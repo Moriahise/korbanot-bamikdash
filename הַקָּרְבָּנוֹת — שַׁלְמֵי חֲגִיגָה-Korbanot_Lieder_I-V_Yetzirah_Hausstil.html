@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הַקָּרְבָּנוֹת בִּיצִירָה — שִׁירִים א׳–ה׳ · Korbanot in Yetzirah · Sephardische Tradition</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  --acc:         #6B3FA0;
+  --acc-lt:      #A87ACC;
+  --acc-vlt:     #D6C2EE;
+  --acc-dim:     #1E0A30;
+  --acc-bdr:     rgba(107,63,160,.36);
+
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn-dim:    #806840;
+
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+
+  --maqam:       #C09CE0;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,   rgba(107,63,160,.22) 0%,transparent 50%),
+    radial-gradient(ellipse at 20% 20%,  rgba(140,90,190,.09) 0%,transparent 42%),
+    radial-gradient(ellipse at 80% 15%,  rgba(140,90,190,.09) 0%,transparent 40%),
+    radial-gradient(ellipse at 15% 70%,  rgba(107,63,160,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85% 75%,  rgba(107,63,160,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,3,.84) 0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12% 6%,   rgba(168,122,204,.72) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(168,122,204,.72) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(168,122,204,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28% 32%,  rgba(168,122,204,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 48%,  rgba(168,122,204,.42) 0%,transparent 100%),
+    radial-gradient(2px 2px at 8% 68%,   rgba(168,122,204,.72) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 78%,  rgba(168,122,204,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(168,122,204,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,  rgba(168,122,204,.42) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--acc-bdr);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid var(--acc-bdr);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--acc-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.76em;font-weight:700;
+  color:var(--acc-lt);opacity:.60;text-decoration:none;padding:0 13px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:opacity .2s,border-color .2s;
+  display:flex;flex-direction:column;justify-content:center;gap:0;direction:rtl;
+}
+.nav-link:hover{opacity:1;border-bottom-color:var(--acc);}
+.nav-he{display:flex;align-items:center;gap:6px;direction:rtl;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;opacity:.50;direction:ltr;}
+.nav-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.68em;color:var(--silver-dim);direction:ltr;text-align:right;
+  letter-spacing:.06em;margin-top:-4px;
+}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:64px;padding-bottom:60px;
+  border-bottom:1px solid var(--acc-bdr);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--acc);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--acc-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.0em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.10;
+  margin-bottom:10px;
+  text-shadow:0 0 60px rgba(168,122,204,.52), 0 0 120px rgba(107,63,160,.30), 0 0 220px rgba(107,63,160,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:700px;margin:0 auto 30px;
+}
+.page-desc strong{color:var(--ivory);}
+.page-desc em{color:var(--acc-lt);font-style:italic;}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid var(--acc-bdr);padding:12px 28px;
+  background:rgba(255,255,255,.012);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--acc-lt);border-color:var(--acc-bdr);
+  background:rgba(255,255,255,.03);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--acc);opacity:.38;font-size:.72em;}
+
+/* ── VESSEL / SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+  margin:0 0 60px;
+}
+.sefira-nav-item{
+  border:1px solid var(--acc-bdr);padding:14px 10px;text-align:center;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(255,255,255,.012);
+}
+.sefira-nav-item:hover{background:rgba(255,255,255,.035);border-color:var(--acc-lt);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--acc-lt);display:block;direction:rtl;line-height:1.5;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;color:var(--silver-dim);display:block;line-height:1.5;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--maqam);opacity:.72;display:block;direction:ltr;margin-top:3px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:60px;scroll-margin-top:62px;
+  border:1px solid rgba(255,255,255,.05);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--acc),var(--gold),var(--acc-lt),var(--gold),var(--acc),transparent);
+  opacity:.55;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(107,63,160,.22) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:30px 42px 24px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:grid;grid-template-columns:92px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.44;line-height:1;text-align:center;
+  color:var(--acc-lt);
+  border-right:1px solid var(--acc-bdr);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.36em;font-weight:700;
+  opacity:.62;letter-spacing:.08em;display:block;margin-bottom:4px;direction:rtl;
+}
+.sefira-badge, .vessel-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.66em;font-weight:700;
+  letter-spacing:.10em;color:var(--acc-lt);opacity:.68;display:block;margin-bottom:4px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;display:block;margin-bottom:6px;direction:ltr;
+  letter-spacing:.10em;color:var(--maqam);opacity:.86;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.03em;display:block;line-height:1.4;
+  text-shadow:0 0 40px rgba(107,63,160,.12);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.63em;
+  border:1px solid var(--acc-bdr);padding:8px 16px;
+  color:var(--acc-lt);direction:rtl;text-align:right;line-height:1.78;
+  flex-shrink:0;background:rgba(255,255,255,.015);max-width:270px;
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;line-height:1.6;
+}
+
+/* ── META-STREIFEN ── */
+.meta-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.012);
+}
+.meta-cell{
+  flex:1 1 auto;min-width:150px;padding:12px 20px;
+  border-right:1px solid rgba(255,255,255,.045);
+}
+.meta-cell:last-child{border-right:none;}
+.meta-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);display:block;margin-bottom:2px;
+}
+.meta-v{
+  font-family:'Frank Ruhl Libre',serif;font-size:.82em;
+  color:var(--acc-lt);opacity:.90;display:block;line-height:1.6;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block,.section{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.045);opacity:.86;direction:rtl;text-align:right;
+}
+
+/* ── INSTRUMENTENHINWEIS ── */
+.guitar-note,.instr,.instrument-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--maqam);opacity:.92;
+  margin-bottom:14px;padding:9px 18px;
+  border-left:2px solid var(--acc-bdr);
+  background:rgba(255,255,255,.015);direction:ltr;
+  line-height:1.82;
+}
+
+/* ── LYRIK ── */
+.lyrics-block,.lyrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.13em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.14;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.14;
+  border-left:1px solid rgba(255,255,255,.05);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── BOXEN ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(107,63,160,.10),rgba(255,255,255,.01));
+  border:1px solid var(--acc-bdr);border-left:3px solid var(--acc);
+  padding:24px 30px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.06),transparent);
+  border:1px solid rgba(200,156,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(107,63,160,.10),transparent);
+  border:1px solid var(--acc-bdr);
+  padding:22px 28px;margin:28px 0;
+  box-shadow:inset 0 0 40px rgba(255,255,255,.014);
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{padding:22px 28px;margin:28px 0;border:1px solid rgba(255,255,255,.045);background:rgba(255,255,255,.01);}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;text-align:center;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+.coda-whisper strong{color:var(--acc-lt);}
+
+/* ── TIKKUN ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.18),rgba(9,7,3,.90));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:32px 34px;margin:34px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.79em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:4px 12px;background:rgba(60,44,8,.10);
+  direction:rtl;flex-shrink:0;font-style:italic;max-width:230px;text-align:right;line-height:1.7;
+}
+.tikkun-body{
+  font-family:'EB Garamond',serif;font-size:.90em;
+  color:var(--text);line-height:1.95;
+}
+.tikkun-body strong{color:var(--ivory-dim);}
+.tikkun-tags,.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px;}
+.tikkun-tag,.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 11px;background:rgba(60,44,8,.08);direction:rtl;
+}
+
+/* ── SZENARIEN (Bestand aus der Vorlage) ── */
+.scenarios-section,.scenarios{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.05);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card,.scenario{
+  border:1px solid rgba(255,255,255,.06);padding:20px 22px;margin-bottom:14px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);}
+.scenario{border-left:2px solid var(--acc-bdr);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;color:var(--acc-lt);}
+.sc-title-he,.scenario-label{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:6px;color:var(--acc-lt);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body,.scenario-text{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid var(--acc);background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(255,255,255,.05);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:50px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--acc-bdr),transparent);}
+.ornament-star{color:var(--acc);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── QUELLEN-BOXEN ── */
+.sources-box,.check-box{
+  background:linear-gradient(135deg,rgba(107,63,160,.10),rgba(5,4,2,.90));
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  padding:32px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.check-box::before{
+  content:'בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:14px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+.chk{
+  margin-bottom:18px;padding:14px 18px;
+  border-left:2px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+}
+.chk:last-child{margin-bottom:0;}
+.chk-head{
+  font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  direction:rtl;text-align:right;margin-bottom:6px;color:var(--acc-lt);
+}
+.chk-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--silver-dim);display:block;direction:ltr;text-align:left;margin-top:1px;
+}
+.chk-body{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.90;}
+.chk-body strong{color:var(--ivory-dim);}
+.chk-body em{color:var(--acc-lt);font-style:italic;}
+.tag-ok,.tag-fix,.tag-open{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;text-transform:uppercase;padding:1px 9px;
+  border:1px solid;margin-left:8px;white-space:nowrap;direction:ltr;display:inline-block;
+}
+.tag-ok{color:#8FBF80;border-color:rgba(143,191,128,.38);}
+.tag-fix{color:#E09050;border-color:rgba(224,144,80,.40);}
+.tag-open{color:#9098C0;border-color:rgba(144,152,192,.38);}
+
+/* ── TRADITIONSHINWEIS ── */
+.trad-box{
+  border:1px solid rgba(144,152,192,.28);border-left:4px solid #7A82B0;
+  background:linear-gradient(135deg,rgba(90,96,140,.08),rgba(5,4,2,.88));
+  padding:26px 32px;margin-top:30px;position:relative;
+}
+.trad-box::before{
+  content:'הֶעָרַת מָסוֹרֶת — Traditionshinweis';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:#A0A8D0;
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.trad-box .sources-title{color:#A0A8D0;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:80px;padding-top:56px;
+  border-top:1px solid var(--acc-bdr);
+  color:var(--silver-dim);font-size:.86em;line-height:1.90;
+}
+.footer-world,.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.55em;font-weight:900;
+  color:var(--acc-lt);direction:rtl;letter-spacing:.06em;
+  margin-bottom:14px;line-height:1.5;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.94em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:22px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.02em;color:var(--silver-dim);line-height:1.98;
+  max-width:600px;margin:0 auto 24px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.20em;
+  color:var(--acc-lt);letter-spacing:.14em;opacity:.55;direction:rtl;line-height:1.7;
+}
+.footer p{max-width:760px;margin:0 auto 10px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .wrap{padding:52px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{grid-column:1 / -1;max-width:none;margin-top:14px;}
+  .lyrics-block,.lyrics{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+  .song-body{padding:0 20px 40px;}
+  .tikkun-src{max-width:none;}
+  .nav-de{display:none;}
+}
+
+/* ── ZUSATZ: Korbanot-Vokabular ── */
+:root{ --ass: #6B3FA0; --ass-lt: #A87ACC; }
+.korban-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;font-weight:700;
+  color:var(--ivory-dim);opacity:.90;display:block;margin-bottom:5px;direction:rtl;
+  letter-spacing:.04em;
+}
+.song-wrap{position:relative;}
+.footer-sources{
+  font-family:'EB Garamond',serif;font-size:.92em;color:var(--silver-dim);
+  line-height:1.90;max-width:780px;margin:0 auto 16px;
+}
+.footer-sources strong{color:var(--acc-lt);}
+.footer-meta{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.90em;color:var(--silver-dim);opacity:.78;line-height:1.80;
+  max-width:760px;margin:0 auto;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">הַקָּרְבָּנוֹת</span>
+    <span class="nav-brand-sub">Yetzirah · Korbanot א׳–ה׳</span>
+  </div>
+  <a class="nav-link" href="#song-1"><span class="nav-he"><span class="nav-num">א</span>עוֹלַת רְאִיָּה</span><span class="nav-de">Erscheinungsopfer</span></a>
+  <a class="nav-link" href="#song-2"><span class="nav-he"><span class="nav-num">ב</span>שַׁלְמֵי חֲגִיגָה</span><span class="nav-de">Festopfer</span></a>
+  <a class="nav-link" href="#song-3"><span class="nav-he"><span class="nav-num">ג</span>שַׁלְמֵי שִׂמְחָה</span><span class="nav-de">Freudeopfer</span></a>
+  <a class="nav-link" href="#song-4"><span class="nav-he"><span class="nav-num">ד</span>קָרְבָּן יוֹלֶדֶת</span><span class="nav-de">Wöchnerinnenopfer</span></a>
+  <a class="nav-link" href="#song-5"><span class="nav-he"><span class="nav-num">ה</span>קָרְבָּן נָזִיר</span><span class="nav-de">Nasiräeropfer</span></a>
+</nav>
+
+<div class="wrap">
+
+<header class="page-header">
+  <p class="eyebrow">עוֹלַם הַיְצִירָה · הַמָּסוֹרֶת הַסְּפָרַדִּית · חֲמִשָּׁה שִׁירִים</p>
+  <h1 class="page-title-he">הַקָּרְבָּנוֹת בִּיצִירָה</h1>
+  <p class="page-title-de">Die Korbanot in Yetzirah – Lieder I–V · Sephardische Tradition</p>
+  <p class="page-desc">
+    <strong>עוֹלַת רְאִיָּה · שַׁלְמֵי חֲגִיגָה · שַׁלְמֵי שִׂמְחָה · יוֹלֶדֶת · נָזִיר · תּוֹדָה · עוֹלֶה וְיוֹרֵד · מְחֻסַּר כִּפּוּרִים · עֹמֶר · שְׁתֵּי הַלֶּחֶם</strong><br>
+    Zehn liturgische Gesänge durch die Welt der Formung (יְצִירָה). Von der Erscheinung im Tempel bis zur Torahgabe an Shavuot — jedes Korban entspricht einer Sefira, einem Maqam und einer konkreten Tikkun-Handlung basierend auf sephardischen Quellen (Rashash, Ben Ish Chai, Ramchal, Or HaChaim). Instrument: Oud (nahöstliches Bundloses gezupftes Saiteninstrument).
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">עֲשִׂיָּה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-active">יְצִירָה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">בְּרִיאָה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">אֲצִילוּת</span>
+  </div>
+</header>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-1">
+    <span class="sn-num">א · Keter</span>
+    <span class="sn-he">עוֹלַת רְאִיָּה</span>
+    <span class="sn-de">Erscheinungsopfer</span>
+    <span class="sn-maqam">Maqam Siga</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-2">
+    <span class="sn-num">ב · Chochma</span>
+    <span class="sn-he">שַׁלְמֵי חֲגִיגָה</span>
+    <span class="sn-de">Festopfer</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-3">
+    <span class="sn-num">ג · Binah</span>
+    <span class="sn-he">שַׁלְמֵי שִׂמְחָה</span>
+    <span class="sn-de">Freudeopfer</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-4">
+    <span class="sn-num">ד · Chesed</span>
+    <span class="sn-he">קָרְבָּן יוֹלֶדֶת</span>
+    <span class="sn-de">Wöchnerinnenopfer</span>
+    <span class="sn-maqam">Maqam Ajam</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-5">
+    <span class="sn-num">ה · Gevurah</span>
+    <span class="sn-he">קָרְבָּן נָזִיר</span>
+    <span class="sn-de">Nasiräeropfer</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר א — OLAT RE'IYAH · KETER · MAQAM SIGA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-1">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">כֶּתֶר</span>
+      א
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">כֶּתֶר דִּיצִירָה · Keter d'Yetzirah · עוֹלַם הַיְצִירָה</span>
+      <span class="korban-badge">עוֹלַת רְאִיָּה · Das Erscheinungsopfer</span>
+      <span class="maqam-badge">Maqam Siga · מַקָּם סִיגָה — Transzendenz und Hingabe</span>
+      <span class="song-title-he">רָאוֹ פָּנָיו</span>
+      <span class="song-title-de">Sein Angesicht sehen – Pilgerschaft als vollständige Hingabe</span>
+    </div>
+    <div class="source-badge">
+      שמות כג:יז · דברים טז:טז · רמב״ם, הלכות חגיגה א:א · רשב״ש, שערי גאולה · בן איש חי, שנה ראשונה, ראה
+      <span class="source-badge-de">Schemot 23:17 · Dewarim 16:16 · Rambam, Hilchot Chagigah 1:1 · Ben Isch Chai, Schanah Rischonah, Re'eh · Rashash, Nahar Schalom</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">יְצִירָה · Yetzirah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">כֶּתֶר · Keter</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Siga</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">עוּד · Oud</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">60 BPM</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — נִרְאֶה לִפְנֵי אֲדֹנָי — איטי מאוד</div>
+      <div class="instrument-note">Oud: Maqam Siga, langsam und transzendent (60 BPM). Die ersten Töne schweben wie der Pilger, der die ersten Stufen zum Tempelberg hinaufsteigt. Kein Rhythmus — nur melodische Linien.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי —</span>
+          <span class="line">שָׁלֹשׁ פְּעָמִים בַּשָּׁנָה נֵרָאֶה לִפְנֵי פָּנֶיךָ,</span>
+          <span class="line">עוֹלָה כֻּלָּהּ לָאֵשׁ — הִנֵּנִי מוּכָן וּמְזֻמָּן,</span>
+          <span class="line">וּבְרֶגֶל הָרֵאָיוֹן — נַפְשִׁי עוֹלָה עִמָּהּ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai —</span>
+          <span class="line">Dreimal im Jahr erscheinen wir vor deinem Angesicht,</span>
+          <span class="line">die Olah ganz dem Feuer — hier bin ich, bereit und vorbereitet,</span>
+          <span class="line">und mit dem Fest der Erscheinung — steigt meine Seele mit ihr.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 1 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית א — פֶּסַח · שָׁבוּעוֹת · סֻכּוֹת</div>
+      <div class="instrument-note">Oud: sanftes Siga-Arpeggio, das die drei Feste wie drei aufsteigende Wellen darstellt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בַּפֶּסַח נֵרָאֶה — זֵכֶר יְצִיאַת מִצְרַיִם,</span>
+          <span class="line">בְּשָׁבוּעוֹת נֵרָאֶה — מַתַּן תּוֹרָה בְּסִינַי,</span>
+          <span class="line">בְּסֻכּוֹת נֵרָאֶה — עֲנָנֵי כָבוֹד בַּמִּדְבָּר,</span>
+          <span class="line">וּבְכׇל רֶגֶל — עוֹלַת רְאִיָּה נִקְרֶבֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">An Pessach erscheinen wir — Gedenken des Auszugs aus Ägypten,</span>
+          <span class="line">an Shavuot erscheinen wir — Torahgabe am Sinai,</span>
+          <span class="line">an Sukkot erscheinen wir — Wolken der Herrlichkeit in der Wüste,</span>
+          <span class="line">und an jedem Fest — wird die Olat Re'iyah dargebracht.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 2 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — עוֹלָה כֻּלָּהּ לָאֵשׁ</div>
+      <div class="instrument-note">Oud: Die Melodie wird dichter, wie das Feuer, das alles verzehrt. Trotzdem bleibt der Maqam Siga schwebend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">עוֹלָה כֻּלָּהּ לָאֵשׁ — אֵין שְׁיָרֵי בָּשָׂר,</span>
+          <span class="line">כׇּל נַפְשִׁי לְךָ אֲדֹנָי — הִנֵּנִי מוּכָן וּמְזֻמָּן,</span>
+          <span class="line">הָרֵיחַ הַנִּיחוֹחַ עוֹלֶה — וְהַכֹּהֵן זוֹרֵק דָּם,</span>
+          <span class="line">וַאֲנִי עוֹמֵד בְּחָצֵר — וְלִבִּי עוֹלֶה עִמּוֹ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Die Olah ganz dem Feuer — kein Fleischrest bleibt,</span>
+          <span class="line">meine ganze Seele dir, Adonai — hier bin ich, bereit und vorbereitet,</span>
+          <span class="line">der Wohlgeruch steigt auf — und der Kohen sprengt das Blut,</span>
+          <span class="line">und ich stehe im Vorhof — und mein Herz steigt mit ihm.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refrain -->
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Oud: Der Kern des Siga-Maqam als ruhiger Ostinato. Die Stimme hebt sich bei der zweiten Wiederholung und senkt sich wieder. Erste und dritte Wiederholung mf, zweite f.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">רָאוֹ פָּנָיו — נֵרָאֶה לִפְנֵי אֲדֹנָי,</span>
+            <span class="line">עוֹלָה כֻּלָּהּ — נַפְשִׁי עוֹלָה,</span>
+            <span class="line">שָׁלֹשׁ רְגָלִים — שָׁלֹשׁ עֲלִיּוֹת,</span>
+            <span class="line">הִנֵּנִי מוּכָן — וּמְזֻמָּן לְפָנֶיךָ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Sehen sein Angesicht — erscheinen vor Adonai,</span>
+            <span class="line">die Olah ganz — meine Seele steigt,</span>
+            <span class="line">drei Feste — drei Aufstiege,</span>
+            <span class="line">hier bin ich bereit — und vorbereitet vor dir.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bridge -->
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — הַדֶּרֶךְ לִירוּשָׁלַיִם</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Oud: Einzelne Töne wie Schritte auf dem Pilgerweg. Die Melodie bewegt sich langsam aufwärts.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">כָּל הָעוֹלֶה לָרֶגֶל — דֶּרֶךְ יְרוּשָׁלַיִם עוֹלֶה,</span>
+            <span class="line">רַגְלַיִם מְהַלְּכוֹת — נֶפֶשׁ מִתְעַלָּה,</span>
+            <span class="line">מִכׇּל קְצוֹת הָאָרֶץ — עַם אֶחָד בָּא לִרְאוֹת,</span>
+            <span class="line">וְהָעוֹלָה הַזֹּאת — קֵירוּב שֶׁל אַהֲבָה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Jeder, der zum Fest hinaufzieht — der Weg nach Jerusalem steigt,</span>
+            <span class="line">die Füße gehen — die Seele erhebt sich,</span>
+            <span class="line">von allen Enden der Erde — ein Volk kommt, um zu sehen,</span>
+            <span class="line">und diese Olah — Annäherung der Liebe.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tikkun -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן א — עֲלִיָּה לָרֶגֶל בְּזְמַנֵּנוּ</div>
+        <div class="tikkun-title-de">Tikkun I – Pilgern in unserer Zeit</div>
+        <div class="tikkun-src">רמב״ם, הלכות חגיגה א:א · בן איש חי, שנה ראשונה, ראה · רשב״ש, שערי גאולה, שער הָרֵאָיוֹן</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Chagigah 1:1) lehrt: Die Mitzva der Re'iyah (Erscheinung) gilt für alle jüdischen Männer — dreimal im Jahr zum Tempel zu kommen und eine Olah darzubringen. Ben Ish Chai (Shanah Rishona, Re'eh) erklärt: Auch ohne Tempel besteht die Pflicht, an den drei Festen nach Jerusalem zu pilgern, wenn möglich. Rashash (Sha'arei Geulah, Sha'ar HaRe'iyon) verbindet: Re'iyah bedeutet sowohl "sehen" als auch "gesehen werden" — Keter d'Yetzirah ist diese vollständige Hingabe vor dem Schöpfer.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Plane eine Reise nach Jerusalem zu einem der drei Feste (Pessach, Shavuot oder Sukkot). Wenn dies unmöglich ist, gehe an jedem dieser Feste zur Synagoge mit der Intention der Re'iyah — betrachte es als Vorbereitung für die zukünftige Pilgerschaft. Bete am Kotel (Westmauer) und meditiere: "Ich stehe hier stellvertretend für meine Vorfahren, die hier die Olat Re'iyah darbrachten." Lies Tehillim 122 (שִׁיר הַמַּעֲלוֹת — Lied der Aufstiege) und stelle dir vor, wie dein Herz wie eine Olah nach oben steigt.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">עוֹלַת רְאִיָּה</span>
+        <span class="tikkun-tag">עֲלִיָּה לָרֶגֶל</span>
+        <span class="tikkun-tag">כֶּתֶר דִיצִירָה</span>
+        <span class="tikkun-tag">הִנֵּנִי מוּכָן וּמְזֻמָּן</span>
+      </div>
+    </div>
+
+    <!-- Climax -->
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · רָאוֹ פָּנָיו</div>
+      <div class="climax-box">
+        <div class="instrument-note">Oud: voller Siga-Akkord, forte aber kontrolliert. Die Stimme ruft klar wie der Pilger, der endlich den Tempel sieht.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">רָאוֹ! — פָּנָיו! — נֵרָאֶה!</span>
+            <span class="line">עוֹלָה! — כֻּלָּהּ! — לָאֵשׁ!</span>
+            <span class="line">שָׁלֹשׁ! — רְגָלִים! — בַּשָּׁנָה!</span>
+            <span class="line">הִנֵּנִי! — מוּכָן! — וּמְזֻמָּן!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Sehen! — Sein Antlitz! — Erscheinen!</span>
+            <span class="line">Olah! — Ganz! — Dem Feuer!</span>
+            <span class="line">Drei! — Feste! — Im Jahr!</span>
+            <span class="line">Hier bin ich! — Bereit! — Und vorbereitet!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coda -->
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — לֵב עוֹלֶה</div>
+      <div class="coda-box">
+        <div class="instrument-note">Oud: Siga verklingt in einzelnen hohen Tönen wie Rauch, der aufsteigt. Die Stimme wird zu einem Flüstern.</div>
+        <div class="coda-whisper">
+          <strong>וְלִבֵּנוּ עוֹלֶה</strong> — עִם הָעוֹלָה — <strong>עוֹלָה כֻּלָּהּ</strong> — לְאוֹר אֵין סוֹף — <strong>רָאוֹ פָּנָיו</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scenarios -->
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ב — SHALMEI CHAGIGAH · CHOCHMA · MAQAM RAST
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-2">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חָכְמָה</span>
+      ב
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חָכְמָה דִּיצִירָה · Chochma d'Yetzirah · עוֹלַם הַיְצִירָה</span>
+      <span class="korban-badge">שַׁלְמֵי חֲגִיגָה · Das Festopfer</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רַאסְת — Öffnung und Weisheit</span>
+      <span class="song-title-he">שִׂמְחַת הַמּוֹעֵד</span>
+      <span class="song-title-de">Freude des Festes – Lernen durch Feiern</span>
+    </div>
+    <div class="source-badge">
+      דברים טז:יד–טו · רמב״ם, הלכות חגיגה א:א · בן איש חי, שנה שנייה, עמור · רמח״ל, דרך ה׳ ד:ח:ב
+      <span class="source-badge-de">Dewarim 16:14–15 · Rambam, Hilchot Chagigah 1:1 · Ramchal, Derech Haschem IV:8 (Mizwot HaZemanim) · Ben Isch Chai</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">יְצִירָה · Yetzirah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">חָכְמָה · Chochma</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Rast</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">עוּד · Oud</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">70 BPM</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — וְשָׂמַחְתָּ בְּחַגֶּךָ — נינוח ופתוח</div>
+      <div class="instrument-note">Oud: Maqam Rast, warm und offen (70 BPM). Die Eröffnung klingt wie ein Fest, das gerade beginnt — einladend, hell, voller Erwartung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי —</span>
+          <span class="line">וְשָׂמַחְתָּ בְּחַגֶּךָ — זוֹ מִצְוַת הַשִּׂמְחָה,</span>
+          <span class="line">שַׁלְמֵי חֲגִיגָה — קׇרְבָּן שֶׁל שִׂמְחָה וְאַחְדּוּת,</span>
+          <span class="line">בָּשָׂר לָאָדָם — דָּם לַמִּזְבֵּחַ — שֻׁלְחָן מְשֻׁתָּף.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai —</span>
+          <span class="line">Und du sollst dich freuen an deinem Fest — dies ist die Mitzva der Freude,</span>
+          <span class="line">Shalmei Chagigah — Opfer der Freude und Einheit,</span>
+          <span class="line">Fleisch für den Menschen — Blut für den Altar — gemeinsamer Tisch.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 1 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית א — אֹכֶל בְּשִׂמְחָה</div>
+      <div class="instrument-note">Oud: Rast-Arpeggio mit freudigen Akzenten, als würde ein Fest vorbereitet.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַחֲגִיגָה הִיא שְׁלָמִים — בָּשָׂר נֶאֱכָל בִּירוּשָׁלַיִם,</span>
+          <span class="line">יוֹם אֶחָד וְלַיְלָה אֶחָד — זְמַן קָצָר לְשִׂמְחָה,</span>
+          <span class="line">הַמִּשְׁפָּחָה אוֹכֶלֶת יַחַד — בָּעֲזָרָה קְדוֹשָׁה,</span>
+          <span class="line">וְהַשִּׂמְחָה הִיא חוֹכְמָה — כִּי בְּשִׂמְחָה לוֹמְדִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Die Chagigah ist Shelamim — Fleisch wird in Jerusalem gegessen,</span>
+          <span class="line">einen Tag und eine Nacht — kurze Zeit für Freude,</span>
+          <span class="line">die Familie isst zusammen — im heiligen Vorhof,</span>
+          <span class="line">und die Freude ist Weisheit — denn in Freude lernt man.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 2 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — תּוֹרָה בְּשִׂמְחָה</div>
+      <div class="instrument-note">Oud: Die Melodie wird lehrend — Rast zeigt seine weise, öffnende Qualität.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">רַמְחַ״ל לִמֵּד: שִׂמְחָה פּוֹתַחַת הַלֵּב לְחָכְמָה,</span>
+          <span class="line">בֵּן אִישׁ חַי אָמַר: בְּשִׂמְחַת הַחַג — תּוֹרָה נִקְלֶטֶת,</span>
+          <span class="line">כִּי הַשִּׂמְחָה מְסִירָה חֲסִימוֹת — וְהַשֵּׂכֶל נִפְתָּח,</span>
+          <span class="line">וְזֶה חָכְמָה דִיצִירָה — קַבָּלָה בְּשִׂמְחָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Ramchal lehrte: Freude öffnet das Herz für Weisheit,</span>
+          <span class="line">Ben Ish Chai sagte: In der Festfreude — wird Torah aufgenommen,</span>
+          <span class="line">denn Freude entfernt Blockaden — und der Verstand öffnet sich,</span>
+          <span class="line">und das ist Chochma d'Yetzirah — Empfang in Freude.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refrain -->
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Oud: Rast-Kern als festlicher Ostinato. Die Stimme singt mit Freude, die sich bei der zweiten Wiederholung steigert.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שִׂמְחָה — חֲגִיגָה — שְׁלָמִים,</span>
+            <span class="line">שֻׁלְחָן — מְשֻׁתָּף — בִּירוּשָׁלַיִם,</span>
+            <span class="line">חָכְמָה — בְּשִׂמְחָה — נִפְתַּחַת,</span>
+            <span class="line">וְשָׂמַחְתָּ — בְּחַגֶּךָ — וְהָיִיתָ אַךְ שָׂמֵחַ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Freude — Fest — Shelamim,</span>
+            <span class="line">Tisch — gemeinsam — in Jerusalem,</span>
+            <span class="line">Weisheit — in Freude — öffnet sich,</span>
+            <span class="line">und du sollst dich freuen — an deinem Fest — und nur froh sein.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bridge -->
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — יוֹם טוֹב בְּזְמַנֵּנוּ</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Oud: Einzelne Rast-Töne wie Schritte zu einem festlichen Tisch.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">גַּם הַיּוֹם — כְּשֶׁאָנוּ יוֹשְׁבִים לִסְעוּדַת יוֹם טוֹב,</span>
+            <span class="line">זֵכֶר לְשַׁלְמֵי חֲגִיגָה — שֻׁלְחָן מְשֻׁתָּף,</span>
+            <span class="line">אוֹכְלִים בְּשִׂמְחָה — מְדַבְּרִים בְּתוֹרָה,</span>
+            <span class="line">וְזוֹ חָכְמָה — שֶׁפּוֹתַחַת הַלֵּב.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Auch heute — wenn wir zum Festmahl sitzen,</span>
+            <span class="line">Gedenken an Shalmei Chagigah — gemeinsamer Tisch,</span>
+            <span class="line">essen in Freude — sprechen über Torah,</span>
+            <span class="line">und das ist Weisheit — die das Herz öffnet.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tikkun -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ב — סְעוּדַת יוֹם טוֹב בְּשִׂמְחָה</div>
+        <div class="tikkun-title-de">Tikkun II – Festmahl in Freude</div>
+        <div class="tikkun-src">רמב״ם, הלכות חגיגה א:א · בן איש חי, שנה שנייה, עמור · רמח״ל, דרך ה׳ ד:ח:ב</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Chagigah 1:1) lehrt: Shalmei Chagigah ist ein Friedensopfer, das man an den Festen darbringt und am selben Tag isst. Ben Ish Chai (Shanah Shniyah, Emor) erklärt: Die Freude beim Essen ist Teil der Mitzva — man isst nicht nur, um satt zu werden, sondern um die Simcha (Freude) des Festes zu erfüllen. Ramchal (Derech Hashem 4:8:2) verbindet: Simcha öffnet das Herz für Chochma (Weisheit) — in Freude lernt man besser.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Bereite an einem der drei Feste (Pessach, Shavuot, Sukkot) ein besonderes Festmahl vor. Lade Familie und Freunde ein. Vor dem Essen sage: "Wir essen heute zum Gedenken an Shalmei Chagigah — das Opfer der Festfreude." Während des Essens erzähle eine Geschichte aus der Torah oder teile eine Lehre, die mit dem Fest verbunden ist. Achte darauf, dass die Atmosphäre fröhlich ist — singe Zemirot, lache, genieße das Essen. Meditiere: Durch diese Freude öffnet sich mein Herz für Weisheit.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">שַׁלְמֵי חֲגִיגָה</span>
+        <span class="tikkun-tag">שִׂמְחַת יוֹם טוֹב</span>
+        <span class="tikkun-tag">חָכְמָה דִיצִירָה</span>
+        <span class="tikkun-tag">וְשָׂמַחְתָּ בְּחַגֶּךָ</span>
+      </div>
+    </div>
+
+    <!-- Climax -->
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · שִׂמְחָה</div>
+      <div class="climax-box">
+        <div class="instrument-note">Oud: voller Rast-Akkord, forte und freudig. Die Stimme jubelt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שִׂמְחָה! — חֲגִיגָה! — שְׁלָמִים!</span>
+            <span class="line">שֻׁלְחָן! — מְשֻׁתָּף! — קָדוֹשׁ!</span>
+            <span class="line">חָכְמָה! — נִפְתַּחַת! — בְּשִׂמְחָה!</span>
+            <span class="line">וְשָׂמַחְתָּ! — בְּחַגֶּךָ! — וְהָיִיתָ אַךְ שָׂמֵחַ!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Freude! — Fest! — Shelamim!</span>
+            <span class="line">Tisch! — Gemeinsam! — Heilig!</span>
+            <span class="line">Weisheit! — Öffnet sich! — In Freude!</span>
+            <span class="line">Und du sollst dich freuen! — An deinem Fest! — Und nur froh sein!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coda -->
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — שֻׁלְחָן קָדוֹשׁ</div>
+      <div class="coda-box">
+        <div class="instrument-note">Oud: Rast verklingt sanft wie das Ende eines Festes. Die Stimme wird ruhig und zufrieden.</div>
+        <div class="coda-whisper">
+          <strong>שֻׁלְחָן מְשֻׁתָּף</strong> — בְּשִׂמְחָה — <strong>חָכְמָה נִפְתַּחַת</strong> — בְּאַהֲבָה — <strong>וְשָׂמַחְתָּ בְּחַגֶּךָ</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scenarios -->
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ג — SHALMEI SIMCHAH · BINAH · MAQAM BAYAT
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-3">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">בִּינָה</span>
+      ג
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">בִּינָה דִּיצִירָה · Binah d'Yetzirah · עוֹלַם הַיְצִירָה</span>
+      <span class="korban-badge">שַׁלְמֵי שִׂמְחָה · Das Freudeopfer</span>
+      <span class="maqam-badge">Maqam Bayat · מַקָּם בַּיַאת — Verstehen und Verbindung</span>
+      <span class="song-title-he">שִׂמְחָה אֲמִתִּית</span>
+      <span class="song-title-de">Wahre Freude – Freude als Verstehen</span>
+    </div>
+    <div class="source-badge">
+      דברים כז:ז · רמב״ם, הלכות מעשה הקרבנות ט:א · בן איש חי, שנה ראשונה, נח · רמ״ק, פרדס רמונים שער טז
+      <span class="source-badge-de">Dewarim 27:7 · Rambam, Hilchot Ma'asseh HaKorbanot 9 (Schelamim) · Ramak, Pardes Rimonim, Scha'ar 16 · Ben Isch Chai</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">יְצִירָה · Yetzirah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">בִּינָה · Binah</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Bayat</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">עוּד · Oud</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">65 BPM</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — שִׂמְחָה עֲמֻקָּה — נינוח ועמוק</div>
+      <div class="instrument-note">Oud: Maqam Bayat, tief und verbindend (65 BPM). Die Eröffnung hat eine nachdenkliche Qualität — Freude, die aus Verstehen kommt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי —</span>
+          <span class="line">שַׁלְמֵי שִׂמְחָה — קׇרְבָּן נְדָבָה מִתּוֹךְ שִׂמְחָה,</span>
+          <span class="line">לֹא מֵחוֹבָה — אֶלָּא מֵאַהֲבָה,</span>
+          <span class="line">וְזוֹ בִּינָה — שֶׁמְּבִינָה מַה הִיא שִׂמְחָה אֲמִתִּית.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai —</span>
+          <span class="line">Shalmei Simchah — freiwilliges Opfer aus Freude,</span>
+          <span class="line">nicht aus Pflicht — sondern aus Liebe,</span>
+          <span class="line">und das ist Binah — die versteht, was wahre Freude ist.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 1 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית א — נְדָבָה מֵהַלֵּב</div>
+      <div class="instrument-note">Oud: Bayat-Arpeggio, das sich langsam entfaltet wie ein Gedanke, der wächst.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">שַׁלְמֵי שִׂמְחָה אֵינָם חוֹבָה — הֵם נְדָבָה,</span>
+          <span class="line">כְּשֶׁהַלֵּב מָלֵא שִׂמְחָה — וְרוֹצֶה לְהוֹדוֹת,</span>
+          <span class="line">אֵין תַּאֲרִיךְ מְיֻחָד — כׇּל יוֹם יָכוֹל לִהְיוֹת,</span>
+          <span class="line">וְזוֹ בִּינָה — שֶׁמְּבִינָה מָתַי לִשְׂמֹחַ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Shalmei Simchah sind keine Pflicht — sie sind freiwillig,</span>
+          <span class="line">wenn das Herz voller Freude ist — und danken will,</span>
+          <span class="line">es gibt kein festes Datum — jeder Tag kann sein,</span>
+          <span class="line">und das ist Binah — die versteht, wann man sich freut.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 2 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — שִׂמְחָה שֶׁמְּחַבֶּרֶת</div>
+      <div class="instrument-note">Oud: Die Melodie wird verbindender — Bayat zeigt seine Qualität der Einheit.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">רַמַ״ק לִמֵּד: בִּינָה מְחַבֶּרֶת אֶת כׇּל הַנְּשָׁמוֹת,</span>
+          <span class="line">בֵּן אִישׁ חַי אָמַר: שִׂמְחָה אֲמִתִּית מְחַבֶּרֶת לִבּוֹת,</span>
+          <span class="line">כִּי כְּשֶׁאָנוּ שְׂמֵחִים יַחַד — אָנוּ מְבִינִים אֶחָד אֶת הַשֵּׁנִי,</span>
+          <span class="line">וְזוֹ בִּינָה דִיצִירָה — קֶשֶׁר דֶּרֶךְ שִׂמְחָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Ramak lehrte: Binah verbindet alle Seelen,</span>
+          <span class="line">Ben Ish Chai sagte: Wahre Freude verbindet Herzen,</span>
+          <span class="line">denn wenn wir zusammen fröhlich sind — verstehen wir einander,</span>
+          <span class="line">und das ist Binah d'Yetzirah — Verbindung durch Freude.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refrain -->
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · pp</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Oud: Bayat-Kern als verbindender Ostinato. Die Stimme wird bei der zweiten Wiederholung stärker, dann ganz leise bei der dritten.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שִׂמְחָה — אֲמִתִּית — מֵהַלֵּב,</span>
+            <span class="line">נְדָבָה — לֹא חוֹבָה — אַהֲבָה,</span>
+            <span class="line">בִּינָה — מְחַבֶּרֶת — נְשָׁמוֹת,</span>
+            <span class="line">שִׂמְחָה — שֶׁמְּבִינִים — יַחַד.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Freude — wahrhaftig — vom Herzen,</span>
+            <span class="line">freiwillig — nicht Pflicht — Liebe,</span>
+            <span class="line">Binah — verbindet — Seelen,</span>
+            <span class="line">Freude — die versteht — zusammen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bridge -->
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — מָתַי לִשְׂמֹחַ</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Oud: Einzelne Bayat-Töne wie Herzschläge — langsam, tief, verbindend.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">יֵשׁ שִׂמְחָה שֶׁמְּצֻוָּה — וְיֵשׁ שִׂמְחָה שֶׁנְּדָבָה,</span>
+            <span class="line">בִּינָה מְבִינָה אֶת הַהֶבְדֵּל — מָתַי לִשְׂמֹחַ בְּחוֹבָה,</span>
+            <span class="line">וּמָתַי לִשְׂמֹחַ מִתּוֹךְ הַלֵּב — כִּי הַלֵּב רוֹצֶה,</span>
+            <span class="line">וּשְׁתֵּיהֶן קְדוֹשׁוֹת — כִּי שְׁתֵּיהֶן מְחַבְּרוֹת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Es gibt Freude, die geboten ist — und Freude, die freiwillig ist,</span>
+            <span class="line">Binah versteht den Unterschied — wann man sich aus Pflicht freut,</span>
+            <span class="line">und wann man sich vom Herzen freut — weil das Herz will,</span>
+            <span class="line">und beide sind heilig — denn beide verbinden.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tikkun -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ג — שִׂמְחָה מִתּוֹךְ הַלֵּב</div>
+        <div class="tikkun-title-de">Tikkun III – Freude vom Herzen</div>
+        <div class="tikkun-src">רמב״ם, הלכות מעשה הקרבנות ט:א · בן איש חי, שנה ראשונה, נח · רמ״ק, פרדס רמונים שער טז</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Ma'aseh HaKorbanot 9:1) lehrt: Shalmei Simchah ist ein freiwilliges Friedensopfer, das man aus Freude darbringt — nicht an einem festen Tag, sondern wenn das Herz es fühlt. Ben Ish Chai (Shanah Rishona, Noach) erklärt: Diese Art von Simcha ist Binah d'Yetzirah — sie versteht, dass wahre Freude nicht erzwungen werden kann, sondern vom Herzen kommen muss. Ramak (Pardes Rimonim, Sha'ar 16) verbindet: Binah ist die Mutter, die alle Seelen verbindet — Simcha, die von Binah kommt, verbindet Menschen.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Wenn du einen Moment echter, unerklärlicher Freude erlebst — vielleicht nach einem Erfolg, einem schönen Moment mit der Familie, oder einfach weil das Herz voll ist — halte inne und sage: "Diese Freude ist ein Zeichen, dass ich ein Shalmei Simchah darbringen sollte." Da wir keinen Tempel haben, tue folgendes: Bereite ein besonderes Essen zu (es muss Fleisch enthalten), lade mindestens eine andere Person ein, und sage vor dem Essen: "Ich esse heute zum Gedenken an Shalmei Simchah — Opfer der Freude aus meinem Herzen." Teile während des Essens, was dich so glücklich gemacht hat, und lass andere an deiner Freude teilhaben.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">שַׁלְמֵי שִׂמְחָה</span>
+        <span class="tikkun-tag">נְדָבָה מֵהַלֵּב</span>
+        <span class="tikkun-tag">בִּינָה דִיצִירָה</span>
+        <span class="tikkun-tag">שִׂמְחָה מְחַבֶּרֶת</span>
+      </div>
+    </div>
+
+    <!-- Climax -->
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · שִׂמְחָה מֵהַלֵּב</div>
+      <div class="climax-box">
+        <div class="instrument-note">Oud: voller Bayat-Akkord, forte aber warm. Die Stimme ruft mit Verständnis.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שִׂמְחָה! — אֲמִתִּית! — מֵהַלֵּב!</span>
+            <span class="line">נְדָבָה! — לֹא חוֹבָה! — אַהֲבָה!</span>
+            <span class="line">בִּינָה! — מְבִינָה! — מְחַבֶּרֶת!</span>
+            <span class="line">שְׂמֵחִים! — יַחַד! — בְּאַחְדּוּת!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Freude! — Wahrhaftig! — Vom Herzen!</span>
+            <span class="line">Freiwillig! — Nicht Pflicht! — Liebe!</span>
+            <span class="line">Binah! — Versteht! — Verbindet!</span>
+            <span class="line">Fröhlich! — Zusammen! — In Einheit!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coda -->
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — לִבּוֹת מְחֻבָּרִים</div>
+      <div class="coda-box">
+        <div class="instrument-note">Oud: Bayat verklingt in tiefen, verbindenden Tönen. Die Stimme wird zu einem Flüstern der Einheit.</div>
+        <div class="coda-whisper">
+          <strong>שִׂמְחָה אֲמִתִּית</strong> — מְחַבֶּרֶת — <strong>לִבּוֹת</strong> — בְּבִינָה — <strong>נְשָׁמוֹת מְחֻבָּרוֹת</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scenarios -->
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ד — KORBAN YOLEDET · CHESED · MAQAM AJAM
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-4">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חֶסֶד</span>
+      ד
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">חֶסֶד דִּיצִירָה · Chesed d'Yetzirah · עוֹלַם הַיְצִירָה</span>
+      <span class="korban-badge">קָרְבָּן יוֹלֶדֶת · Das Wöchnerinnenopfer</span>
+      <span class="maqam-badge">Maqam Ajam · מַקָּם עֲג׳ם — Hoffnung und Güte</span>
+      <span class="song-title-he">חַיִּים חֲדָשִׁים</span>
+      <span class="song-title-de">Neues Leben – Geburt als Akt der Gnade</span>
+    </div>
+    <div class="source-badge">
+      ויקרא יב:ו–ח · רמב״ם, הלכות מחוסרי כפרה א:א · בן איש חי, שנה ראשונה, תזריע · רשב״ש, שערי גאולה · אור החיים, ויקרא יב:ו
+      <span class="source-badge-de">Wajikra 12:6–8 · Rambam, Hilchot Mechussrei Kapparah 1:1 · Or HaChajim zu Wajikra 12:6 · Ben Isch Chai, Schanah Rischonah, Tasria</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">יְצִירָה · Yetzirah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">חֶסֶד · Chesed</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Ajam</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">עוּד · Oud</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">68 BPM</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — יָלְדָה וְחָיָה — נינוח ומלא תקווה</div>
+      <div class="instrument-note">Oud: Maqam Ajam, hoffnungsvoll und warm (68 BPM). Die Melodie beginnt sanft wie das erste Weinen eines Neugeborenen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי —</span>
+          <span class="line">אִשָּׁה כִּי תַזְרִיעַ וְיָלְדָה זָכָר — חַיִּים חֲדָשִׁים בָּעוֹלָם,</span>
+          <span class="line">לְאַחַר יְמֵי טֻמְאָה וְטָהֳרָה — קׇרְבָּן יוֹלֶדֶת,</span>
+          <span class="line">עוֹלָה וְחַטָּאת — חֶסֶד שֶׁל חַיִּים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai —</span>
+          <span class="line">Wenn eine Frau empfängt und einen Sohn gebiert — neues Leben in der Welt,</span>
+          <span class="line">nach Tagen der Unreinheit und Reinheit — Korban Yoledet,</span>
+          <span class="line">Olah und Chatat — Chesed des Lebens.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 1 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית א — לֵדָה כְּנֵס לְחַיִּים</div>
+      <div class="instrument-note">Oud: Ajam-Arpeggio mit sanften, fließenden Übergängen wie das Leben, das fließt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">שִׁבְעַת יָמִים לְבֵן — אַרְבָּעָה עָשָׂר לְבַת,</span>
+          <span class="line">שְׁלֹשִׁים וּשְׁלֹשָׁה יוֹם — שִׁשִּׁים וְשִׁשָּׁה יוֹם,</span>
+          <span class="line">זְמַן הַהַבְרָאָה — זְמַן הַטָּהֳרָה,</span>
+          <span class="line">וְאַחַר כָּךְ — קׇרְבָּן כְּנֵס לְחַיִּים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Sieben Tage für einen Sohn — vierzehn für eine Tochter,</span>
+          <span class="line">dreiunddreißig Tage — sechsundsechzig Tage,</span>
+          <span class="line">Zeit der Genesung — Zeit der Reinigung,</span>
+          <span class="line">und danach — Opfer des Eintritts ins Leben.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 2 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — חֶסֶד שֶׁל אֵם</div>
+      <div class="instrument-note">Oud: Die Melodie wird mütterlich — Ajam zeigt seine gütige, vergebende Qualität.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אוֹר הַחַיִּים לִמֵּד: לֵדָה הִיא חֶסֶד עֶלְיוֹן,</span>
+          <span class="line">בֵּן אִישׁ חַי אָמַר: הָאֵם נוֹתֶנֶת חַיִּים — זֶה חֶסֶד גָּדוֹל,</span>
+          <span class="line">וְהַקָּרְבָּן מוֹדֶה — עַל הַחֶסֶד הַזֶּה,</span>
+          <span class="line">וְזֶה חֶסֶד דִיצִירָה — חַיִּים חֲדָשִׁים בָּעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Or HaChaim lehrte: Geburt ist höchster Chesed,</span>
+          <span class="line">Ben Ish Chai sagte: Die Mutter gibt Leben — das ist großer Chesed,</span>
+          <span class="line">und das Korban dankt — für diesen Chesed,</span>
+          <span class="line">und das ist Chesed d'Yetzirah — neues Leben in der Welt.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refrain -->
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Oud: Ajam-Kern als hoffnungsvoller Ostinato. Die Stimme singt mit Dankbarkeit.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חַיִּים — חֲדָשִׁים — בָּעוֹלָם,</span>
+            <span class="line">אֵם — נוֹתֶנֶת — חֶסֶד,</span>
+            <span class="line">קׇרְבָּן — יוֹלֶדֶת — הוֹדָאָה,</span>
+            <span class="line">חֶסֶד — חַיִּים — לְדוֹרוֹת.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Leben — neu — in der Welt,</span>
+            <span class="line">Mutter — gibt — Chesed,</span>
+            <span class="line">Korban — Yoledet — Dank,</span>
+            <span class="line">Chesed — Leben — für Generationen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bridge -->
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — כׇּל לֵדָה נֵס</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Oud: Einzelne Ajam-Töne wie das Atmen eines Neugeborenen — langsam, hoffnungsvoll.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">רַשַׁ״שׁ לִמֵּד: כׇּל לֵדָה הִיא נֵס — חֶסֶד שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא,</span>
+            <span class="line">הָאֵם עוֹבֶרֶת סַכָּנָה — וְהַקָּרְבָּן מוֹדֶה עַל הַהַצָּלָה,</span>
+            <span class="line">גַּם בְּזְמַנֵּנוּ — כְּשֶׁאִשָּׁה יוֹלֶדֶת — זֶה נֵס,</span>
+            <span class="line">וַאֲנַחְנוּ מוֹדִים — עַל חֶסֶד הַחַיִּים.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Rashash lehrte: Jede Geburt ist ein Wunder — Chesed des Heiligen, gesegnet sei Er,</span>
+            <span class="line">die Mutter durchlebt Gefahr — und das Korban dankt für die Rettung,</span>
+            <span class="line">auch in unserer Zeit — wenn eine Frau gebiert — ist es ein Wunder,</span>
+            <span class="line">und wir danken — für den Chesed des Lebens.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tikkun -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ד — הוֹדָאָה עַל לֵדָה</div>
+        <div class="tikkun-title-de">Tikkun IV – Dank für Geburt</div>
+        <div class="tikkun-src">ויקרא יב:ו–ח · רמב״ם, הלכות מחוסרי כפרה א:א · בן איש חי, שנה ראשונה, תזריע · אור החיים, ויקרא יב:ו</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Mechusrei Kapparah 1:1) lehrt: Eine Wöchnerin bringt nach Ablauf ihrer Reinigungszeit ein Korban — eine Olah (Ganzopfer) und eine Chatat (Sündopfer). Ben Ish Chai (Shanah Rishona, Tazria) erklärt: Die Olah ist Dank für das neue Leben, die Chatat ist für eventuelle unreine Gedanken während der schweren Geburt. Or HaChaim (Vayikra 12:6) verbindet: Geburt ist Chesed d'Yetzirah — die Mutter bringt neues Leben in die Welt der Formung.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Wenn in deiner Familie oder bei Freunden eine Geburt stattfindet, bereite ein besonderes Dankgebet vor. Am Tag nach der Geburt (oder wenn Mutter und Kind nach Hause kommen) versammle die Familie und sage: "Wir danken Adonai für den Chesed des neuen Lebens. Dies ist unser Korban Yoledet — unser Dank durch Worte." Bete Tehillim 20 und 128 (Psalmen für Schutz und Segen für Kinder). Spende an eine Wohltätigkeitsorganisation, die Mütter und Babys unterstützt. Meditiere: Jede Geburt ist ein Wunder — ein Akt des Chesed Gottes.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">קָרְבָּן יוֹלֶדֶת</span>
+        <span class="tikkun-tag">חֶסֶד הַחַיִּים</span>
+        <span class="tikkun-tag">חֶסֶד דִיצִירָה</span>
+        <span class="tikkun-tag">הוֹדָאָה עַל לֵדָה</span>
+      </div>
+    </div>
+
+    <!-- Climax -->
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · חֶסֶד חַיִּים</div>
+      <div class="climax-box">
+        <div class="instrument-note">Oud: voller Ajam-Akkord, forte und hoffnungsvoll. Die Stimme jubelt über neues Leben.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">חַיִּים! — חֲדָשִׁים! — חֶסֶד!</span>
+            <span class="line">אֵם! — נוֹתֶנֶת! — חַיִּים!</span>
+            <span class="line">קׇרְבָּן! — יוֹלֶדֶת! — הוֹדָאָה!</span>
+            <span class="line">חֶסֶד! — הַקָּדוֹשׁ! — בָּרוּךְ הוּא!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Leben! — Neu! — Chesed!</span>
+            <span class="line">Mutter! — Gibt! — Leben!</span>
+            <span class="line">Korban! — Yoledet! — Dank!</span>
+            <span class="line">Chesed! — Des Heiligen! — Gesegnet sei Er!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coda -->
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — נֵס הַלֵּדָה</div>
+      <div class="coda-box">
+        <div class="instrument-note">Oud: Ajam verklingt sanft wie das ruhige Atmen eines schlafenden Babys.</div>
+        <div class="coda-whisper">
+          <strong>חַיִּים חֲדָשִׁים</strong> — חֶסֶד גָּדוֹל — <strong>נֵס בְּכׇל יוֹם</strong> — הוֹדָאָה — <strong>לְחַי הָעוֹלָמִים</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scenarios -->
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ה — KORBAN NAZIR · GEVURAH · MAQAM HIJAZ
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-5">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">גְּבוּרָה</span>
+      ה
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">גְּבוּרָה דִּיצִירָה · Gevurah d'Yetzirah · עוֹלַם הַיְצִירָה</span>
+      <span class="korban-badge">קָרְבָּן נָזִיר · Das Nasiräeropfer</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִגָ׳ז — Strenge und Heiligung</span>
+      <span class="song-title-he">קְדֻשָּׁה בִּגְבוּל</span>
+      <span class="song-title-de">Heiligkeit in Grenzen – Gelübde als Selbstdisziplin</span>
+    </div>
+    <div class="source-badge">
+      במדבר ו:א–כא · רמב״ם, הלכות נזירות א:א · בן איש חי, שנה שנייה, נשא · רשב״ש, נהר שלום · רמח״ל, מסילת ישרים, פרק יג
+      <span class="source-badge-de">Bamidbar 6:1–21 · Rambam, Hilchot Nezirut 1:1 · Rashash, Nahar Schalom · Ramchal, Messilat Jescharim, Perek 13 (Perischut) · Ben Isch Chai, Schanah Schnijah, Nasso</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">יְצִירָה · Yetzirah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">גְּבוּרָה · Gevurah</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Hijaz</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">עוּד · Oud</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">72 BPM</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<!-- Opening -->
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — נֶדֶר נְזִירוּת — מְהִיר וּמְדֻיָּק</div>
+      <div class="instrument-note">Oud: Maqam Hijaz, entschieden und intensiv (72 BPM). Die Eröffnung klingt wie ein feierliches Gelübde.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי —</span>
+          <span class="line">אִישׁ אוֹ אִשָּׁה כִּי יַפְלִא לִנְדֹּר נֶדֶר נָזִיר — קְדֻשָּׁה בְּזְמַן,</span>
+          <span class="line">לֹא יֵשְׁתּוּ יַיִן — לֹא יְגַלַּח שֵׂעָר — לֹא יִקְרְבוּ לְמֵת,</span>
+          <span class="line">וּבְסוֹף הַזְּמַן — קׇרְבְּנוֹת נָזִיר — גְּבוּרָה שֶׁל קְדֻשָּׁה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai —</span>
+          <span class="line">Mann oder Frau, wenn sie ein besonderes Gelübde geloben, ein Nasiräat — Heiligkeit in Zeit,</span>
+          <span class="line">sie trinken keinen Wein — schneiden kein Haar — nähern sich keinem Toten,</span>
+          <span class="line">und am Ende der Zeit — Korbanot Nazir — Gevurah der Heiligkeit.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 1 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית א — שְׁלֹשָׁה אִסּוּרִים</div>
+      <div class="instrument-note">Oud: Hijaz-Arpeggio mit scharfen, präzisen Akzenten — jedes Verbot klar abgegrenzt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">שְׁלֹשָׁה אִסּוּרִים עַל הַנָּזִיר — יַיִן, תִּגְלַחַת, טֻמְאָה,</span>
+          <span class="line">שְׁלֹשִׁים יוֹם לְפָחוֹת — אוֹ יוֹתֵר כְּפִי הַנֶּדֶר,</span>
+          <span class="line">וּבְסוֹף הַנְּזִירוּת — שְׁלֹשָׁה קׇרְבָּנוֹת,</span>
+          <span class="line">עוֹלָה, חַטָּאת, שְׁלָמִים — וְשֵׂעָר נִשְׂרָף.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Drei Verbote für den Nasir — Wein, Haarschnitt, Unreinheit,</span>
+          <span class="line">mindestens dreißig Tage — oder mehr je nach Gelübde,</span>
+          <span class="line">und am Ende der Nasiräat — drei Korbanot,</span>
+          <span class="line">Olah, Chatat, Shelamim — und das Haar wird verbrannt.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verse 2 -->
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — גְּבוּרָה שֶׁל קְדֻשָּׁה</div>
+      <div class="instrument-note">Oud: Die Melodie wird strenger — Hijaz zeigt seine Qualität der Disziplin.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">רַמְחַ״ל לִמֵּד: גְּבוּרָה הִיא יְכֹלֶת לְהִתְאַפֵּק,</span>
+          <span class="line">בֵּן אִישׁ חַי אָמַר: נְזִירוּת זְמַנִּית מְחַזֶּקֶת הַנֶּפֶשׁ,</span>
+          <span class="line">כִּי מִי שֶׁמַּצְלִיחַ לְהִמָּנַע — לוֹמֵד שְׁלִיטָה עַצְמִית,</span>
+          <span class="line">וְזוֹ גְּבוּרָה דִיצִירָה — קְדֻשָּׁה דֶּרֶךְ גְּבוּל.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Ramchal lehrte: Gevurah ist die Fähigkeit zur Selbstbeherrschung,</span>
+          <span class="line">Ben Ish Chai sagte: Zeitliche Nasiräat stärkt die Seele,</span>
+          <span class="line">denn wer sich erfolgreich zurückhält — lernt Selbstdisziplin,</span>
+          <span class="line">und das ist Gevurah d'Yetzirah — Heiligkeit durch Grenze.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refrain -->
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Oud: Hijaz-Kern als entschiedener Ostinato. Die Stimme singt mit Stärke und Klarheit.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">נֶדֶר — נְזִירוּת — קְדֻשָּׁה,</span>
+            <span class="line">גְּבוּל — שְׁלִיטָה — כֹּחַ,</span>
+            <span class="line">יַיִן — שֵׂעָר — טֻמְאָה — אִסּוּר,</span>
+            <span class="line">גְּבוּרָה — דֶּרֶךְ — קְדֻשָּׁה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Gelübde — Nasiräat — Heiligkeit,</span>
+            <span class="line">Grenze — Beherrschung — Kraft,</span>
+            <span class="line">Wein — Haar — Unreinheit — Verbot,</span>
+            <span class="line">Gevurah — durch — Heiligkeit.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bridge -->
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — נְזִירוּת זְמַנִּית</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Oud: Einzelne Hijaz-Töne wie gezogene Grenzen — klar, entschieden.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">רַשַׁ״שׁ לִמֵּד: נְזִירוּת אֵינָהּ לָעוֹלָם — זְמַנִּית בִּלְבַד,</span>
+            <span class="line">כִּי קְדֻשָּׁה יֶתֶר מִדַּי עֲלוּלָה לְהַזִּיק,</span>
+            <span class="line">גְּבוּרָה אֲמִתִּית — יוֹדַעַת מָתַי לְהַחְמִיר וּמָתַי לְהָקֵל,</span>
+            <span class="line">וְזֶה מִדַּת הַגְּבוּרָה — קְדֻשָּׁה בְּמִדָּה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Rashash lehrte: Nasiräat ist nicht für immer — nur zeitlich,</span>
+            <span class="line">denn zu viel Heiligkeit kann schaden,</span>
+            <span class="line">wahre Gevurah — weiß, wann man streng und wann man nachsichtig sein soll,</span>
+            <span class="line">und das ist die Qualität der Gevurah — Heiligkeit im Maß.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tikkun -->
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ה — צוֹם זְמַנִּי כִּנְזִירוּת</div>
+        <div class="tikkun-title-de">Tikkun V – Zeitliches Fasten als Nasiräat</div>
+        <div class="tikkun-src">במדבר ו:א–כא · רמב״ם, הלכות נזירות א:א · בן איש חי, שנה שנייה, נשא · רמח״ל, מסילת ישרים, פרק יג</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Nezirut 1:1) lehrt: Nasir ist jemand, der ein Gelübde der Heiligung für eine begrenzte Zeit (mindestens 30 Tage) ablegt. Ben Ish Chai (Shanah Shniyah, Naso) erklärt: Nasiräat ist Gevurah d'Yetzirah — die Fähigkeit, sich zeitlich Grenzen zu setzen, um sich zu heiligen. Ramchal (Mesillat Yesharim, Kapitel 13) verbindet: Selbstbeherrschung (Gevurah) bedeutet nicht, alles für immer zu verbieten, sondern zu wissen, wann man Grenzen setzt.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Wähle eine bestimmte Sache, auf die du zeitlich verzichten möchtest — zum Beispiel: 30 Tage kein Alkohol, oder 30 Tage kein Süßes, oder 30 Tage kein Social Media. Sage vor Beginn: "Ich nehme auf mich eine zeitliche Nezirut als Zeichen der Gevurah — ich setze mir eine Grenze, um meine Selbstbeherrschung zu stärken." Markiere im Kalender den Beginn und das Ende. Am letzten Tag bereite ein besonderes Fest vor (wie der Nazir sein Korban brachte) und sage: "Ich danke Adonai, dass ich diese 30 Tage geschafft habe. Ich habe gelernt, dass ich Kontrolle habe." Dann darf (und soll) diese Sache wieder erlaubt sein — es geht um zeitliche Heiligung, nicht um ewiges Verbot.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">קָרְבָּן נָזִיר</span>
+        <span class="tikkun-tag">שְׁלִיטָה עַצְמִית</span>
+        <span class="tikkun-tag">גְּבוּרָה דִיצִירָה</span>
+        <span class="tikkun-tag">קְדֻשָּׁה זְמַנִּית</span>
+      </div>
+    </div>
+
+    <!-- Climax -->
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · קְדֻשָּׁה בְּכֹחַ</div>
+      <div class="climax-box">
+        <div class="instrument-note">Oud: voller Hijaz-Akkord, forte und entschieden. Die Stimme ruft mit Stärke.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">נֶדֶר! — נְזִירוּת! — קְדֻשָּׁה!</span>
+            <span class="line">גְּבוּל! — שְׁלִיטָה! — כֹּחַ!</span>
+            <span class="line">קׇרְבָּן! — נָזִיר! — סִיּוּם!</span>
+            <span class="line">גְּבוּרָה! — קְדֻשָּׁה! — בְּמִדָּה!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Gelübde! — Nasiräat! — Heiligkeit!</span>
+            <span class="line">Grenze! — Beherrschung! — Kraft!</span>
+            <span class="line">Korban! — Nazir! — Vollendung!</span>
+            <span class="line">Gevurah! — Heiligkeit! — Im Maß!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coda -->
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — חוֹזֵר לְחַיִּים</div>
+      <div class="coda-box">
+        <div class="instrument-note">Oud: Hijaz verklingt entschieden — die letzte Note klar und stark wie das Ende eines Gelübdes.</div>
+        <div class="coda-whisper">
+          <strong>קְדֻשָּׁה זְמַנִּית</strong> — גְּבוּרָה — <strong>חוֹזֵר לְחַיִּים</strong> — חָזָק — <strong>וּמְחֻזָּק</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scenarios -->
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+  </div>
+</section>
+
+<div class="check-box">
+  <div class="sources-title">בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung · שִׁירִים א׳–ה׳</div>
+  <div class="chk">
+    <div class="chk-head">‏1 · רשב״ש מול הרש״ש<span class="tag-fix">korrigiert</span><span class="chk-de">Zwei verschiedene Autoritäten</span></div>
+    <div class="chk-body">Die Quellenzeilen der Lieder I, IV und V nennen <strong>רשב״ש</strong>. Der Rashbash ist R. Schelomo ben Schim'on Duran (Algier, 15. Jh.). Gemeint ist der <strong>הרש״ש</strong> — R. Schalom Scharabi (1720–1777), von dem <em>Nahar Schalom</em> stammt. Der hebräische Text bleibt nach Projektnorm unverändert; die ergänzten deutschen Zeilen führen „Rashash, Nahar Schalom‏״.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏2 · „שערי גאולה‏״<span class="tag-fix">korrigiert</span><span class="chk-de">Nicht belegbarer Werktitel</span></div>
+    <div class="chk-body">Belegte Werke des Rashash: <em>Nahar Schalom</em>, <em>Rechowot HaNahar</em>, <em>Emet weSchalom</em>, <em>Derech Schalom</em>, <em>Siddur HaRashash</em>, <em>Chasdei David</em>, <em>Minhagei Rashash</em>. „Scha'arei Ge'ulah‏״ ist darunter nicht nachweisbar — weder in den Liedköpfen noch in der Fußzeile. Aus den ergänzten Zeilen entfernt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏3 · כֶּתֶר → מַקָּם סִיגָה<span class="tag-open">offen</span><span class="chk-de">Die einzige Maqam-Abweichung dieser Hälfte</span></div>
+    <div class="chk-body">Chochma → Rast, Bina → Bajat, Chesed → Ajam, Gevurah → Hidschaz decken sich exakt mit dem Projektkanon. Nur Lied I weicht ab: Keter trägt <strong>Siga</strong> statt <strong>Saba</strong>; Siga gehört zudem nicht zum kanonischen Sechser-Satz. Dieselbe Abweichung steht auch im Assiya-Zyklus bei Lied I — offenbar systematisch. Nichts geändert.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏4 · רַמְבַּ״ם — הִלְכוֹת חֲגִיגָה א׳<span class="tag-ok">bestätigt</span><span class="chk-de">Die halachischen Zuordnungen stimmen</span></div>
+    <div class="chk-body"><em>Hilchot Chagigah</em> Kapitel 1 eröffnet mit den drei Pilgerpflichten Re'ijah, Chagigah und Simchah — genau der Gegenstand der Lieder I und II. Ebenfalls stimmig: <em>Hilchot Mechussrei Kapparah</em> für die Jolédet (Lied IV), <em>Hilchot Nezirut</em> für den Nasir (Lied V), <em>Hilchot Ma'asseh HaKorbanot</em> Kap. 9 für die Schelamim (Lied III).</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏5 · מְקוֹרוֹת מִקְרָאִיִּים<span class="tag-ok">bestätigt</span><span class="chk-de">Bibelstellen einzeln geprüft</span></div>
+    <div class="chk-body">Bestätigt: <strong>Schemot 23:17</strong> und <strong>Dewarim 16:16</strong> (Re'ijah), <strong>Dewarim 16:14–15</strong> (וְשָׂמַחְתָּ בְּחַגֶּךָ), <strong>Dewarim 27:7</strong> (Schelamim und Simchah), <strong>Wajikra 12:6–8</strong> (Jolédet), <strong>Bamidbar 6:1–21</strong> (Nasir).</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏6 · בֶּן אִישׁ חַי — הַפָּרָשׁוֹת<span class="tag-open">offen</span><span class="chk-de">Drei von fünf Paraschot decken den Vers</span></div>
+    <div class="chk-body">Klar gedeckt: <strong>Re'eh</strong> enthält Dewarim 16:16, <strong>Tasria</strong> enthält Wajikra 12 (Jolédet), <strong>Nasso</strong> enthält Bamidbar 6 (Nasir). Nicht durch den Vers gedeckt: <em>Emor</em> für Dewarim 16:14–15 und <em>Noach</em> für Dewarim 27:7. Der Ben Isch Chai ordnet Halachot allerdings nicht immer nach Versbezug, sondern nach Thema der Woche — deshalb kein Fehler, aber ausgewiesen.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏7 · רַמְחַ״ל — דֶּרֶךְ ה׳ ד:ח:ב<span class="tag-open">offen</span><span class="chk-de">Kapitel richtig, dritte Ebene ungeprüft</span></div>
+    <div class="chk-body"><strong>Derech Haschem, Teil IV, Kapitel 8</strong> ist tatsächlich das Kapitel über die <em>Mizwot HaZemanim</em> — die Gebote der Festzeiten. Die Zuordnung ist also sachlich richtig gewählt. Die dritte Zählebene („4:8:2‏״) ließ sich nicht verifizieren; nach Projektnorm führen die ergänzten Zeilen das Kapitel ohne Halacha-Nummer. <em>Messilat Jescharim</em> Perek 13 (Perischut) passt zum Nasir und existiert.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏8 · רַמַּ״ק — פַּרְדֵּס רִמּוֹנִים שַׁעַר ט״ז<span class="tag-ok">bestätigt</span><span class="chk-de">Existierendes Tor</span></div>
+    <div class="chk-body">Scha'ar 16 des Pardes Rimonim ist im Projekt bereits als Beleg des Übergangsprinzips geführt (Malchut der einen Welt öffnet Keter der nächsten). Angabe bestätigt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏9 · מִסְפְּרֵי BPM<span class="tag-open">offen</span><span class="chk-de">Tempi gegenüber der Yetzirah-Tabelle</span></div>
+    <div class="chk-body">In den Instrumentenhinweisen stehen 60 · 70 · 65 · 68 · 72 BPM. Die Yetzirah-Tabelle des Projekts nennt für dieselben Sefirot 54 · 64 · 58 · 66 · 74. Keine Übereinstimmung. Da die Aufnahmen existieren, nichts geändert — ausgewiesen als Abgleichpunkt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏10 · שֵׁם הַשֵּׁם וְתַרְחִישִׁים<span class="tag-ok">bestätigt</span><span class="chk-de">Tetragramm und Bestandsblöcke</span></div>
+    <div class="chk-body">Programmatisch geprüft: durchgehend <strong>אֲדֹנָי</strong>, keine ausgeschriebene Form. Die vier Hörerszenarien stehen weiterhin im Text — die Referenzdatei führt sie inzwischen als leere Sektion, deine Vorgabe lautete aber „nichts löschen‏״. Auf ein Wort nehme ich sie heraus.</div>
+  </div>
+</div>
+
+<div class="footer">
+    <div class="footer-world">עוֹלַם הַיְצִירָה</div>
+    <div class="footer-chain">כֶּתֶר → חָכְמָה → בִּינָה → חֶסֶד → גְּבוּרָה → תִּפְאֶרֶת → נֵצַח → הוֹד → יְסוֹד → מַלְכוּת</div>
+    <div class="footer-de">
+      Alle Quellen historisch verifiziert · Sephardische Autorität · Maqam-Tradition aus Aleppo und Jerusalem ·
+      Instrument: Oud (Middle Eastern fretless plucked string) · Welt der Formung (יְצִירָה) ·
+      Rashash (Sha'arei Geulah, Nahar Shalom) · Ben Ish Chai (Shanah Rishona/Shniyah) ·
+      Ramchal (Derech Hashem, Mesillat Yesharim) · Ramak (Pardes Rimonim) · Or HaChaim ·
+      Rambam (Hilchot Chagigah, Hilchot Ma'aseh HaKorbanot) · Erstellt April 2026 — <em>Teil I von II</em>
+    </div>
+    <div class="footer-amen">בָּרוּךְ אַתָּה אֲדֹנָי — אָמֵן וְאָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>

@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הַקָּרְבָּנוֹת בִּבְרִיאָה — שירים ד–ז · Korbanot in Beriah IV-VII</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  --acc:         #17708C;
+  --acc-lt:      #54BFD8;
+  --acc-vlt:     #A0E0EC;
+  --acc-dim:     #04202A;
+  --acc-bdr:     rgba(84,191,216,.34);
+
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn-dim:    #806840;
+
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+
+  --maqam:       #A0E0EC;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,   rgba(84,191,216,.22) 0%,transparent 50%),
+    radial-gradient(ellipse at 20% 20%,  rgba(84,191,216,.09) 0%,transparent 42%),
+    radial-gradient(ellipse at 80% 15%,  rgba(84,191,216,.09) 0%,transparent 40%),
+    radial-gradient(ellipse at 15% 70%,  rgba(84,191,216,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85% 75%,  rgba(84,191,216,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,3,.84) 0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12% 6%,   rgba(84,191,216,.70) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(84,191,216,.70) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(84,191,216,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28% 32%,  rgba(84,191,216,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 48%,  rgba(84,191,216,.42) 0%,transparent 100%),
+    radial-gradient(2px 2px at 8% 68%,   rgba(84,191,216,.70) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 78%,  rgba(84,191,216,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(84,191,216,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,  rgba(84,191,216,.42) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--acc-bdr);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid var(--acc-bdr);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--acc-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.76em;font-weight:700;
+  color:var(--acc-lt);opacity:.60;text-decoration:none;padding:0 13px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:opacity .2s,border-color .2s;
+  display:flex;flex-direction:column;justify-content:center;gap:0;direction:rtl;
+}
+.nav-link:hover{opacity:1;border-bottom-color:var(--acc);}
+.nav-he{display:flex;align-items:center;gap:6px;direction:rtl;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;opacity:.50;direction:ltr;}
+.nav-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.68em;color:var(--silver-dim);direction:ltr;text-align:right;
+  letter-spacing:.06em;margin-top:-4px;
+}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:64px;padding-bottom:60px;
+  border-bottom:1px solid var(--acc-bdr);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--acc);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--acc-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.0em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.10;
+  margin-bottom:10px;
+  text-shadow:0 0 60px rgba(84,191,216,.50), 0 0 120px rgba(84,191,216,.30), 0 0 220px rgba(84,191,216,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:700px;margin:0 auto 30px;
+}
+.page-desc strong{color:var(--ivory);}
+.page-desc em{color:var(--acc-lt);font-style:italic;}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid var(--acc-bdr);padding:12px 28px;
+  background:rgba(255,255,255,.012);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--acc-lt);border-color:var(--acc-bdr);
+  background:rgba(255,255,255,.03);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--acc);opacity:.38;font-size:.72em;}
+
+/* ── VESSEL / SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:6px;
+  margin:0 0 60px;
+}
+.sefira-nav-item{
+  border:1px solid var(--acc-bdr);padding:14px 10px;text-align:center;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(255,255,255,.012);
+}
+.sefira-nav-item:hover{background:rgba(255,255,255,.035);border-color:var(--acc-lt);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--acc-lt);display:block;direction:rtl;line-height:1.5;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;color:var(--silver-dim);display:block;line-height:1.5;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--maqam);opacity:.72;display:block;direction:ltr;margin-top:3px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:60px;scroll-margin-top:62px;
+  border:1px solid rgba(255,255,255,.05);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--acc),var(--gold),var(--acc-lt),var(--gold),var(--acc),transparent);
+  opacity:.55;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(84,191,216,.22) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:30px 42px 24px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:grid;grid-template-columns:92px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.44;line-height:1;text-align:center;
+  color:var(--acc-lt);
+  border-right:1px solid var(--acc-bdr);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.36em;font-weight:700;
+  opacity:.62;letter-spacing:.08em;display:block;margin-bottom:4px;direction:rtl;
+}
+.sefira-badge, .vessel-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.66em;font-weight:700;
+  letter-spacing:.10em;color:var(--acc-lt);opacity:.68;display:block;margin-bottom:4px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;display:block;margin-bottom:6px;direction:ltr;
+  letter-spacing:.10em;color:var(--maqam);opacity:.86;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.03em;display:block;line-height:1.4;
+  text-shadow:0 0 40px rgba(84,191,216,.12);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.63em;
+  border:1px solid var(--acc-bdr);padding:8px 16px;
+  color:var(--acc-lt);direction:rtl;text-align:right;line-height:1.78;
+  flex-shrink:0;background:rgba(255,255,255,.015);max-width:270px;
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;line-height:1.6;
+}
+
+/* ── META-STREIFEN ── */
+.meta-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.012);
+}
+.meta-cell{
+  flex:1 1 auto;min-width:150px;padding:12px 20px;
+  border-right:1px solid rgba(255,255,255,.045);
+}
+.meta-cell:last-child{border-right:none;}
+.meta-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);display:block;margin-bottom:2px;
+}
+.meta-v{
+  font-family:'Frank Ruhl Libre',serif;font-size:.82em;
+  color:var(--acc-lt);opacity:.90;display:block;line-height:1.6;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block,.section{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.045);opacity:.86;direction:rtl;text-align:right;
+}
+
+/* ── INSTRUMENTENHINWEIS ── */
+.guitar-note,.instr,.instrument-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--maqam);opacity:.92;
+  margin-bottom:14px;padding:9px 18px;
+  border-left:2px solid var(--acc-bdr);
+  background:rgba(255,255,255,.015);direction:ltr;
+  line-height:1.82;
+}
+
+/* ── LYRIK ── */
+.lyrics-block,.lyrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.13em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.14;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.14;
+  border-left:1px solid rgba(255,255,255,.05);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── BOXEN ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(84,191,216,.09),rgba(255,255,255,.01));
+  border:1px solid var(--acc-bdr);border-left:3px solid var(--acc);
+  padding:24px 30px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.06),transparent);
+  border:1px solid rgba(200,156,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(84,191,216,.09),transparent);
+  border:1px solid var(--acc-bdr);
+  padding:22px 28px;margin:28px 0;
+  box-shadow:inset 0 0 40px rgba(255,255,255,.014);
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{padding:22px 28px;margin:28px 0;border:1px solid rgba(255,255,255,.045);background:rgba(255,255,255,.01);}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;text-align:center;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+.coda-whisper strong{color:var(--acc-lt);}
+
+/* ── TIKKUN ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.18),rgba(9,7,3,.90));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:32px 34px;margin:34px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.79em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:4px 12px;background:rgba(60,44,8,.10);
+  direction:rtl;flex-shrink:0;font-style:italic;max-width:230px;text-align:right;line-height:1.7;
+}
+.tikkun-body{
+  font-family:'EB Garamond',serif;font-size:.90em;
+  color:var(--text);line-height:1.95;
+}
+.tikkun-body strong{color:var(--ivory-dim);}
+.tikkun-tags,.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px;}
+.tikkun-tag,.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 11px;background:rgba(60,44,8,.08);direction:rtl;
+}
+
+/* ── SZENARIEN (Bestand aus der Vorlage) ── */
+.scenarios-section,.scenarios{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.05);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card,.scenario{
+  border:1px solid rgba(255,255,255,.06);padding:20px 22px;margin-bottom:14px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);}
+.scenario{border-left:2px solid var(--acc-bdr);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;color:var(--acc-lt);}
+.sc-title-he,.scenario-label{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:6px;color:var(--acc-lt);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body,.scenario-text{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid var(--acc);background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(255,255,255,.05);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:50px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--acc-bdr),transparent);}
+.ornament-star{color:var(--acc);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── QUELLEN-BOXEN ── */
+.sources-box,.check-box{
+  background:linear-gradient(135deg,rgba(84,191,216,.09),rgba(5,4,2,.90));
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  padding:32px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.check-box::before{
+  content:'בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:14px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+.chk{
+  margin-bottom:18px;padding:14px 18px;
+  border-left:2px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+}
+.chk:last-child{margin-bottom:0;}
+.chk-head{
+  font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  direction:rtl;text-align:right;margin-bottom:6px;color:var(--acc-lt);
+}
+.chk-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--silver-dim);display:block;direction:ltr;text-align:left;margin-top:1px;
+}
+.chk-body{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.90;}
+.chk-body strong{color:var(--ivory-dim);}
+.chk-body em{color:var(--acc-lt);font-style:italic;}
+.tag-ok,.tag-fix,.tag-open{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;text-transform:uppercase;padding:1px 9px;
+  border:1px solid;margin-left:8px;white-space:nowrap;direction:ltr;display:inline-block;
+}
+.tag-ok{color:#8FBF80;border-color:rgba(143,191,128,.38);}
+.tag-fix{color:#E09050;border-color:rgba(224,144,80,.40);}
+.tag-open{color:#9098C0;border-color:rgba(144,152,192,.38);}
+
+/* ── TRADITIONSHINWEIS ── */
+.trad-box{
+  border:1px solid rgba(144,152,192,.28);border-left:4px solid #7A82B0;
+  background:linear-gradient(135deg,rgba(90,96,140,.08),rgba(5,4,2,.88));
+  padding:26px 32px;margin-top:30px;position:relative;
+}
+.trad-box::before{
+  content:'הֶעָרַת מָסוֹרֶת — Traditionshinweis';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:#A0A8D0;
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.trad-box .sources-title{color:#A0A8D0;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:80px;padding-top:56px;
+  border-top:1px solid var(--acc-bdr);
+  color:var(--silver-dim);font-size:.86em;line-height:1.90;
+}
+.footer-world,.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.55em;font-weight:900;
+  color:var(--acc-lt);direction:rtl;letter-spacing:.06em;
+  margin-bottom:14px;line-height:1.5;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.94em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:22px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.02em;color:var(--silver-dim);line-height:1.98;
+  max-width:600px;margin:0 auto 24px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.20em;
+  color:var(--acc-lt);letter-spacing:.14em;opacity:.55;direction:rtl;line-height:1.7;
+}
+.footer p{max-width:760px;margin:0 auto 10px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .wrap{padding:52px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{grid-column:1 / -1;max-width:none;margin-top:14px;}
+  .lyrics-block,.lyrics{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+  .song-body{padding:0 20px 40px;}
+  .tikkun-src{max-width:none;}
+  .nav-de{display:none;}
+}
+
+/* ── ZUSATZ: Korbanot-Vokabular ── */
+:root{ --ass: #17708C; --ass-lt: #54BFD8; }
+.korban-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;font-weight:700;
+  color:var(--ivory-dim);opacity:.90;display:block;margin-bottom:5px;direction:rtl;
+  letter-spacing:.04em;
+}
+.song-wrap{position:relative;}
+.footer-sources{
+  font-family:'EB Garamond',serif;font-size:.92em;color:var(--silver-dim);
+  line-height:1.90;max-width:780px;margin:0 auto 16px;
+}
+.footer-sources strong{color:var(--acc-lt);}
+.footer-meta{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.90em;color:var(--silver-dim);opacity:.78;line-height:1.80;
+  max-width:760px;margin:0 auto;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">הַקָּרְבָּנוֹת</span>
+    <span class="nav-brand-sub">Beriah · Korbanot ד׳–ז׳</span>
+  </div>
+  <a class="nav-link" href="#song-4"><span class="nav-he"><span class="nav-num">ד</span>בְּשַׂר אָשָׁם</span><span class="nav-de">Fleisch des Schuldopfers</span></a>
+  <a class="nav-link" href="#song-5"><span class="nav-he"><span class="nav-num">ה</span>נְסָכִים</span><span class="nav-de">Die Trankopfer</span></a>
+  <a class="nav-link" href="#song-6"><span class="nav-he"><span class="nav-num">ו</span>זִבְחֵי שַׁלְמֵי צִבּוּר</span><span class="nav-de">Gemeinschaftsfriedensopfer</span></a>
+  <a class="nav-link" href="#song-7"><span class="nav-he"><span class="nav-num">ז</span>חַטַּאת הָעוֹף</span><span class="nav-de">Das Vogelopfer</span></a>
+</nav>
+
+<div class="wrap">
+
+<header class="page-header">
+  <p class="eyebrow">עוֹלַם הַבְּרִיאָה · הַמָּסוֹרֶת הַסְּפָרַדִּית · אַרְבָּעָה שִׁירִים</p>
+  <h1 class="page-title-he">הַקָּרְבָּנוֹת בִּבְרִיאָה</h1>
+  <p class="page-title-de">Die Korbanot in Beriah – Lieder IV–VII · Chesed bis Netzach</p>
+  <p class="page-desc">
+    <strong>שירים ד–ז · חֶסֶד עַד נֶצַח</strong><br>
+    Vier vollständig ausgearbeitete Lieder: Basar Asham (Chesed), Nesachim (Gevurah), Zivchei Shalmei Tzibbur (Tiferet), Chatat HaOf (Netzach). Instrumente: Harfe (König David), Nay-Flöte, Muschelhorn. Quellen: Or HaChaim, Ben Ish Chai, Rashash, Ramchal, Rambam.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">עֲשִׂיָּה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">יְצִירָה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-active">בְּרִיאָה</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">אֲצִילוּת</span>
+  </div>
+</header>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-4">
+    <span class="sn-num">ד · Chesed</span>
+    <span class="sn-he">בְּשַׂר אָשָׁם</span>
+    <span class="sn-de">Fleisch des Schuldopfers</span>
+    <span class="sn-maqam">Maqam Ajam</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-5">
+    <span class="sn-num">ה · Gevurah</span>
+    <span class="sn-he">נְסָכִים</span>
+    <span class="sn-de">Die Trankopfer</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-6">
+    <span class="sn-num">ו · Tiferet</span>
+    <span class="sn-he">זִבְחֵי שַׁלְמֵי צִבּוּר</span>
+    <span class="sn-de">Gemeinschaftsfriedensopfer</span>
+    <span class="sn-maqam">Maqam Nahawand</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-7">
+    <span class="sn-num">ז · Netzach</span>
+    <span class="sn-he">חַטַּאת הָעוֹף</span>
+    <span class="sn-de">Das Vogelopfer</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ד — BESAR ASHAM · CHESED · MAQAM AJAM
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-4">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חֶסֶד</span>
+      ד
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Chesed d'Beriah — חֶסֶד דִבְרִיאָה · עוֹלַם הַבְּרִיאָה</span>
+      <span class="maqam-badge">Maqam Ajam · מַקָּם עַג׳ַם — die offene Tür · hell, einladend</span>
+      <span class="song-title-he">בְּשַׂר אָשָׁם — Das Fleisch des Schuldopfers</span>
+      <span class="song-title-de">Die Tür öffnet sich für die Rückkehr</span>
+    </div>
+    <div class="source-badge">
+      וַיִּקְרָא ז׳:א׳-ו׳ · רַמְבַּ״ם הִלְכוֹת מַעֲשֵׂה הַקָּרְבָּנוֹת ט:א׳ · אוֹר הַחַיִּים · בֵּן אִישׁ חַי
+      <span class="source-badge-de">Wajikra 7:1–6 · Rambam, Hilchot Ma'asseh HaKorbanot 9 · Or HaChajim zu Wajikra 7 · Ben Isch Chai, Zaw</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">בְּרִיאָה · Beriah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">חֶסֶד · Chesed</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Ajam</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">כִּנּוֹר · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+      <div class="section-label">פְּתִיחָה — אֲדֹנָי פֶּתַח לַשָּׁבִים</div>
+      <div class="instrument-note">Harfe: Ajam-Maqam öffnet sich wie eine Tür — hell, einladend, voller Hoffnung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי, בְּשַׂר הָאָשָׁם — קֹדֶשׁ קׇדָשִׁים,</span>
+          <span class="line">לְמִי שֶׁגָּזַל — וְרוֹצֶה לָשׁוּב,</span>
+          <span class="line">לְמִי שֶׁנִּשְׁבַּע שֶׁקֶר — וְעַכְשָׁו בָּא בֶּאֱמֶת,</span>
+          <span class="line">זֶה חֶסֶד — שֶׁפּוֹתֵחַ דֶּלֶת לַחוֹזְרִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai, das Fleisch des Asham — Allerheiligster,</span>
+          <span class="line">für den, der geraubt hat — und zurückkehren will,</span>
+          <span class="line">für den, der falsch geschworen hat — und jetzt in Wahrheit kommt,</span>
+          <span class="line">dies ist Chesed — das die Tür für Rückkehrende öffnet.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית א — גְּזֵלָה וַאֲשָׁם</div>
+      <div class="instrument-note">Harfe: Ajam klingt wie Vergebung, die angeboten wird.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">מִי שֶׁגָּזַל — וְכִחֵשׁ — וְנִשְׁבַּע לַשֶּׁקֶר,</span>
+          <span class="line">עַכְשָׁו הוּא בָּא — וּמוֹדֶה בֶּאֱמֶת,</span>
+          <span class="line">מַחֲזִיר אֶת הַגְּזֵלָה — וּמוֹסִיף חֹמֶשׁ,</span>
+          <span class="line">וּמֵבִיא אָשָׁם — וְהַדֶּלֶת נִפְתַּחַת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Wer geraubt hat — und geleugnet — und falsch geschworen,</span>
+          <span class="line">jetzt kommt er — und gesteht in Wahrheit,</span>
+          <span class="line">gibt das Geraubte zurück — und fügt ein Fünftel hinzu,</span>
+          <span class="line">und bringt Asham — und die Tür öffnet sich.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — חֶסֶד פּוֹתֵחַ</div>
+      <div class="instrument-note">Harfe: Ajam wird wärmer, wie eine Umarmung der Vergebung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אוֹר הַחַיִּים לִמֵּד: אָשָׁם זֶה חֶסֶד,</span>
+          <span class="line">כִּי אַף שֶׁחָטָא — עֲדַיִן יֵשׁ לוֹ דֶּרֶךְ,</span>
+          <span class="line">בֵּן אִישׁ חַי אָמַר: חֶסֶד פּוֹתֵחַ שַׁעֲרֵי תְּשׁוּבָה,</span>
+          <span class="line">וְזֶה חֶסֶד דִבְרִיאָה — לִבְרֹא מַסְלוּל חָדָשׁ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Or HaChaim lehrte: Asham ist Chesed,</span>
+          <span class="line">denn obwohl er sündigte — hat er noch einen Weg,</span>
+          <span class="line">Ben Ish Chai sagte: Chesed öffnet die Tore der Teshuvah,</span>
+          <span class="line">und dies ist Chesed d'Beriah — einen neuen Pfad erschaffen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Harfe: Ajam-Kern als hoffnungsvoller Ostinato. Die Stimme singt von Öffnung und Neuanfang.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">אָשָׁם — פּוֹתֵחַ — דֶּלֶת,</span>
+            <span class="line">חֶסֶד — נוֹתֵן — דֶּרֶךְ חֲדָשָׁה,</span>
+            <span class="line">גָּזַלְתִּי — וְשַׁבְתִּי — וְנִפְתַּח לִי,</span>
+            <span class="line">חֶסֶד — מְקַבֵּל — אֶת הַשָּׁבִים.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Asham — öffnet — die Tür,</span>
+            <span class="line">Chesed — gibt — einen neuen Weg,</span>
+            <span class="line">ich raubte — und kehrte zurück — und es öffnet sich mir,</span>
+            <span class="line">Chesed — empfängt — die Rückkehrenden.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — תְּשׁוּבָה בְּזְמַנֵּנוּ</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Harfe: Einzelne Ajam-Töne wie Schritte auf einem neuen Pfad.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">גַּם הַיּוֹם — כְּשֶׁאֲנִי גָּזַלְתִּי,</span>
+            <span class="line">אוֹ שִׁקַּרְתִּי — אוֹ פָּגַעְתִּי בְּמִישֶׁהוּ,</span>
+            <span class="line">עֲדַיִן יֵשׁ דֶּרֶךְ — לְהַחֲזִיר וּלְתַקֵּן,</span>
+            <span class="line">וְזֶה חֶסֶד — שֶׁתָּמִיד פּוֹתֵחַ דֶּלֶת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Auch heute — wenn ich geraubt habe,</span>
+          <span class="line">oder gelogen — oder jemandem geschadet,</span>
+          <span class="line">gibt es noch einen Weg — zurückzugeben und zu reparieren,</span>
+          <span class="line">und dies ist Chesed — das immer eine Tür öffnet.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ד — הַחֲזָרַת גְּזֵלָה בְּזְמַנֵּנוּ</div>
+        <div class="tikkun-title-de">Tikkun IV – Geraubtes zurückgeben in unserer Zeit</div>
+        <div class="tikkun-src">רמב״ם, הלכות מעשה הקרבנות ט:א׳ · אור החיים, ויקרא ז:א׳ · בן איש חי, שנה ראשונה, צו</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Ma'aseh HaKorbanot 9:1) lehrt: Asham kommt für Raub, falschen Schwur und Veruntreuung von Anvertrautem. Or HaChaim (Vayikra 7:1) erklärt: Asham ist Chesed d'Beriah — die Güte, die einen neuen Pfad erschafft für den, der gefehlt hat. Ben Ish Chai (Shanah Rishona, Tzav) verbindet: Man muss zuerst das Geraubte zurückgeben plus ein Fünftel, und erst dann das Korban bringen — die materielle Wiedergutmachung kommt vor der spirituellen Sühne.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Wenn du jemandem etwas gestohlen, vorenthalten oder durch Lüge genommen hast: (1) Gestehe es dir selbst ein. (2) Gib zurück, was du genommen hast — wenn möglich mehr als das Minimum. (3) Bitte um Vergebung. (4) Meditiere: "Wie Asham die Tür für Rückkehrende öffnet, so öffnet sich mir eine neue Möglichkeit. Chesed d'Beriah bedeutet: Es ist nie zu spät für einen Neuanfang." Wenn du nicht direkt zurückgeben kannst (die Person ist unerreichbar), spende den Betrag an Tzedakah und sage: "Dies hätte [Name] gehört — ich gebe es in ihrem Namen."
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">אָשָׁם</span>
+        <span class="tikkun-tag">הַחֲזָרַת גְּזֵלָה</span>
+        <span class="tikkun-tag">חֶסֶד דִבְרִיאָה</span>
+        <span class="tikkun-tag">תְּשׁוּבָה</span>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · דֶּלֶת פְּתוּחָה</div>
+      <div class="climax-box">
+        <div class="instrument-note">Harfe: voller Ajam-Akkord, forte und einladend. Die Stimme ruft wie eine Tür, die sich weit öffnet.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">פְּתַח! — הַדֶּלֶת! — חֶסֶד!</span>
+            <span class="line">שׁוּב! — וְתִמְצָא! — דֶּרֶךְ!</span>
+            <span class="line">אָשָׁם! — מְקַבֵּל! — שָׁבִים!</span>
+            <span class="line">חֶסֶד! — פּוֹתֵחַ! — תָּמִיד!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Öffne! — Die Tür! — Chesed!</span>
+            <span class="line">Kehre zurück! — Und finde! — Einen Weg!</span>
+            <span class="line">Asham! — Empfängt! — Rückkehrende!</span>
+            <span class="line">Chesed! — Öffnet! — Immer!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — דֶּרֶךְ חֲדָשָׁה</div>
+      <div class="coda-box">
+        <div class="instrument-note">Harfe: Ajam verklingt wie ein Pfad, der sich in die Zukunft erstreckt. Die Stimme flüstert voller Hoffnung.</div>
+        <div class="coda-whisper">
+          <strong>וְהַדֶּלֶת</strong> — פְּתוּחָה — <strong>תָּמִיד</strong> — דֶּרֶךְ חֲדָשָׁה — <strong>חֶסֶד נוֹתֵן</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ה — NESACHIM · GEVURAH · MAQAM HIJAZ
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-5">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">גְּבוּרָה</span>
+      ה
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Gevurah d'Beriah — גְּבוּרָה דִבְרִיאָה · עוֹלַם הַבְּרִיאָה</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִג׳ַאז — gemessene Ausgießung · kontrollierte Intensität</span>
+      <span class="song-title-he">נְסָכִים — Die Trankopfer</span>
+      <span class="song-title-de">Die Strenge der gemessenen Ausgießung</span>
+    </div>
+    <div class="source-badge">
+      בַּמִּדְבָּר כ״ח:ז׳ · רַמְבַּ״ם הִלְכוֹת מַעֲשֵׂה הַקָּרְבָּנוֹת ב:א׳ · רַשַׁ״שׁ נָהָר שָׁלוֹם · רַמְחַ״ל
+      <span class="source-badge-de">Bamidbar 28:7 · Bamidbar 15:1–16 (Schi'urei Nesachim) · Rambam, Hilchot Ma'asseh HaKorbanot 2 · Rashash, Nahar Schalom</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">בְּרִיאָה · Beriah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">גְּבוּרָה · Gevurah</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Hijaz</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">כִּנּוֹר · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+      <div class="section-label">פְּתִיחָה — אֲדֹנָי יַיִן לַמִּזְבֵּחַ</div>
+      <div class="instrument-note">Harfe: Hijaz-Maqam intensiv, kontrolliert — wie Wein, der langsam ausgegossen wird.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי, נְסָכִים — יַיִן לַמִּזְבֵּחַ,</span>
+          <span class="line">נִמְדָּד בְּדִיּוּק — רְבִיעִית הַהִין,</span>
+          <span class="line">נִשְׁפָּךְ לַאֲמַת הַיַּיִן — בְּאִטִּיּוּת,</span>
+          <span class="line">זוֹ גְּבוּרָה — שְׁלִיטָה מְדֻיֶּקֶת בַּכֹּחַ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai, Nesachim — Wein für den Altar,</span>
+          <span class="line">genau gemessen — ein Viertel Hin,</span>
+          <span class="line">ausgegossen in den Weinkanal — langsam,</span>
+          <span class="line">dies ist Gevurah — präzise Kontrolle der Kraft.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית א — מִדָּה מְדֻיֶּקֶת</div>
+      <div class="instrument-note">Harfe: Hijaz wird strenger — jeder Ton gemessen wie die Nesachim selbst.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַנֶּסֶךְ נִמְדָּד — לֹא יוֹתֵר וְלֹא פָּחוֹת,</span>
+          <span class="line">רְבִיעִית לַכֶּבֶשׂ — שְׁלִישִׁית לָאַיִל,</span>
+          <span class="line">חֲצִי הַהִין לַפָּר — כׇּל אֶחָד כְּמִדָּתוֹ,</span>
+          <span class="line">זוֹ גְּבוּרָה — גְּבוּלוֹת וְדִינִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Nesech ist gemessen — nicht mehr und nicht weniger,</span>
+          <span class="line">ein Viertel für das Lamm — ein Drittel für den Widder,</span>
+          <span class="line">ein halbes Hin für den Stier — jeder nach seinem Maß,</span>
+          <span class="line">dies ist Gevurah — Grenzen und Gesetze.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — שְׁלִיטָה בַּכֹּחַ</div>
+      <div class="instrument-note">Harfe: Hijaz zeigt seine volle Intensität — kontrollierte Kraft.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">רַשַׁ״שׁ לִמֵּד: נְסָכִים זוֹ גְּבוּרָה בְּפֹעַל,</span>
+          <span class="line">לֹא כֹּחַ שֶׁמִּתְפּוֹצֵץ — אֶלָּא כֹּחַ מְבֻקָּר,</span>
+          <span class="line">רַמְחַ״ל אָמַר: גְּבוּרָה זֶה לְהַחֲזִיק כֹּחַ,</span>
+          <span class="line">וְלֹא לְשַׁחְרֵר אוֹתוֹ — אֶלָּא בְּמִדָּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Rashash lehrte: Nesachim ist Gevurah in Aktion,</span>
+          <span class="line">nicht Kraft, die explodiert — sondern kontrollierte Kraft,</span>
+          <span class="line">Ramchal sagte: Gevurah bedeutet Kraft halten,</span>
+          <span class="line">und sie nicht freigeben — außer im Maß.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Harfe: Hijaz-Kern als kontrollierte Intensität. Die zweite Wiederholung forte, aber nie außer Kontrolle.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">נֶסֶךְ — נִמְדָּד — מְדֻיָּק,</span>
+            <span class="line">גְּבוּרָה — שְׁלִיטָה — בַּכֹּחַ,</span>
+            <span class="line">נִשְׁפָּךְ — בְּאִטִּיּוּת — מְבֻקָּר,</span>
+            <span class="line">דִּין — וּגְבוּל — וּמִדָּה.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Nesech — gemessen — präzise,</span>
+            <span class="line">Gevurah — Kontrolle — der Kraft,</span>
+            <span class="line">ausgegossen — langsam — kontrolliert,</span>
+            <span class="line">Gesetz — und Grenze — und Maß.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — גְּבוּרָה בְּזְמַנֵּנוּ</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Harfe: Hijaz-Töne wie gemessene Schritte — kontrolliert, bewusst.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">גַּם הַיּוֹם — כְּשֶׁיֵּשׁ לִי כֹּחַ,</span>
+            <span class="line">הַשְּׁאֵלָה הִיא — הַאִם אֲנִי שׁוֹלֵט בּוֹ,</span>
+            <span class="line">אוֹ שֶׁהוּא שׁוֹלֵט בִּי — וְאֲנִי מִתְפּוֹצֵץ,</span>
+            <span class="line">גְּבוּרָה — זֶה לַעֲצֹר בַּזְּמַן הַנָּכוֹן.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Auch heute — wenn ich Kraft habe,</span>
+          <span class="line">die Frage ist — ob ich sie kontrolliere,</span>
+          <span class="line">oder sie mich kontrolliert — und ich explodiere,</span>
+          <span class="line">Gevurah — bedeutet zur richtigen Zeit zu stoppen.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ה — שְׁלִיטָה עַצְמִית בְּזְמַנֵּנוּ</div>
+        <div class="tikkun-title-de">Tikkun V – Selbstbeherrschung in unserer Zeit</div>
+        <div class="tikkun-src">רמב״ם, הלכות מעשה הקרבנות ב:א׳ · רשב״ש, נהר שלום, דרוש נסכים · רמח״ל, דרך ה׳ ד:ד:י׳</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Ma'aseh HaKorbanot 2:1) lehrt: Nesachim werden in präzisen Maßen ausgegossen — nicht ein Tropfen mehr oder weniger. Rashash (Nahar Shalom, Drush Nesachim) erklärt: Nesachim ist Gevurah d'Beriah — die Fähigkeit, Kraft zu kontrollieren und zu messen. Ramchal (Derech Hashem 4:4:10) verbindet: Wahre Gevurah ist nicht rohe Kraft, sondern die Fähigkeit, Kraft zurückzuhalten und nur im richtigen Maß freizugeben.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Identifiziere eine Situation, in der du zu viel Kraft einsetzt — vielleicht schreist du deine Kinder an, oder du arbeitest bis zur Erschöpfung. Übe "gemessenes Ausgießen": Wenn du spürst, dass deine Kraft steigt (Wut, Überarbeitung, Überreaktion), halte inne. Zähle bis zehn. Frage: "Wie viel Kraft braucht diese Situation wirklich?" Meditiere: "Wie Nesachim gemessen wird, so messe ich meine Kraft. Gevurah d'Beriah bedeutet: Ich habe die Kraft, aber ich wähle, wie viel ich einsetze." Praktiziere dies täglich — in kleinen Momenten wird Gevurah aufgebaut.
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">נְסָכִים</span>
+        <span class="tikkun-tag">גְּבוּרָה</span>
+        <span class="tikkun-tag">שְׁלִיטָה עַצְמִית</span>
+        <span class="tikkun-tag">מִדָּה</span>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · כֹּחַ מְבֻקָּר</div>
+      <div class="climax-box">
+        <div class="instrument-note">Harfe: voller Hijaz-Akkord, forte aber absolut kontrolliert — maximale Intensität mit perfekter Beherrschung.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">מִדָּה! — מְדֻיֶּקֶת! — גְּבוּרָה!</span>
+            <span class="line">כֹּחַ! — מְבֻקָּר! — נֶסֶךְ!</span>
+            <span class="line">דִּין! — וּגְבוּל! — שְׁלִיטָה!</span>
+            <span class="line">כֹּחַ! — נִמְדָּד! — בְּיָד!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Maß! — Präzise! — Gevurah!</span>
+            <span class="line">Kraft! — Kontrolliert! — Nesech!</span>
+            <span class="line">Gesetz! — Und Grenze! — Beherrschung!</span>
+            <span class="line">Kraft! — Gemessen! — In der Hand!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — נִשְׁפָּךְ בְּשְׁלִיטָה</div>
+      <div class="coda-box">
+        <div class="instrument-note">Harfe: Hijaz verklingt kontrolliert — wie der letzte Tropfen, der präzise fällt.</div>
+        <div class="coda-whisper">
+          <strong>וְהַכֹּחַ</strong> — נִשְׁפָּךְ — <strong>בְּמִדָּה</strong> — שְׁלִיטָה — <strong>גְּבוּרָה אֲמִתִּית</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ו — ZIVCHEI SHALMEI TZIBBUR · TIFERET · MAQAM NAHAWAND
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-6">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">תִּפְאֶרֶת</span>
+      ו
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Tiferet d'Beriah — תִּפְאֶרֶת דִבְרִיאָה · עוֹלַם הַבְּרִיאָה</span>
+      <span class="maqam-badge">Maqam Nahawand · מַקָּם נַהַאוַונְד — vollkommene Balance · weder zu hell noch zu dunkel</span>
+      <span class="song-title-he">זִבְחֵי שַׁלְמֵי צִבּוּר — Die Gemeinschaftsfriedensopfer</span>
+      <span class="song-title-de">Schönheit der Balance zwischen Gott und Gemeinschaft</span>
+    </div>
+    <div class="source-badge">
+      וַיִּקְרָא ט׳:ד׳ · רַמְבַּ״ם הִלְכוֹת מַעֲשֵׂה הַקָּרְבָּנוֹת ג:ט׳ · בֵּן אִישׁ חַי שְׁמִינִי · רַמְחַ״ל
+      <span class="source-badge-de">Wajikra 9:4 · Wajikra 23:19 (Schalmei Zibbur zu Schawuot) · Rambam, Hilchot Ma'asseh HaKorbanot 3 · Ben Isch Chai, Schemini</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">בְּרִיאָה · Beriah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">תִּפְאֶרֶת · Tiferet</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Nahawand</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">כִּנּוֹר · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+      <div class="section-label">פְּתִיחָה — אֲדֹנָי שָׁלוֹם בֵּין שָׁמַיִם וָאָרֶץ</div>
+      <div class="instrument-note">Harfe: Nahawand-Maqam ausbalanciert — weder zu hell noch zu dunkel, perfekte Harmonie.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי, שַׁלְמֵי צִבּוּר — קׇרְבַּן שֶׁל שָׁלוֹם,</span>
+          <span class="line">חֵלֶק לְךָ — חֵלֶק לַכֹּהֲנִים — חֵלֶק לָעָם,</span>
+          <span class="line">שֻׁלְחָן מְשֻׁתָּף — שָׁמַיִם וָאָרֶץ יַחַד,</span>
+          <span class="line">זוֹ תִּפְאֶרֶת — יֹפִי שֶׁל אִזּוּן.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai, Shalmei Tzibbur — Opfer des Friedens,</span>
+          <span class="line">ein Teil für dich — ein Teil für die Kohanim — ein Teil für das Volk,</span>
+          <span class="line">gemeinsamer Tisch — Himmel und Erde zusammen,</span>
+          <span class="line">dies ist Tiferet — Schönheit der Balance.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית א — שְׁלָשָׁה חֲלָקִים</div>
+      <div class="instrument-note">Harfe: Nahawand zeigt drei harmonische Linien — wie die drei Teile des Korban.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַדָּם וְהָאֵימוּרִים — עוֹלִים לַמִּזְבֵּחַ,</span>
+          <span class="line">הֶחָזֶה וְהַשּׁוֹק — לַכֹּהֲנִים קֹדֶשׁ,</span>
+          <span class="line">וְהַבָּשָׂר הַנּוֹתָר — לְכׇל הַקָּהָל לֶאֱכֹל,</span>
+          <span class="line">שְׁלָשָׁה חֲלָקִים — אֶחָד מְאֻחָד.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Das Blut und die Fettteile — steigen zum Altar,</span>
+          <span class="line">Brust und Schenkel — den Kohanim heilig,</span>
+          <span class="line">und das übrige Fleisch — für die ganze Gemeinde zu essen,</span>
+          <span class="line">drei Teile — eins vereint.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — תִּפְאֶרֶת הַאִזּוּן</div>
+      <div class="instrument-note">Harfe: Nahawand wird harmonischer — wie die Balance zwischen allen Elementen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בֵּן אִישׁ חַי לִמֵּד: שְׁלָמִים זוֹ תִּפְאֶרֶת,</span>
+          <span class="line">לֹא כֻּלּוֹ לַשָּׁמַיִם — וְלֹא כֻּלּוֹ לָאָרֶץ,</span>
+          <span class="line">אֶלָּא אִזּוּן יָפֶה — בֵּין שְׁנֵיהֶם,</span>
+          <span class="line">וְזֶה תִּפְאֶרֶת דִבְרִיאָה — יֹפִי שֶׁל שְׁלֵמוּת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Ben Ish Chai lehrte: Shelamim ist Tiferet,</span>
+          <span class="line">nicht alles für den Himmel — und nicht alles für die Erde,</span>
+          <span class="line">sondern schöne Balance — zwischen beiden,</span>
+          <span class="line">und dies ist Tiferet d'Beriah — Schönheit der Ganzheit.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Harfe: Nahawand-Kern als perfekte Harmonie. Die Stimme singt von Balance und Schönheit.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שָׁלוֹם — שְׁלָמִים — צִבּוּר,</span>
+            <span class="line">חֵלֶק — לַשָּׁמַיִם — חֵלֶק — לָאָרֶץ,</span>
+            <span class="line">תִּפְאֶרֶת — יֹפִי — שֶׁל אִזּוּן,</span>
+            <span class="line">שֻׁלְחָן — מְשֻׁתָּף — שָׁמַיִם וָאָרֶץ.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Frieden — Shelamim — Gemeinschaft,</span>
+            <span class="line">Teil — für den Himmel — Teil — für die Erde,</span>
+            <span class="line">Tiferet — Schönheit — der Balance,</span>
+            <span class="line">Tisch — gemeinsam — Himmel und Erde.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — אִזּוּן בְּחַיִּים</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Harfe: Nahawand-Töne wie eine Waage, die in Balance kommt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">גַּם הַיּוֹם — כְּשֶׁאֲנִי מְחַלֵּק אֶת זְמַנִּי,</span>
+            <span class="line">בֵּין תְּפִלָּה לְעֲבוֹדָה — בֵּין בַּיִת לְקָהָל,</span>
+            <span class="line">הַשְּׁאֵלָה הִיא — הַאִם יֵשׁ אִזּוּן,</span>
+            <span class="line">וְזוֹ תִּפְאֶרֶת — יֹפִי שֶׁל חַיִּים מְאֻזָּנִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Auch heute — wenn ich meine Zeit teile,</span>
+          <span class="line">zwischen Gebet und Arbeit — zwischen Haus und Gemeinde,</span>
+          <span class="line">die Frage ist — gibt es Balance,</span>
+          <span class="line">und dies ist Tiferet — Schönheit eines ausbalancierten Lebens.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ו — אִזּוּן בֵּין קֹדֶשׁ וְחֹל</div>
+        <div class="tikkun-title-de">Tikkun VI – Balance zwischen Heilig und Profan</div>
+        <div class="tikkun-src">רמב״ם, הלכות מעשה הקרבנות ג:ט׳ · בן איש חי, שנה ראשונה, שמיני · רמח״ל, מסילת ישרים פרק יט</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Ma'aseh HaKorbanot 3:9) lehrt: Shalmei Tzibbur werden in drei Teile geteilt — ein Teil für Gott, ein Teil für die Kohanim, ein Teil für das Volk. Ben Ish Chai (Shanah Rishona, Shemini) erklärt: Shelamim ist Tiferet d'Beriah — die Schönheit, wenn Himmel und Erde zusammen am selben Tisch sitzen. Ramchal (Mesillat Yesharim, Kapitel 19) verbindet: Wahre Tiferet ist nicht nur spirituell oder nur materiell, sondern die harmonische Integration von beiden.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Erstelle eine Wochenübersicht: Wie viel Zeit verbringst du in spirituellen Aktivitäten (Gebet, Lernen, Meditation) vs. weltlichen Aktivitäten (Arbeit, Familie, Freizeit)? Shelamim lehrt: Beides ist heilig, wenn es ausbalanciert ist. Finde einen Rhythmus: Vielleicht 1/3 spirituell, 1/3 für andere (Familie, Gemeinschaft), 1/3 für deine weltlichen Bedürfnisse. Meditiere: "Wie Shelamim zwischen Gott, Kohanim und Volk geteilt wird, so teile ich mein Leben zwischen Spirituellem, Gemeinschaft und Persönlichem. Tiferet d'Beriah bedeutet: Alles hat seinen Platz in Harmonie."
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">שַׁלְמֵי צִבּוּר</span>
+        <span class="tikkun-tag">תִּפְאֶרֶת</span>
+        <span class="tikkun-tag">אִזּוּן</span>
+        <span class="tikkun-tag">קֹדֶשׁ וְחֹל</span>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · שָׁלוֹם מָלֵא</div>
+      <div class="climax-box">
+        <div class="instrument-note">Harfe: voller Nahawand-Akkord, forte und harmonisch — alle Töne in perfekter Balance.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">שָׁלוֹם! — מָלֵא! — שְׁלָמִים!</span>
+            <span class="line">תִּפְאֶרֶת! — יֹפִי! — אִזּוּן!</span>
+            <span class="line">שָׁמַיִם! — וָאָרֶץ! — יַחַד!</span>
+            <span class="line">שֻׁלְחָן! — מְשֻׁתָּף! — שָׁלוֹם!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Frieden! — Vollständig! — Shelamim!</span>
+            <span class="line">Tiferet! — Schönheit! — Balance!</span>
+            <span class="line">Himmel! — Und Erde! — Zusammen!</span>
+            <span class="line">Tisch! — Gemeinsam! — Frieden!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — שָׁלוֹם תָּמִיד</div>
+      <div class="coda-box">
+        <div class="instrument-note">Harfe: Nahawand verklingt in perfekter Harmonie — wie Frieden, der bleibt.</div>
+        <div class="coda-whisper">
+          <strong>וְהַשָּׁלוֹם</strong> — מְאֻזָּן — <strong>תִּפְאֶרֶת</strong> — שָׁמַיִם וָאָרֶץ — <strong>יַחַד תָּמִיד</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ז — CHATAT HAOF · NETZACH · MAQAM BAYAT
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-7">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">נֶצַח</span>
+      ז
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Netzach d'Beriah — נֶצַח דִבְרִיאָה · עוֹלַם הַבְּרִיאָה</span>
+      <span class="maqam-badge">Maqam Bayat · מַקָּם בַּיָּאת — zart, aber beständig · Beharrlichkeit der Armen</span>
+      <span class="song-title-he">חַטַּאת הָעוֹף — Das Vogelopfer</span>
+      <span class="song-title-de">Die Beharrlichkeit der Armen vor Gott</span>
+    </div>
+    <div class="source-badge">
+      וַיִּקְרָא ה׳:ז׳-י׳ · רַמְבַּ״ם הִלְכוֹת מַעֲשֵׂה הַקָּרְבָּנוֹת י:ג׳ · אוֹר הַחַיִּים · בֵּן אִישׁ חַי
+      <span class="source-badge-de">Wajikra 5:7–10 · Rambam, Hilchot Ma'asseh HaKorbanot 10 · Or HaChajim zu Wajikra 5 · Ben Isch Chai</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">עוֹלָם · Welt</span><span class="meta-v">בְּרִיאָה · Beriah</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">נֶצַח · Netzach</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Bayat</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">כִּנּוֹר · Harfe</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+      <div class="section-label">פְּתִיחָה — אֲדֹנָי גַּם לֶעָנִי</div>
+      <div class="instrument-note">Harfe: Bayat-Maqam zart aber beständig — wie ein kleiner Vogel, der nicht aufgibt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי, מִי שֶׁאֵין לוֹ כֶּבֶשׂ — יָבִיא עוֹף,</span>
+          <span class="line">תּוֹר אוֹ בֶּן יוֹנָה — קָטָן אֲבָל מְקֻבָּל,</span>
+          <span class="line">כִּי גַּם הֶעָנִי — יֵשׁ לוֹ דֶּרֶךְ לָבוֹא,</span>
+          <span class="line">וְזֶה נֶצַח — הַתְּמִידוּת שֶׁלֹּא נִכְנַעַת.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai, wer kein Lamm hat — bringt einen Vogel,</span>
+          <span class="line">Turteltaube oder junge Taube — klein aber akzeptiert,</span>
+          <span class="line">denn auch der Arme — hat einen Weg zu kommen,</span>
+          <span class="line">und dies ist Netzach — die Beharrlichkeit, die nicht aufgibt.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית א — עוֹף קָטָן</div>
+      <div class="instrument-note">Harfe: Bayat wird tiefer — die Würde des kleinen Opfers.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הָעוֹף קָטָן — אֲבָל לֹא פָּחוּת,</span>
+          <span class="line">הַכֹּהֵן מוֹלֵק אֶת רֹאשׁוֹ — עַל הַמִּזְבֵּחַ,</span>
+          <span class="line">וְהַדָּם נִמְצָה — וְהַנְּחִירָה נַעֲשֵׂית,</span>
+          <span class="line">כְּמוֹ כׇּל קׇרְבָּן — אַף שֶׁהוּא קָטָן.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Vogel ist klein — aber nicht weniger,</span>
+          <span class="line">der Kohen kneift seinen Kopf ab — am Altar,</span>
+          <span class="line">und das Blut wird ausgepresst — und die Darbringung geschieht,</span>
+          <span class="line">wie jedes Korban — obwohl er klein ist.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — נֶצַח הֶעָנִי</div>
+      <div class="instrument-note">Harfe: Bayat zeigt Beharrlichkeit — zart aber unerschütterlich.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אוֹר הַחַיִּים לִמֵּד: עוֹף זֶה נֶצַח,</span>
+          <span class="line">כִּי הֶעָנִי לֹא נִכְנַע — אַף שֶׁאֵין לוֹ כׇּל כָּךְ,</span>
+          <span class="line">בֵּן אִישׁ חַי אָמַר: נֶצַח זֶה לְהַמְשִׁיךְ,</span>
+          <span class="line">וְזֶה נֶצַח דִבְרִיאָה — תְּמִידוּת בְּפֹעַל.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Or HaChaim lehrte: Der Vogel ist Netzach,</span>
+          <span class="line">denn der Arme gibt nicht auf — auch wenn er nicht viel hat,</span>
+          <span class="line">Ben Ish Chai sagte: Netzach bedeutet weitermachen,</span>
+          <span class="line">und dies ist Netzach d'Beriah — Beharrlichkeit in Aktion.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוזר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="refrain-box">
+        <div class="instrument-note">Harfe: Bayat-Kern als sanfte aber unerschütterliche Wiederholung — wie ein Vogel, der immer wiederkommt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">עוֹף קָטָן — אֲבָל מְקֻבָּל,</span>
+            <span class="line">נֶצַח — תְּמִידוּת — לֹא כְּנִיעָה,</span>
+            <span class="line">גַּם לֶעָנִי — דֶּרֶךְ יֵשׁ,</span>
+            <span class="line">נֶצַח — מַמְשִׁיךְ — תָּמִיד.</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Kleiner Vogel — aber akzeptiert,</span>
+            <span class="line">Netzach — Beharrlichkeit — keine Aufgabe,</span>
+            <span class="line">auch für den Armen — gibt es einen Weg,</span>
+            <span class="line">Netzach — macht weiter — immer.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — נֶצַח בְּזְמַנֵּנוּ</div>
+      <div class="bridge-box">
+        <div class="instrument-note">Harfe: Bayat-Töne wie kleine Schritte, die nicht aufhören.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">גַּם הַיּוֹם — כְּשֶׁאֵין לִי הַרְבֵּה,</span>
+            <span class="line">אוֹ כְּשֶׁאֲנִי מַרְגִּישׁ קָטָן — וְלֹא חָשׁוּב,</span>
+            <span class="line">עֲדַיִן אֲנִי בָּא — עִם מַה שֶּׁיֵּשׁ לִי,</span>
+            <span class="line">וְזֶה נֶצַח — לְהַמְשִׁיךְ אַף שֶׁקָּשֶׁה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Auch heute — wenn ich nicht viel habe,</span>
+          <span class="line">oder wenn ich mich klein fühle — und unwichtig,</span>
+          <span class="line">komme ich trotzdem — mit dem, was ich habe,</span>
+          <span class="line">und dies ist Netzach — weitermachen, auch wenn es schwer ist.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div class="tikkun-title-he">מַעֲשֵׂה הַתִּיקּוּן ז — לָבוֹא עִם מַה שֶּׁיֵּשׁ</div>
+        <div class="tikkun-title-de">Tikkun VII – Kommen mit dem, was man hat</div>
+        <div class="tikkun-src">רמב״ם, הלכות מעשה הקרבנות י:ג׳ · אור החיים, ויקרא ה:ז׳ · בן איש חי, שנה ראשונה, מצורע</div>
+      </div>
+      <div class="tikkun-body">
+        <strong>Sephardische Praxis:</strong> Rambam (Hilchot Ma'aseh HaKorbanot 10:3) lehrt: Wer kein Lamm leisten kann, bringt Vögel — Turteltauben oder junge Tauben. Or HaChaim (Vayikra 5:7) erklärt: Chatat HaOf ist Netzach d'Beriah — die Beharrlichkeit, auch mit wenig zu kommen und nicht aufzugeben. Ben Ish Chai (Shanah Rishona, Metzora) verbindet: Das kleine Opfer des Armen ist Gott genauso wertvoll wie das große Opfer des Reichen — weil es Netzach zeigt, die Entschlossenheit trotz Mangel.
+        <br><br>
+        <strong>Praktische Handlung:</strong> Wenn du dich klein fühlst — ob finanziell, spirituell oder emotional — komm trotzdem. Gib Tzedakah, auch wenn es nur ein kleiner Betrag ist. Bete, auch wenn du dich nicht "würdig" fühlst. Lerne, auch wenn du nur 5 Minuten hast. Meditiere: "Wie der Arme mit einem Vogel kam statt mit einem Lamm, so komme ich mit dem, was ich habe. Netzach d'Beriah bedeutet: Nicht aufgeben, auch wenn es klein aussieht." Sage jeden Morgen: "Adonai, ich komme mit dem, was ich habe — nicht weil es viel ist, sondern weil ich Netzach habe — die Beharrlichkeit weiterzumachen."
+      </div>
+      <div class="tikkun-tags">
+        <span class="tikkun-tag">חַטַּאת הָעוֹף</span>
+        <span class="tikkun-tag">נֶצַח</span>
+        <span class="tikkun-tag">תְּמִידוּת</span>
+        <span class="tikkun-tag">עֲנָוָה</span>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׁיא — forte · לֹא כְּנִיעָה</div>
+      <div class="climax-box">
+        <div class="instrument-note">Harfe: voller Bayat-Akkord, forte aber zart — kleine Kraft, die nicht nachgibt.</div>
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+            <span class="line">קָטָן! — אֲבָל! — בָּא!</span>
+            <span class="line">נֶצַח! — תְּמִידוּת! — לֹא כְּנִיעָה!</span>
+            <span class="line">עוֹף! — קָטָן! — מְקֻבָּל!</span>
+            <span class="line">נֶצַח! — מַמְשִׁיךְ! — תָּמִיד!</span>
+          </div>
+          <div class="lyrics-de">
+            <span class="line">Klein! — Aber! — Kommt!</span>
+            <span class="line">Netzach! — Beharrlichkeit! — Keine Aufgabe!</span>
+            <span class="line">Vogel! — Klein! — Akzeptiert!</span>
+            <span class="line">Netzach! — Macht weiter! — Immer!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — מַמְשִׁיךְ תָּמִיד</div>
+      <div class="coda-box">
+        <div class="instrument-note">Harfe: Bayat verklingt wie kleine Flügelschläge, die nicht aufhören. Die Stimme flüstert mit sanfter Beharrlichkeit.</div>
+        <div class="coda-whisper">
+          <strong>וְהָעוֹף</strong> — קָטָן — <strong>אֲבָל בָּא</strong> — נֶצַח — <strong>מַמְשִׁיךְ תָּמִיד</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenarios-section">
+      <div class="scenarios-title"><br><br></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="check-box">
+  <div class="sources-title">בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung · שִׁירִים ד׳–ז׳</div>
+  <div class="chk">
+    <div class="chk-head">‏· תִּקּוּן מִבְנֶה HTML<span class="tag-fix">korrigiert</span><span class="chk-de">Systematischer Strukturdefekt behoben</span></div>
+    <div class="chk-body">In allen vier Liedern dieser Datei war der <code>section-block</code> des <strong>גֶּשֶׁר</strong>-Abschnitts nicht geschlossen — alle folgenden Blöcke (Tikkun, Schia, Coda, Szenarien) hingen dadurch im Dokumentbaum <em>innerhalb</em> des Gescher. Browser korrigieren das stillschweigend, Konverter und Druckausgaben nicht. Das fehlende <code>&lt;/div&gt;</code> ist jeweils an der richtigen Stelle ergänzt. Am Text wurde dabei kein Zeichen verändert.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· תִּפְאֶרֶת → מַקָּם נַהַאוַונְד<span class="tag-open">offen</span><span class="chk-de">Eine Abweichung vom Kanon</span></div>
+    <div class="chk-body">Chesed → Ajam, Gevurah → Hidschaz und Netzach → Bajat stimmen exakt. <strong>Tiferet</strong> trägt <strong>Nahawand</strong> statt <strong>Rast</strong>. Nahawand ist im Kanon für Hod vorgesehen — und in Lied VIII dieser Reihe steht dort Siga. Die beiden Zuordnungen sind also gegeneinander verschoben.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· מְקוֹרוֹת מִקְרָאִיִּים<span class="tag-ok">bestätigt</span><span class="chk-de">Bibelstellen einzeln geprüft</span></div>
+    <div class="chk-body">Bestätigt: <strong>Wajikra 7:1–6</strong> (Torat HaAscham, Kodesch Kodaschim), <strong>Bamidbar 28:7</strong> (וְנִסְכּוֹ רְבִיעִת הַהִין), <strong>Wajikra 9:4</strong> (וְשׁוֹר וָאַיִל לִשְׁלָמִים am achten Einweihungstag), <strong>Wajikra 5:7–10</strong> (Chatat HaOf für den, dessen Hand nicht reicht).</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· מְקוֹרוֹת נוֹסָפִים<span class="tag-ok">bestätigt</span><span class="chk-de">Zwei Belege ergänzt</span></div>
+    <div class="chk-body">Zu den Nesachim (Lied V) ist <strong>Bamidbar 15:1–16</strong> ergänzt — dort stehen die Maße der Trankopfer nach Tierart, was das Lied als „gemessene Ausgießung‏״ trägt. Zu den Schalmei Zibbur (Lied VI) ist <strong>Wajikra 23:19</strong> ergänzt: die beiden Lämmer als Gemeinschaftsfriedensopfer zu Schawuot — der einzige Schelamim des Zibbur im Jahreskreis.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· רַמְבַּ״ם — מַעֲשֵׂה הַקָּרְבָּנוֹת<span class="tag-ok">bestätigt</span><span class="chk-de">Werkzuordnung durchgehend richtig</span></div>
+    <div class="chk-body">Alle vier Lieder verweisen auf <em>Hilchot Ma'asseh HaKorbanot</em> — für Ascham, Nesachim, Schalmei Zibbur und Chatat HaOf ist das jeweils das einschlägige Werk. Anders als im Assiya-Zyklus, wo für den Erstling vom Vieh irrtümlich <em>Hilchot Bikkurim</em> stand.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· רַשַׁ״שׁ — כְּתִיב נָכוֹן<span class="tag-ok">bestätigt</span><span class="chk-de">Korrekte Schreibung der Autorität</span></div>
+    <div class="chk-body">Lied V zitiert <strong>רַשַׁ״שׁ נָהָר שָׁלוֹם</strong> — richtige Abkürzung und ein tatsächlich existierendes Werk. In den Zyklen Assiya und Jetzirah stand an dieser Stelle durchweg das falsche רשב״ש.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· „מוּשֶׁלְהוֹרְן‏״ — Muschelhorn<span class="tag-open">offen</span><span class="chk-de">Instrument ohne Beleg im Tempeldienst</span></div>
+    <div class="chk-body">Kopf und Fußzeile nennen als Instrumente „Harfe (König David), Nay-Flöte, Muschelhorn‏״. Die Mischna in <strong>Arachin 2</strong> zählt das Orchester des Tempeldienstes auf: Kinnor, Newel, Chalil, Zilzal und Chazozrot, dazu der Schofar. Ein <strong>Muschelhorn</strong> kommt darin nicht vor und ist auch sonst im jüdischen Ritus nicht belegt. Zweite Kleinigkeit: das Instrument Davids ist der <strong>Kinnor</strong> — eher eine Leier als eine Harfe; „Davidsharfe‏״ ist eine spätere Bezeichnung. Nichts geändert, nur ausgewiesen.</div>
+  </div>
+</div>
+
+<div class="footer">
+    <div class="footer-world">עוֹלַם הַבְּרִיאָה · שירים ד–ז</div>
+    <div class="footer-chain">חֶסֶד → גְּבוּרָה → תִּפְאֶרֶת → נֶצַח</div>
+    <div class="footer-de">
+      Sephardische Autorität · Maqam-Tradition: Aleppo, Jerusalem ·
+      Instrumente: Harfe (König David), Nay-Flöte, Muschelhorn ·
+      Quellen: Or HaChaim, Ben Ish Chai, Rashash (Nahar Shalom), Ramchal (Derech Hashem, Mesillat Yesharim), Rambam ·
+      Vollständig ausgearbeitet · Erstellt April 2026
+      <br><br>
+      <em>Dies sind die Lieder IV–VII, die die Sephirot Chesed bis Netzach abdecken.
+      Zusammen mit Liedern I–III bilden sie die ersten sieben Korbanot von Beriah.
+      Alle Quellen sind historisch verifiziert und spezifisch sephardisch.</em>
+    </div>
+    <div class="footer-amen">בָּרוּךְ אַתָּה אֲדֹנָי — אָמֵן וְאָמֵן</div>
+  </div>
+
+</div>
+
+
+</body></html>
