@@ -1,0 +1,2723 @@
+<!DOCTYPE html>
+<html lang="he-IL"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יוֹם הַכִּפּוּרִים — שְׁמוֹנֶה בִּרְכוֹת · Lieder XXIX–XXXVI</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  --acc:         #7C8498;
+  --acc-lt:      #CDD4E4;
+  --acc-vlt:     #EDF1F8;
+  --acc-dim:     #12161E;
+  --acc-bdr:     rgba(205,212,228,.34);
+
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn-dim:    #806840;
+
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+
+  --maqam:       #EDF1F8;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,   rgba(205,212,228,.22) 0%,transparent 50%),
+    radial-gradient(ellipse at 20% 20%,  rgba(205,212,228,.09) 0%,transparent 42%),
+    radial-gradient(ellipse at 80% 15%,  rgba(205,212,228,.09) 0%,transparent 40%),
+    radial-gradient(ellipse at 15% 70%,  rgba(205,212,228,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85% 75%,  rgba(205,212,228,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,3,.84) 0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12% 6%,   rgba(205,212,228,.70) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(205,212,228,.70) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(205,212,228,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28% 32%,  rgba(205,212,228,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 48%,  rgba(205,212,228,.42) 0%,transparent 100%),
+    radial-gradient(2px 2px at 8% 68%,   rgba(205,212,228,.70) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 78%,  rgba(205,212,228,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(205,212,228,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,  rgba(205,212,228,.42) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--acc-bdr);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid var(--acc-bdr);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--acc-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.76em;font-weight:700;
+  color:var(--acc-lt);opacity:.60;text-decoration:none;padding:0 13px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:opacity .2s,border-color .2s;
+  display:flex;flex-direction:column;justify-content:center;gap:0;direction:rtl;
+}
+.nav-link:hover{opacity:1;border-bottom-color:var(--acc);}
+.nav-he{display:flex;align-items:center;gap:6px;direction:rtl;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;opacity:.50;direction:ltr;}
+.nav-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.68em;color:var(--silver-dim);direction:ltr;text-align:right;
+  letter-spacing:.06em;margin-top:-4px;
+}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:64px;padding-bottom:60px;
+  border-bottom:1px solid var(--acc-bdr);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--acc);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--acc-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.0em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.10;
+  margin-bottom:10px;
+  text-shadow:0 0 60px rgba(205,212,228,.50), 0 0 120px rgba(205,212,228,.30), 0 0 220px rgba(205,212,228,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:700px;margin:0 auto 30px;
+}
+.page-desc strong{color:var(--ivory);}
+.page-desc em{color:var(--acc-lt);font-style:italic;}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid var(--acc-bdr);padding:12px 28px;
+  background:rgba(255,255,255,.012);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--acc-lt);border-color:var(--acc-bdr);
+  background:rgba(255,255,255,.03);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--acc);opacity:.38;font-size:.72em;}
+
+/* ── VESSEL / SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:6px;
+  margin:0 0 60px;
+}
+.sefira-nav-item{
+  border:1px solid var(--acc-bdr);padding:14px 10px;text-align:center;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(255,255,255,.012);
+}
+.sefira-nav-item:hover{background:rgba(255,255,255,.035);border-color:var(--acc-lt);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--acc-lt);display:block;direction:rtl;line-height:1.5;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;color:var(--silver-dim);display:block;line-height:1.5;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--maqam);opacity:.72;display:block;direction:ltr;margin-top:3px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:60px;scroll-margin-top:62px;
+  border:1px solid rgba(255,255,255,.05);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--acc),var(--gold),var(--acc-lt),var(--gold),var(--acc),transparent);
+  opacity:.55;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(205,212,228,.22) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:30px 42px 24px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:grid;grid-template-columns:92px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.44;line-height:1;text-align:center;
+  color:var(--acc-lt);
+  border-right:1px solid var(--acc-bdr);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.36em;font-weight:700;
+  opacity:.62;letter-spacing:.08em;display:block;margin-bottom:4px;direction:rtl;
+}
+.sefira-badge, .vessel-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.66em;font-weight:700;
+  letter-spacing:.10em;color:var(--acc-lt);opacity:.68;display:block;margin-bottom:4px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;display:block;margin-bottom:6px;direction:ltr;
+  letter-spacing:.10em;color:var(--maqam);opacity:.86;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.03em;display:block;line-height:1.4;
+  text-shadow:0 0 40px rgba(205,212,228,.12);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.63em;
+  border:1px solid var(--acc-bdr);padding:8px 16px;
+  color:var(--acc-lt);direction:rtl;text-align:right;line-height:1.78;
+  flex-shrink:0;background:rgba(255,255,255,.015);max-width:270px;
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;line-height:1.6;
+}
+
+/* ── META-STREIFEN ── */
+.meta-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.012);
+}
+.meta-cell{
+  flex:1 1 auto;min-width:150px;padding:12px 20px;
+  border-right:1px solid rgba(255,255,255,.045);
+}
+.meta-cell:last-child{border-right:none;}
+.meta-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);display:block;margin-bottom:2px;
+}
+.meta-v{
+  font-family:'Frank Ruhl Libre',serif;font-size:.82em;
+  color:var(--acc-lt);opacity:.90;display:block;line-height:1.6;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block,.section{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.045);opacity:.86;direction:rtl;text-align:right;
+}
+
+/* ── INSTRUMENTENHINWEIS ── */
+.guitar-note,.instr,.instrument-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--maqam);opacity:.92;
+  margin-bottom:14px;padding:9px 18px;
+  border-left:2px solid var(--acc-bdr);
+  background:rgba(255,255,255,.015);direction:ltr;
+  line-height:1.82;
+}
+
+/* ── LYRIK ── */
+.lyrics-block,.lyrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.13em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.14;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.14;
+  border-left:1px solid rgba(255,255,255,.05);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── BOXEN ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(205,212,228,.09),rgba(255,255,255,.01));
+  border:1px solid var(--acc-bdr);border-left:3px solid var(--acc);
+  padding:24px 30px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.06),transparent);
+  border:1px solid rgba(200,156,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(205,212,228,.09),transparent);
+  border:1px solid var(--acc-bdr);
+  padding:22px 28px;margin:28px 0;
+  box-shadow:inset 0 0 40px rgba(255,255,255,.014);
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{padding:22px 28px;margin:28px 0;border:1px solid rgba(255,255,255,.045);background:rgba(255,255,255,.01);}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;text-align:center;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+.coda-whisper strong{color:var(--acc-lt);}
+
+/* ── TIKKUN ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.18),rgba(9,7,3,.90));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:32px 34px;margin:34px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.79em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:4px 12px;background:rgba(60,44,8,.10);
+  direction:rtl;flex-shrink:0;font-style:italic;max-width:230px;text-align:right;line-height:1.7;
+}
+.tikkun-body{
+  font-family:'EB Garamond',serif;font-size:.90em;
+  color:var(--text);line-height:1.95;
+}
+.tikkun-body strong{color:var(--ivory-dim);}
+.tikkun-tags,.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px;}
+.tikkun-tag,.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 11px;background:rgba(60,44,8,.08);direction:rtl;
+}
+
+/* ── SZENARIEN (Bestand aus der Vorlage) ── */
+.scenarios-section,.scenarios{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.05);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card,.scenario{
+  border:1px solid rgba(255,255,255,.06);padding:20px 22px;margin-bottom:14px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);}
+.scenario{border-left:2px solid var(--acc-bdr);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;color:var(--acc-lt);}
+.sc-title-he,.scenario-label{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:6px;color:var(--acc-lt);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body,.scenario-text{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid var(--acc);background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(255,255,255,.05);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:50px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--acc-bdr),transparent);}
+.ornament-star{color:var(--acc);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── QUELLEN-BOXEN ── */
+.sources-box,.check-box{
+  background:linear-gradient(135deg,rgba(205,212,228,.09),rgba(5,4,2,.90));
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  padding:32px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.check-box::before{
+  content:'בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:14px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+.chk{
+  margin-bottom:18px;padding:14px 18px;
+  border-left:2px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+}
+.chk:last-child{margin-bottom:0;}
+.chk-head{
+  font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  direction:rtl;text-align:right;margin-bottom:6px;color:var(--acc-lt);
+}
+.chk-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--silver-dim);display:block;direction:ltr;text-align:left;margin-top:1px;
+}
+.chk-body{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.90;}
+.chk-body strong{color:var(--ivory-dim);}
+.chk-body em{color:var(--acc-lt);font-style:italic;}
+.tag-ok,.tag-fix,.tag-open{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;text-transform:uppercase;padding:1px 9px;
+  border:1px solid;margin-left:8px;white-space:nowrap;direction:ltr;display:inline-block;
+}
+.tag-ok{color:#8FBF80;border-color:rgba(143,191,128,.38);}
+.tag-fix{color:#E09050;border-color:rgba(224,144,80,.40);}
+.tag-open{color:#9098C0;border-color:rgba(144,152,192,.38);}
+
+/* ── TRADITIONSHINWEIS ── */
+.trad-box{
+  border:1px solid rgba(144,152,192,.28);border-left:4px solid #7A82B0;
+  background:linear-gradient(135deg,rgba(90,96,140,.08),rgba(5,4,2,.88));
+  padding:26px 32px;margin-top:30px;position:relative;
+}
+.trad-box::before{
+  content:'הֶעָרַת מָסוֹרֶת — Traditionshinweis';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:#A0A8D0;
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.trad-box .sources-title{color:#A0A8D0;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:80px;padding-top:56px;
+  border-top:1px solid var(--acc-bdr);
+  color:var(--silver-dim);font-size:.86em;line-height:1.90;
+}
+.footer-world,.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.55em;font-weight:900;
+  color:var(--acc-lt);direction:rtl;letter-spacing:.06em;
+  margin-bottom:14px;line-height:1.5;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.94em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:22px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.02em;color:var(--silver-dim);line-height:1.98;
+  max-width:600px;margin:0 auto 24px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.20em;
+  color:var(--acc-lt);letter-spacing:.14em;opacity:.55;direction:rtl;line-height:1.7;
+}
+.footer p{max-width:760px;margin:0 auto 10px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .wrap{padding:52px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{grid-column:1 / -1;max-width:none;margin-top:14px;}
+  .lyrics-block,.lyrics{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+  .song-body{padding:0 20px 40px;}
+  .tikkun-src{max-width:none;}
+  .nav-de{display:none;}
+}
+
+/* ── ZUSATZ: Korbanot-Vokabular ── */
+:root{ --ass: #7C8498; --ass-lt: #CDD4E4; }
+.korban-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;font-weight:700;
+  color:var(--ivory-dim);opacity:.90;display:block;margin-bottom:5px;direction:rtl;
+  letter-spacing:.04em;
+}
+.song-wrap{position:relative;}
+.footer-sources{
+  font-family:'EB Garamond',serif;font-size:.92em;color:var(--silver-dim);
+  line-height:1.90;max-width:780px;margin:0 auto 16px;
+}
+.footer-sources strong{color:var(--acc-lt);}
+.footer-meta{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.90em;color:var(--silver-dim);opacity:.78;line-height:1.80;
+  max-width:760px;margin:0 auto;
+}
+
+/* ── ZUSATZ: Or-Chozer-Abschluss (Lied X) ── */
+.or-chozer-box{
+  background:linear-gradient(135deg,rgba(205,212,228,.09),rgba(200,156,32,.10),rgba(10,8,8,.94));
+  border:2px solid var(--acc-lt);padding:38px 34px;text-align:center;
+  margin:44px 0;position:relative;
+}
+.or-chozer-box::before{
+  content:'אוֹר חוֹזֵר';position:absolute;top:-13px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 18px;
+  font-family:'Frank Ruhl Libre',serif;font-size:.74em;color:var(--acc-lt);
+  letter-spacing:.20em;direction:rtl;
+}
+.or-chozer-text{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.24em;color:var(--acc-lt);
+  direction:rtl;line-height:2.45;
+}
+.or-chozer-text strong{font-weight:900;color:var(--ivory-lt);}
+.or-chozer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92em;
+  color:var(--text);margin-top:18px;line-height:1.92;
+}
+
+/* ── ZUSATZ: Gruppen-Trenner und Gruppen-Farbmodifikatoren ── */
+.sec-div{
+  display:flex;align-items:center;gap:22px;
+  padding:22px 30px;margin:52px 0 40px;position:relative;
+  border:1px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+  color:var(--acc-lt);
+}
+.sec-div::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,transparent,var(--acc),transparent);
+}
+.sec-num{
+  font-family:'Frank Ruhl Libre',serif;font-size:2.1em;font-weight:900;
+  color:var(--acc-lt);opacity:.42;direction:rtl;line-height:1;flex-shrink:0;
+}
+.sec-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.14em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;
+}
+.sec-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);line-height:1.75;
+}
+
+/* Gruppenfarben: setzen die Akzentvariablen für Element und Teilbaum neu */
+.jer{--acc:#7C8498;--acc-lt:#CDD4E4;--acc-bdr:rgba(205,212,228,.34);--maqam:#CDD4E4;}
+.pro,.pro-song{--acc:#7C8498;--acc-lt:#CDD4E4;--acc-bdr:rgba(205,212,228,.34);--maqam:#CDD4E4;}
+.ver,.ver-song{--acc:#7C8498;--acc-lt:#CDD4E4;--acc-bdr:rgba(205,212,228,.34);--maqam:#CDD4E4;}
+.song-num.jer,.song-num.pro,.song-num.ver{color:var(--acc-lt);}
+
+/* ── ZUSATZ: Gesichert-Badge und Sektionsvarianten ── */
+.gesichert-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  letter-spacing:.10em;color:#8FBF80;border:1px solid rgba(143,191,128,.36);
+  padding:2px 10px;margin-right:8px;white-space:nowrap;display:inline-block;
+  background:rgba(143,191,128,.05);
+}
+.sec-div.gold-sec,.sec-div.ketoret-sec{
+  border-color:rgba(200,156,32,.34);
+}
+.sec-div.gold-sec .sec-num,.sec-div.gold-sec .sec-title-he,
+.sec-div.ketoret-sec .sec-num,.sec-div.ketoret-sec .sec-title-he{color:var(--gold-lt);}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">הַמִּקְדָּשׁ</span>
+    <span class="nav-brand-sub">יוֹם הַכִּפּוּרִים · כ״ט–ל״ו</span>
+  </div>
+  <a class="nav-link" href="#song-29"><span class="nav-he"><span class="nav-num">כט</span>① עַל הַתּוֹרָה</span><span class="nav-de">Segen für die Tora</span></a>
+  <a class="nav-link" href="#song-30"><span class="nav-he"><span class="nav-num">ל</span>② עַל הָעֲבוֹדָה</span><span class="nav-de">Segen für den Tempeldienst</span></a>
+  <a class="nav-link" href="#song-31"><span class="nav-he"><span class="nav-num">לא</span>③ עַל הַהוֹדָאָה</span><span class="nav-de">Segen des Dankes</span></a>
+  <a class="nav-link" href="#song-32"><span class="nav-he"><span class="nav-num">לב</span>④ עַל מְחִילַת הֶעָוֺן</span><span class="nav-de">Sündenvergebung</span></a>
+  <a class="nav-link" href="#song-33"><span class="nav-he"><span class="nav-num">לג</span>⑤ עַל הַמִּקְדָּשׁ</span><span class="nav-de">Segen für das Heiligtum</span></a>
+  <a class="nav-link" href="#song-34"><span class="nav-he"><span class="nav-num">לד</span>⑥ עַל יִשְׂרָאֵל</span><span class="nav-de">Segen für Israel</span></a>
+  <a class="nav-link" href="#song-35"><span class="nav-he"><span class="nav-num">לה</span>⑦ עַל הַכֹּהֲנִים</span><span class="nav-de">Segen für die Priester</span></a>
+  <a class="nav-link" href="#song-36"><span class="nav-he"><span class="nav-num">לו</span>⑧ עַל שְׁאָר הַתְּפִלָּה</span><span class="nav-de">Abschlussgebet</span></a>
+</nav>
+
+<div class="wrap">
+
+<header class="page-header">
+  <p class="eyebrow">בֵּית הַמִּקְדָּשׁ הַשְּׁלִישִׁי</p>
+  <h1 class="page-title-he">יוֹם הַכִּפּוּרִים — שְׁמוֹנֶה בִּרְכוֹת כֹּהֵן גָּדוֹל</h1>
+  <p class="page-title-de">Die acht Berachot des Kohen Gadol nach der Toralesung am Yom Kippur · Lieder XXIX–XXXVI · Sephardische Vertonung</p>
+  <p class="page-desc">
+    <strong>תּוֹרָה · עֲבוֹדָה · הוֹדָאָה · מְחִילָה · מִקְדָּשׁ · יִשְׂרָאֵל · כֹּהֲנִים · שְׁאָר תְּפִלָּה</strong><br>
+    Nach dem Vortragen der Tora-Lesung (Vayikra 16 und Bamidbar 29:7–11) tritt der Kohen Gadol vor das Volk
+    in der <em>Ezrat Naschim</em> und spricht acht Berachot in fester Reihenfolge — die <em>schmoneh berachot
+    schel Kohen Gadol</em>. Jede schliesst mit <em>„מִן הָעוֹלָם וְעַד הָעוֹלָם"</em>, das Volk antwortet
+    <em>„בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד"</em> und fällt beim Aussprechen des Heiligen Namens
+    auf das Angesicht (<strong>Mishna Yoma 7:1; 6:2</strong>; <strong>Rambam Hilchot Avodat Yom HaKippurim 3:11</strong>).
+    Die acht Berachot bilden die kabbalistische Architektur des Yom-Kippur-Tages: vom <em>Tora-Lichtsamen</em>
+    (Chochmah) durch <em>Avoda-Mitte</em>, <em>Hodaah-Dank</em>, <em>Mechila-Herzstück</em>, <em>Mikdash-Wohnung</em>,
+    <em>Volk-Krönung</em>, <em>Priester-Segen</em> bis zur <em>Krönungs-Klammer aller Tefillot</em> (Keter).
+    Sechs sephardische Maqamim — Rast, Bayat, Nahawand, Hijaz, Saba, Siga, Ajam — tragen durch die acht Lieder.
+    <br><strong>שְׁמוֹנֶה שִׁירִים · אַחַת שַׁעַר הַלֵּב · יוֹם הַכִּפּוּרִים</strong>
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">עֲבוֹדַת הַבֹּקֶר</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">לִשְׁכַּת הַגָּזִית</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">חֲתִימַת הַתָּמִיד</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">בֵּין הָעַרְבַּיִם</span>
+  </div>
+</header>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-29">
+    <span class="sn-num">כט · Chochmah</span>
+    <span class="sn-he">① עַל הַתּוֹרָה</span>
+    <span class="sn-de">Segen für die Tora</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-30">
+    <span class="sn-num">ל · Tiferet</span>
+    <span class="sn-he">② עַל הָעֲבוֹדָה</span>
+    <span class="sn-de">Segen für den Tempeldienst</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-31">
+    <span class="sn-num">לא · Hod</span>
+    <span class="sn-he">③ עַל הַהוֹדָאָה</span>
+    <span class="sn-de">Segen des Dankes</span>
+    <span class="sn-maqam">Maqam Nahawand</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-32">
+    <span class="sn-num">לב · Gevurah</span>
+    <span class="sn-he">④ עַל מְחִילַת הֶעָוֺן</span>
+    <span class="sn-de">Sündenvergebung</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-33">
+    <span class="sn-num">לג · Binah</span>
+    <span class="sn-he">⑤ עַל הַמִּקְדָּשׁ</span>
+    <span class="sn-de">Segen für das Heiligtum</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-34">
+    <span class="sn-num">לד · Malchut</span>
+    <span class="sn-he">⑥ עַל יִשְׂרָאֵל</span>
+    <span class="sn-de">Segen für Israel</span>
+    <span class="sn-maqam">Maqam Siga</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-35">
+    <span class="sn-num">לה · Chesed</span>
+    <span class="sn-he">⑦ עַל הַכֹּהֲנִים</span>
+    <span class="sn-de">Segen für die Priester</span>
+    <span class="sn-maqam">Maqam Ajam</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-36">
+    <span class="sn-num">לו · Keter</span>
+    <span class="sn-he">⑧ עַל שְׁאָר הַתְּפִלָּה</span>
+    <span class="sn-de">Abschlussgebet</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+</div>
+<div class="sec-div">
+  <span class="sec-num">ד</span>
+  <div style="display:flex;flex-direction:column;gap:6px;z-index:1;">
+    <span class="sec-title-he">יוֹם הַכִּפּוּרִים — שְׁמוֹנֶה בִּרְכוֹת אַחַר קְרִיאַת הַתּוֹרָה</span>
+    <span class="sec-sub">Lieder XXIX–XXXVI · Mischna Yoma 7:1 · alle acht gesichert</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר כט — SEGEN FÜR DIE TORA · CHOCHMAH · MAQAM RAST
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section tora-section" id="song-29">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Chochmah</span>
+      כט
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Chochmah — חׇכְמָה · Tora als Wurzel-Weisheit · Eröffnung der acht Berachot</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רַסְת</span>
+      <span class="song-title-he">① עַל הַתּוֹרָה — Erste Beracha · Segen für die Tora</span>
+      <span class="song-title-de">Tora als Grundlage jeder Sühne · Unmittelbar nach der Vorlesung am Yom Kippur</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · רַמְבַּ״ם הִלְכוֹת עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם הִלְכוֹת תְּפִלָּה יב · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ בִּרְכוֹת הַתּוֹרָה · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה נִצָּבִים · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט (אַהֲבָה) · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ד:ב · אוֹר הַחַיִּים דְּבָרִים ל:יד · סֵפֶר הָעִקָּרִים ג:יז
+      <span class="source-badge-de">Mischna Joma 7:1 · Rambam, Hilchot Awodat Jom HaKippurim 3:10–11 · Wajikra 16 und Bamidbar 29:7–11 (die beiden Lesungen) · Jeruschalmi Joma 7:1</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Chochmah</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Rast</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — תּוֹרַת אֱמֶת</div>
+    <div class="instrument-note">[solo acoustic guitar — Rast opening with clear royal-gold fingerpicking, the Kohen Gadol has just rolled the Tora-scroll closed and now turns to the people in the Ezrat Naschim, rubato around 58 BPM, no percussion, no drums, no beat] Gitarre: Rast-Maqam öffnet mit klar königlich-goldenem Fingerpicking — der Kohen Gadol hat soeben die Tora-Rolle geschlossen und wendet sich nun an die Versammlung in der Ezrat Naschim.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — הַתּוֹרָה נִקְרְאָה,</span>
+        <span class="line">הַכֹּהֵן הַגָּדוֹל — בְּבִגְדֵי לָבָן,</span>
+        <span class="line">חׇכְמָה — שֶׁפּוֹתַחַת אֶת הַשְּׁמוֹנֶה,</span>
+        <span class="line">לִפְנֵי הַעֲבוֹדָה — בָּא הַלִּמּוּד.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — die Tora wurde gelesen,</span>
+        <span class="line">der Kohen Gadol — in weissen Gewändern,</span>
+        <span class="line">Chochmah — die die acht eröffnet,</span>
+        <span class="line">vor dem Dienst — kommt das Lernen.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת</div>
+    <div class="instrument-note">[solo acoustic guitar — Rast verse, balanced clear modal, eternal-life-planted theme, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">בָּרוּךְ אַתָּה אֲדֹנָי — אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,</span>
+        <span class="line">אֲשֶׁר נָתַן לָנוּ — תּוֹרַת אֱמֶת,</span>
+        <span class="line">וְחַיֵּי עוֹלָם — נָטַע בְּתוֹכֵנוּ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Gesegnet bist Du Adonai — unser Gott, König der Welt,</span>
+        <span class="line">der uns gegeben hat — die Tora der Wahrheit,</span>
+        <span class="line">und ewiges Leben — in uns gepflanzt.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · mf, the Birkat haTora exactly per Mishnah Yoma 7:1, Rast clear and royal, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם,</span>
+          <span class="line">אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת,</span>
+          <span class="line">וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — נוֹתֵן הַתּוֹרָה,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet bist Du Adonai, unser Gott, König der Welt,</span>
+          <span class="line">der uns gegeben hat die Tora der Wahrheit,</span>
+          <span class="line">und ewiges Leben in uns gepflanzt.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der die Tora gibt,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — תְּשׁוּבַת הָעָם</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">חׇכְמָה — מַקְדִּימָה אֶת כָּל הַבְּרָכוֹת,</span>
+          <span class="line">כִּי הַתּוֹרָה — שֹׁרֶשׁ הַכַּפָּרָה,</span>
+          <span class="line">וְהַלִּמּוּד — קוֹדֵם לְמַעֲשֶׂה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Chochmah — geht allen Berachot voraus,</span>
+          <span class="line">denn die Tora — ist die Wurzel der Sühne,</span>
+          <span class="line">und das Lernen — geht der Tat voraus.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן בִּרְכַּת הַתּוֹרָה — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל</div>
+      <div class="tikkun-title-de">Tikkun der Tora-Beracha — Sephardische Praxis und praktische Handlung</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · רַמְבַּ״ם עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי נִצָּבִים · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ד:ב · אוֹר הַחַיִּים דְּבָרִים ל:יד · סֵפֶר הָעִקָּרִים ג:יז · כַּף הַחַיִּים או״ח קלט</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Die <em>erste</em> der acht Berachot ist die
+      Birkat haTora — und es ist <em>kein Zufall</em>, dass der Kohen Gadol am
+      heiligsten Tag mit der Tora beginnt. <strong>Rambam</strong> (<em>Hilchot
+      Avodat Yom HaKippurim</em> 3:11) zitiert <em>Mishna Yoma</em> 7:1 wörtlich
+      und nennt die Reihenfolge der acht Berachot in ihrer Mischna-Form: zuerst
+      <em>al haTora</em>, dann al haAvoda, dann al haHodaa, dann al mechilat
+      haAvon — eine pädagogische Architektur: ohne Wissen keine Sühne, ohne
+      Lernen kein Dienst. Der <strong>Rashash</strong> (<em>Nahar Shalom</em>,
+      Drush <em>Birkot haTora</em>) deutet diese Beracha als die Sefira
+      <em>Chochmah</em> — den blitzartigen Wurzel-Lichtsamen, aus dem alle
+      anderen sieben Berachot wie ein Sefirot-Baum hervorwachsen. Der Text
+      selbst (<em>asher natan lanu torat emet wechajei olam nata betochenu</em>)
+      ist heute die zweite Birkat haTora vor dem Aufruf zur Tora — sephardisch
+      mit der Beracha-Schluss-Formel des Mishna-Yoma-Textes, die heute durch die
+      Formel des Tagesgebets ersetzt wird, aber im Tempel-Kontext mit
+      <em>min haOlam we'ad haOlam</em> endete (Rambam <em>Hilchot Tefilla</em>
+      14:9 — die Tempel-Schluss-Formel). <strong>Or HaChaim</strong> auf
+      <em>Devarim 30:14</em> (<em>ki karov elecha hadawar me'od</em>) lehrt:
+      die Tora ist „nahe" — sie ist bereits <em>in</em> uns gepflanzt
+      (<em>chajei olam nata betochenu</em>), nicht etwas, das von aussen
+      hinzugefügt werden müsste. Yom Kippur ist der Tag, an dem dieser
+      eingepflanzte Tora-Same wieder erkannt wird. Der <strong>Ben Ish Chai</strong>
+      (<em>Shanah Rischona</em>, Nitzavim — die Yom-Kippur-Vorbereitungs-Hilchot)
+      lehrt die zentrale sephardische Yom-Kippur-Kawanah bei jeder Tora-Aliyah:
+      mental in der Ezrat Naschim stehen und den Kohen Gadol sprechen hören.
+      <strong>Ramchal</strong> (<em>Derech HaSchem</em> 4:2 — die Wirkung des
+      Tora-Lernens; <em>Mesillat Yescharim</em> 19 — Ahava): Tora ist
+      <em>chajei olam</em> — nicht nur Information, sondern ontologische
+      Verpflanzung göttlichen Lichts in den Lernenden. Daher steht sie an
+      erster Stelle: alles Folgende — Sühne, Tempel, Volks-Segen — fliesst aus
+      diesem ersten Lichtsamen. <strong>Sefer haIkkarim</strong> (Yosef Albo,
+      <em>Maamar Schlischi</em> 17): die Tora ist das einzige unter den drei
+      Glaubens-Wurzeln (Existenz Gottes, Tora vom Himmel, Vergeltung), das im
+      Tempel-Kontext direkt erlebt wird — daher die Eröffnungs-Position.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt die Birkat haTora in
+      jeder Tora-Aliyah weiter, sephardisch dreimal täglich gesprochen (vor
+      dem Morgenlernen, beim Schacharit-Pesukei deZimra, bei jeder Aliyah).
+      <em>Tikkun</em>: am Yom Kippur bei der Tora-Aliyah und bei der Geziera-
+      Beracha bewusst die <strong>Kohen-Gadol-Kawanah</strong> halten —
+      „ich stehe nun, wo der Hohepriester stand" (Ben Ish Chai Nitzavim).
+      Sephardischer Brauch (Aleppo · Yerushalayim · Bagdad): bei jeder
+      Birkat haTora innerlich die <em>32 Pfade der Weisheit</em>
+      mit-denken (Sefer Yetzira 1:1 als Wurzel-Architektur — die Chochmah
+      öffnet 32 Wege). Zweite Tikkun: täglich vor dem Tora-Lernen einen
+      Moment innehalten und mental nennen, <em>warum</em> man lernt —
+      die Kawanah des <em>chajei olam nata betochenu</em>: kein Lernen
+      <em>für Wissen</em>, sondern Lernen als <em>Lebens-Pflanzung</em>
+      (Or HaChaim Devarim 30:14). Dritte Tikkun: jährlich am Erev Yom Kippur
+      bei der Seudah Mafseket die Erstlinge des kommenden Lernjahres mental
+      planen — welches Sefer, welche Massechta, welche Halachot werden im
+      neuen Jahr in mich „gepflanzt"? Maschiach ben David wird die Tora in
+      voller Klarheit erneut lehren (Or HaChaim auf Devarim 30 — die Geulah
+      als Tora-Wieder-Manifestation).
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">חׇכְמָה</span>
+      <span class="tikkun-tag">תּוֹרַת אֱמֶת</span>
+      <span class="tikkun-tag">חַיֵּי עוֹלָם נָטַע</span>
+      <span class="tikkun-tag">ל״ב נְתִיבוֹת</span>
+      <span class="tikkun-tag">שֹׁרֶשׁ הַכַּפָּרָה</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — חַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ</div>
+    <div class="instrument-note">[climax — Rast opens fully, voice sustained on Cholam "וֹ" in "Olam" — the moment ewiges Leben is acknowledged as already planted, no percussion]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">חַיֵּי עוֹלָם — כְּבָר נָטוּעַ,</span>
+          <span class="line">לֹא בְּמַתָּנָה חֲדָשָׁה — אֶלָּא בִּמְצִיאוּת קְבוּעָה,</span>
+          <span class="line">בְּכָל יְהוּדִי — הַתּוֹרָה נוֹשֶׁמֶת,</span>
+          <span class="line">חׇכְמָה — שֶׁאֵין צָרִיךְ לְהוֹכִיחַ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Ewiges Leben — ist bereits gepflanzt,</span>
+          <span class="line">nicht als neue Gabe — sondern als feste Wirklichkeit,</span>
+          <span class="line">in jedem Juden — atmet die Tora,</span>
+          <span class="line">Chochmah — die nicht bewiesen werden muss.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — לִפְנֵי בִּרְכַּת הָעֲבוֹדָה</div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        הַתּוֹרָה — <strong>נִתְּנָה וְנִשְׁאֲרָה</strong>.<br>
+        הַכֹּהֵן הַגָּדוֹל — מַתְחִיל בַּשְּׁמוֹנֶה.<br>
+        הָאַחֲרֵי בָּא — <strong>② עַל הָעֲבוֹדָה</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ל — SEGEN FÜR DEN TEMPELDIENST · TIFERET · MAQAM BAYAT
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section avoda-section" id="song-30">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Tiferet</span>
+      ל
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Tiferet — תִּפְאֶרֶת · Avoda als Mittlere Säule · Tora-im-Tat</span>
+      <span class="maqam-badge">Maqam Bayat · מַקָּם בַּיָּאת</span>
+      <span class="song-title-he">② עַל הָעֲבוֹדָה — Zweite Beracha · Segen für den Tempeldienst</span>
+      <span class="song-title-de">Bitte um Annahme des gesamten Yom-Kippur-Dienstes · Erweitert gegenüber Tamid-Avoda</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · מִשְׁנָה תָּמִיד ה:א · רַמְבַּ״ם הִלְכוֹת עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם הִלְכוֹת תְּפִלָּה ב:א · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ הָעֲבוֹדָה · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה הַאֲזִינוּ · רַמְחַ״ל מְסִלַּת יְשָׁרִים יד (יִרְאָה) · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ד:ה · אוֹר הַחַיִּים וַיִּקְרָא טז:ל · רַ״ן יוֹמָא פז.
+      <span class="source-badge-de">Mischna Joma 7:1 · Mischna Tamid 5:1 (die Awodah-Beracha im täglichen Dienst) · Rambam, Hilchot Awodat Jom HaKippurim 3:11</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Tiferet</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Bayat</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — בַּקָּשַׁת הַקַּבָּלָה</div>
+    <div class="instrument-note">[solo acoustic guitar — Bayat opening with warm honey-amber central-pillar fingerpicking, the Kohen Gadol asks for divine acceptance of the entire Yom Kippur Avoda just completed, rubato around 52 BPM, no percussion, no drums, no beat] Gitarre: Bayat-Maqam öffnet mit warm honig-bernsteinem Mittelsäulen-Fingerpicking — der Kohen Gadol bittet um die göttliche Annahme der gesamten Yom-Kippur-Avoda.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְהַתּוֹרָה נֶחְתְּמָה,</span>
+        <span class="line">עַתָּה — בַּקָּשָׁה עַל הָעֲבוֹדָה,</span>
+        <span class="line">תִּפְאֶרֶת — אַחֲרֵי חׇכְמָה,</span>
+        <span class="line">עַבְדֵי הַכֹּהֲנִים — וְעַם יִשְׂרָאֵל יַחְדָּו.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — und die Tora ist besiegelt,</span>
+        <span class="line">nun — Bitte um die Avoda,</span>
+        <span class="line">Tiferet — nach Chochmah,</span>
+        <span class="line">Priester-Diener — und das Volk Israel zusammen.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — שֶׁל יוֹם הַכִּפּוּרִים בִּמְיֻחָד</div>
+    <div class="instrument-note">[solo acoustic guitar — Bayat verse, this is Yom-Kippur-specific Avoda not daily Tamid, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">לֹא תָּמִיד שֶׁל יוֹם וָיוֹם,</span>
+        <span class="line">אֶלָּא — קׇרְבְּנוֹת הַחַטָּאוֹת,</span>
+        <span class="line">קְטֹרֶת לִפְנַי וְלִפְנִים,</span>
+        <span class="line">תִּפְאֶרֶת — שֶׁל יוֹם אֶחָד בְּכׇל הַשָּׁנָה.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Nicht das tägliche Tamid,</span>
+        <span class="line">sondern — die Sündopfer,</span>
+        <span class="line">Räucherwerk im Allerheiligsten,</span>
+        <span class="line">Tiferet — eines einzigen Tags im ganzen Jahr.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · mf, the Birkat haAvoda exactly per Mishnah Yoma 7:1, Bayat warm and central, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">רְצֵה אֲדֹנָי אֱלֹהֵינוּ — בְּעַבְדֶּיךָ הַכֹּהֲנִים,</span>
+          <span class="line">וּבְעַמְּךָ יִשְׂרָאֵל — וְאֶת תְּפִלָּתָם קַבֵּל בְּרָצוֹן,</span>
+          <span class="line">וּתְהִי לְרָצוֹן תָּמִיד — עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ,</span>
+          <span class="line">בְּיוֹם הַכִּפּוּרִים.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — הַמְקַבֵּל עֲבוֹדַת עַמּוֹ יִשְׂרָאֵל בְּרָצוֹן,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Nimm wohlgefällig an, Adonai unser Gott — Deine Diener-Priester,</span>
+          <span class="line">und Dein Volk Israel — und ihr Gebet empfange wohlwollend,</span>
+          <span class="line">und es möge stets wohlgefällig sein — der Dienst Deines Volkes Israel,</span>
+          <span class="line">am Yom Kippur.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der die Avoda Seines Volkes Israel wohlwollend annimmt,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — תְּשׁוּבַת הָעָם</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">חָמֵשׁ טְבִילוֹת — עֲשָׂרָה קִידּוּשִׁים,</span>
+          <span class="line">בִּגְדֵי לָבָן — וּבִגְדֵי זָהָב,</span>
+          <span class="line">תִּפְאֶרֶת — שֶׁל עַם וְכֹהֵן יַחְדָּו.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Fünf Tauchungen — zehn Heiligungen,</span>
+          <span class="line">weisse Gewänder — und goldene Gewänder,</span>
+          <span class="line">Tiferet — von Volk und Priester zusammen.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן בִּרְכַּת הָעֲבוֹדָה — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל</div>
+      <div class="tikkun-title-de">Tikkun der Avoda-Beracha — Sephardische Praxis und praktische Handlung</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · רַמְבַּ״ם עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם תְּפִלָּה ב:א · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי הַאֲזִינוּ · רַמְחַ״ל מְסִלַּת יְשָׁרִים יד · אוֹר הַחַיִּים וַיִּקְרָא טז:ל · כַּף הַחַיִּים או״ח קכא</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Die zweite Beracha — <em>al haAvoda</em>
+      — ist die Yom-Kippur-Variante der täglichen <em>Birkat haAvoda</em>
+      (Mishna Tamid 5:1 · die dritte Beracha in der Lischkat haGazit). Hier
+      jedoch erweitert: nicht „die Avoda Israels" allgemein, sondern
+      ausdrücklich <em>beYom haKippurim</em> — die fünf Sündopfer, die
+      Räucherwerk-Eintrittung ins Allerheiligste, die Sprengungen vor dem
+      Vorhang, die Bekenntnisse über Stier und Ziegenbock. <strong>Rambam</strong>
+      (<em>Hilchot Avodat Yom HaKippurim</em> 3:11) zitiert die Beracha
+      ausdrücklich als zweite in der Reihenfolge; <em>Hilchot Tefilla</em> 2:1
+      erklärt: die Avoda-Beracha steht in der Mitte jeder Amidah genau dort,
+      wo im Tempel die Avoda selbst stattfand. Der <strong>Rashash</strong>
+      (<em>Nahar Shalom</em>, Drush <em>haAvoda</em>) deutet diese Beracha
+      als die Sefira <em>Tiferet</em> — die Mittlere Säule, die Harmonie
+      zwischen Chesed (rechte Säule: Priester-Liebe) und Gevurah (linke
+      Säule: Sühne-Strenge). Tiferet ist die Sefira, die <em>aktiv vermittelt</em>:
+      ohne sie kein Fluss von oben nach unten. Daher steht die Avoda-Beracha
+      <em>nach</em> der Tora (Chochmah-Lichtsamen) — sie ist die Übersetzung
+      des Tora-Lichts in die Tat. <strong>Or HaChaim</strong> auf
+      <em>Vayikra 16:30</em> (<em>ki vayom hazeh yechapper</em>): das
+      Wirksam-Werden der Sühne ist nicht passive Gottes-Gnade allein,
+      sondern erfordert <em>die Avoda</em> als aktiven Akt — daher betet
+      der Kohen Gadol um <em>Akzeptanz</em> dieses Aktes, nicht um die
+      Sühne selbst (diese kommt später in der vierten Beracha). Der
+      <strong>Ben Ish Chai</strong> (<em>Shanah Rischona</em>, Haazinu —
+      die Yom-Kippur-Hilchot) lehrt die zentrale sephardische
+      Avoda-Kawanah: bei jedem <em>Retzeh</em> mental die fünf Avoda-
+      Hauptakte des Hohepriesters durchgehen — Stier-Bekenntnis,
+      Goral-Losung, Ketoret im Kodesch HaKodaschim, Blutsprengungen vor
+      dem Vorhang, Hauptbekenntnis. <strong>Ramchal</strong>
+      (<em>Mesillat Yesharim</em> 14 — Yir'ah; <em>Derech HaSchem</em> 4:5):
+      die Avoda ist <em>kein Geschenk an Gott</em>, sondern eine
+      <em>Erlaubnis</em>, dass Gott durch unsere Hände handelt; daher
+      die Bitte um <em>Akzeptanz</em>, nicht um Belohnung.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt die Avoda-Beracha
+      in jeder Amidah weiter — dreimal täglich. <em>Tikkun</em>: am Yom
+      Kippur bei jedem <em>Retzeh</em> der fünf Amidot (Maariv, Schacharit,
+      Mussaf, Mincha, Ne'ila) bewusst die <strong>fünf entsprechenden
+      Avoda-Akte des Kohen Gadol</strong> mental nachgehen — Mussaf
+      ist die zentrale Avodah-Erinnerung im sephardischen Brauch
+      (Ben Ish Chai Haazinu — die ausführliche Avoda-Rezitation des
+      Mussaf-Amidah). Sephardischer Brauch (Aleppo · Yerushalayim):
+      bei der Mussaf-Avoda-Rezitation jeweils dreimal kniefallen
+      (<em>schlosch hischtachawayot</em>) bei den drei Wiederholungen des
+      Tetragrammaton — Bagdad und Marokko folgen dieser Schtachawayah-
+      Praxis besonders streng. Zweite Tikkun: täglich beim <em>Retzeh</em>
+      eine konkrete Handlung des Tages als <em>Avoda</em> einordnen — was
+      heute getan wurde, soll <em>akzeptiert</em> werden als Dienst (nicht
+      nur als Leistung). Dritte Tikkun: am Erev Yom Kippur in der Seudah
+      Mafseket nicht nur essen, sondern mental jede Speise als
+      <em>Vorbereitung der Mussaf-Avoda</em> aufnehmen — der Körper als
+      Werkzeug der morgigen Tempeldienst-Erinnerung.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">תִּפְאֶרֶת</span>
+      <span class="tikkun-tag">רְצֵה</span>
+      <span class="tikkun-tag">חָמֵשׁ אֲמִידוֹת</span>
+      <span class="tikkun-tag">שָׁלוֹשׁ הִשְׁתַּחֲוָיוֹת</span>
+      <span class="tikkun-tag">הָעַמּוּד הָאֶמְצָעִי</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — תְּהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל</div>
+    <div class="instrument-note">[climax — Bayat opens to full warmth, voice sustained on Cholam "וֹ" in "Le'olam" — the moment Avoda is accepted, no percussion]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">תְּהִי לְרָצוֹן — תָּמִיד,</span>
+          <span class="line">לֹא רַק הַיּוֹם — אֶלָּא לְעוֹלָם,</span>
+          <span class="line">עֲבוֹדַת יִשְׂרָאֵל — שֶׁאֵין לָהּ הֶפְסֵק,</span>
+          <span class="line">תִּפְאֶרֶת — שֶׁל יָמִים הַבָּאִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Es möge wohlgefällig sein — stets,</span>
+          <span class="line">nicht nur heute — sondern auf ewig,</span>
+          <span class="line">die Avoda Israels — die kein Ende hat,</span>
+          <span class="line">Tiferet — der kommenden Tage.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — לִפְנֵי בִּרְכַּת הַהוֹדָאָה</div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        הָעֲבוֹדָה — <strong>נִתְקַבְּלָה</strong>.<br>
+        הַלֵּב — מוּכָן לְהוֹדוֹת.<br>
+        הָאַחֲרֵי בָּא — <strong>③ עַל הַהוֹדָאָה</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר לא — SEGEN DES DANKES · HOD · MAQAM NAHAWAND
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section hodaah-section" id="song-31">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Hod</span>
+      לא
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Hod — הוֹד · Pracht-Dankbarkeit · Aharons Demut-Säule</span>
+      <span class="maqam-badge">Maqam Nahawand · מַקָּם נַהַאוַונְד</span>
+      <span class="song-title-he">③ עַל הַהוֹדָאָה — Dritte Beracha · Segen des Dankes</span>
+      <span class="song-title-de">Dank für Leben, Führung und alle Wunder · Modim-Parallele · Vor der Mechila-Bitte</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · רַמְבַּ״ם הִלְכוֹת עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם הִלְכוֹת תְּפִלָּה ב:א · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ הַהוֹדָאָה · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה וְזֹאת הַבְּרָכָה · רַמְחַ״ל מְסִלַּת יְשָׁרִים יח (חֲסִידוּת) · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ד:ה · אוֹר הַחַיִּים שְׁמוֹת טו:ב · בְּרָכוֹת ז:
+      <span class="source-badge-de">Mischna Joma 7:1 · Rambam, Hilchot Awodat Jom HaKippurim 3:11 · Mischna Berachot 5:2 (Modim in der Amidah)</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Hod</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Nahawand</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — מוֹדִים אֲנַחְנוּ לָךְ</div>
+    <div class="instrument-note">[solo acoustic guitar — Nahawand opening with twilight-blue contemplative fingerpicking, the Kohen Gadol acknowledges all blessings before requesting forgiveness, rubato around 56 BPM, no percussion, no drums, no beat] Gitarre: Nahawand-Maqam öffnet mit dämmerblauem kontemplativem Fingerpicking — der Kohen Gadol erkennt alle Segnungen an, bevor er um Vergebung bittet.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְהָעֲבוֹדָה נִתְקַבְּלָה,</span>
+        <span class="line">עַתָּה — לִפְנֵי הַסְּלִיחָה,</span>
+        <span class="line">הוֹדָאָה — לִפְנֵי הַבַּקָּשָׁה,</span>
+        <span class="line">הוֹד — שֶׁל הָעַמּוּד הַשְּׂמָאלִי הַתַּחְתּוֹן.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — und die Avoda ist angenommen,</span>
+        <span class="line">nun — vor der Vergebung,</span>
+        <span class="line">Dankbarkeit — vor der Bitte,</span>
+        <span class="line">Hod — der unteren linken Säule.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — צוּר חַיֵּינוּ מָגֵן יִשְׁעֵנוּ</div>
+    <div class="instrument-note">[solo acoustic guitar — Nahawand verse, our lives in His hands, our souls in His care, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">מוֹדִים אֲנַחְנוּ לָךְ — שֶׁאַתָּה הוּא,</span>
+        <span class="line">אֲדֹנָי אֱלֹהֵינוּ — וֵאלֹהֵי אֲבוֹתֵינוּ לְעוֹלָם וָעֶד,</span>
+        <span class="line">צוּר חַיֵּינוּ — מָגֵן יִשְׁעֵנוּ,</span>
+        <span class="line">אַתָּה הוּא — לְדֹר וָדֹר.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Wir danken Dir — denn Du bist es,</span>
+        <span class="line">Adonai unser Gott — und Gott unserer Väter auf ewig,</span>
+        <span class="line">Fels unseres Lebens — Schild unserer Rettung,</span>
+        <span class="line">Du bist es — von Geschlecht zu Geschlecht.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית ב — שָׁלוֹשׁ פְּעָמִים בַּיּוֹם</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">נוֹדֶה לְּךָ — וּנְסַפֵּר תְּהִלָּתֶךָ,</span>
+        <span class="line">עַל חַיֵּינוּ הַמְּסוּרִים — בְּיָדֶךָ,</span>
+        <span class="line">וְעַל נִשְׁמוֹתֵינוּ — הַפְּקוּדוֹת לָךְ,</span>
+        <span class="line">וְעַל נִסֶּיךָ — שֶׁבְּכָל יוֹם עִמָּנוּ,</span>
+        <span class="line">וְעַל נִפְלְאוֹתֶיךָ וְטוֹבוֹתֶיךָ — שֶׁבְּכָל עֵת,</span>
+        <span class="line">עֶרֶב וָבֹקֶר וְצָהֳרָיִם — שָׁלוֹשׁ פְּעָמִים.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Wir danken Dir — und erzählen Dein Lob,</span>
+        <span class="line">über unser Leben, das übergeben ist — in Deine Hand,</span>
+        <span class="line">und über unsere Seelen — die Dir anvertraut sind,</span>
+        <span class="line">und über Deine Wunder — die alltäglich mit uns sind,</span>
+        <span class="line">und über Deine Wundertaten und Gnaden — zu jeder Zeit,</span>
+        <span class="line">Abend und Morgen und Mittag — dreimal.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · mf, the Birkat haHodaah exactly per Mishnah Yoma 7:1, Nahawand contemplative twilight, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַטּוֹב — כִּי לֹא כָלוּ רַחֲמֶיךָ,</span>
+          <span class="line">וְהַמְרַחֵם — כִּי לֹא תַמּוּ חֲסָדֶיךָ,</span>
+          <span class="line">מֵעוֹלָם — קִוִּינוּ לָךְ.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Gute — dessen Erbarmungen nie enden,</span>
+          <span class="line">der Erbarmer — dessen Gnaden nie aufhören,</span>
+          <span class="line">von Ewigkeit her — hofften wir auf Dich.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der Gute ist Dein Name und Dir gebührt zu danken,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — הוֹד אַחֲרֵי תִּפְאֶרֶת</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">הוֹדָאָה — לִפְנֵי הַסְּלִיחָה,</span>
+          <span class="line">דְּחִילוּ קוֹדֶמֶת לִרְחִימוּ,</span>
+          <span class="line">אַחַר רְחִימוּ — בָּא וִדּוּי.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Dank — vor der Vergebung,</span>
+          <span class="line">Ehrfurcht geht der Liebe voraus,</span>
+          <span class="line">nach der Liebe — kommt das Bekenntnis.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן בִּרְכַּת הַהוֹדָאָה — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל</div>
+      <div class="tikkun-title-de">Tikkun der Hodaah-Beracha — Sephardische Praxis und praktische Handlung</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · רַמְבַּ״ם עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם תְּפִלָּה ב:א · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי וְזֹאת הַבְּרָכָה · רַמְחַ״ל מְסִלַּת יְשָׁרִים יח · אוֹר הַחַיִּים שְׁמוֹת טו:ב · בְּרָכוֹת ז: · כַּף הַחַיִּים או״ח קכז</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Die dritte Beracha — <em>al
+      haHodaah</em> — entspricht dem <em>Modim</em> der täglichen Amidah
+      und steht hier in voller, originaler Form. <strong>Rambam</strong>
+      (<em>Hilchot Avodat Yom HaKippurim</em> 3:11) listet sie als dritte
+      in der Mishna-Yoma-7:1-Reihenfolge; <em>Hilchot Tefilla</em> 2:1
+      nennt die <em>Modim</em>-Beracha als ständigen Bestandteil jeder
+      Amidah, nicht zu kürzen, nicht zu erweitern. Der <strong>Rashash</strong>
+      (<em>Nahar Shalom</em>, Drush <em>haHodaah</em>) deutet diese Beracha
+      als die Sefira <em>Hod</em> — etymologisch identisch mit
+      <em>Hoda'ah</em>. Hod ist die linke untere Säule des Sefirot-Baumes
+      — Aharons Aspekt der priesterlichen Demut-Dankbarkeit. Während
+      Tiferet (Avoda-Beracha) <em>aktive Mitte</em> ist, ist Hod
+      (Modim) <em>empfangende Reflexion</em>. Yom Kippur ist der Tag,
+      an dem die ganze Jahres-Bilanz <em>passiv erkannt</em> wird, bevor
+      sie aktiv gesühnt werden kann. Der <strong>Ben Ish Chai</strong>
+      (<em>Shanah Rischona</em>, WeZot HaBracha — letzter Schabbat-
+      Zyklus vor den Yamim Noraim) lehrt die sephardische Yom-Kippur-
+      Modim-Kawanah: bei jedem <em>al chayeinu</em> drei konkrete
+      Wunder des vergangenen Jahres nennen — nicht abstrakt „Wunder",
+      sondern konkrete Momente, die nicht selbstverständlich waren.
+      <strong>Ramchal</strong> (<em>Mesillat Yescharim</em> 18 —
+      Chassidut): Hodaah ist die Stufe des <em>chassid</em>; der echte
+      Chassid bedankt sich für alles, auch für das Negative, weil er
+      weiss, dass <em>nichts geschieht ohne Sinn</em>. Yom Kippur ist
+      der Tag, an dem auch das Negative des Jahres in Dankbarkeit
+      aufgenommen wird. <strong>Or HaChaim</strong> auf
+      <em>Schemot 15:2</em> (<em>zeh Eli we'anvehu</em>): die Schöne
+      Anerkennung Gottes geschieht durch Hodaah-Praxis — daher kommt
+      sie vor der Bitte, denn nur wer dankt, kann ehrlich bitten.
+      <em>Talmud Bavli Berachot 7a</em>: kein Mensch dankte Gott für
+      etwas, das nicht zuerst die Bitte um es überstieg.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt die Yom-Kippur-
+      Modim in jeder Amidah weiter — dreimal täglich. <em>Tikkun</em>:
+      bei der Yom-Kippur-Modim (besonders im Mussaf) <strong>drei
+      konkrete Jahres-Wunder</strong> mental nennen, die nicht
+      selbstverständlich waren — Gesundheit, eine Versöhnung, eine
+      Hilfe in Krise. Sephardischer Brauch (Ben Ish Chai WeZot HaBracha):
+      am Erev Yom Kippur in der Seudah Mafseket nicht nur Bitten
+      sprechen, sondern bewusst <em>danken</em> — eine Stunde lang
+      konkrete Jahres-Geschenke aufzählen. Zweite Tikkun: täglich (das
+      ganze Jahr) bei <em>Modim</em> mindestens <em>ein</em> konkretes
+      Geschenk des Tages nennen — kein abstrakter Dank, sondern
+      Hod-konkret. Dritte Tikkun: am Yom Kippur bei jeder Modim-
+      Verbeugung (sephardisch: tief beugen bei <em>Modim</em>, aufrichten
+      bei <em>Adonai</em>) bewusst die Hod-Sefira-Kawanah halten — links
+      unten am Sefirot-Baum, Aharons Säule. Vierte Tikkun: bei einer
+      bevorstehenden Krise <em>vor</em> der Bitte dreimal danken — für
+      die bisherige Hilfe, für die Möglichkeit zu bitten, für die
+      Geduld zu hören.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">הוֹד</span>
+      <span class="tikkun-tag">מוֹדִים אֲנַחְנוּ</span>
+      <span class="tikkun-tag">צוּר חַיֵּינוּ</span>
+      <span class="tikkun-tag">לֹא כָלוּ רַחֲמֶיךָ</span>
+      <span class="tikkun-tag">שָׁלוֹשׁ פְּעָמִים בְּיוֹם</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — הַטּוֹב כִּי לֹא כָלוּ רַחֲמֶיךָ</div>
+    <div class="instrument-note">[climax — Nahawand opens fully, voice sustained on Cholam "וֹ" in "Olam" — the moment of acknowledging unending mercies, no percussion]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַטּוֹב — שֶׁאֵין רַחֲמָיו נִכְלִים,</span>
+          <span class="line">הַמְרַחֵם — שֶׁאֵין חֲסָדָיו תַּמִּים,</span>
+          <span class="line">מֵעוֹלָם — קִוִּינוּ לָךְ בְּלִי אֲשֵׁמָה,</span>
+          <span class="line">הוֹד — שֶׁל אֶמְצַע הָעֵץ הַשְּׂמָאלִי.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der Gute — dessen Erbarmungen nicht enden,</span>
+          <span class="line">der Erbarmer — dessen Gnaden nicht aufhören,</span>
+          <span class="line">von Ewigkeit her — haben wir ohne Schuldgefühl auf Dich gehofft,</span>
+          <span class="line">Hod — der Mitte des linken Baumes.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — לִפְנֵי בִּרְכַּת הַמְּחִילָה</div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        הַהוֹדָאָה — <strong>נֶחְתְּמָה</strong>.<br>
+        הַלֵּב — מוּכָן עַתָּה לְהִתְפַּלֵּל עַל הַסְּלִיחָה.<br>
+        הָאַחֲרֵי בָּא — <strong>④ עַל מְחִילַת הָעָוֹן · לֵב הַיּוֹם</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר לב — SÜNDENVERGEBUNG · GEVURAH · MAQAM HIJAZ
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section mechila-section" id="song-32">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Gevurah</span>
+      לב
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Gevurah — גְּבוּרָה · din schel ahavah · DAS HERZSTÜCK des Yom Kippur</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִג׳ַאז</span>
+      <span class="song-title-he">④ עַל מְחִילַת הָעָוֹן — Vierte Beracha · Sündenvergebung</span>
+      <span class="song-title-de">Das emotionale Herzstück · Das Volk warf sich auf das Angesicht · Bitte um Vergebung für ganz Israel</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · מִשְׁנָה יוֹמָא ו:ב · מִשְׁנָה יוֹמָא ח:ט · יוֹמָא פז: · רַמְבַּ״ם הִלְכוֹת תְּשׁוּבָה א:א–ב · רַמְבַּ״ם הִלְכוֹת תְּשׁוּבָה ב:ט · רַמְבַּ״ם הִלְכוֹת עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · יְשַׁעְיָה נה:ז · יְחֶזְקֵאל לג:יא · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ מְחִילַת הָעָוֹן · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה כִּי תֵצֵא · רַמְחַ״ל מְסִלַּת יְשָׁרִים ד · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ב:ד · אוֹר הַחַיִּים וַיִּקְרָא טז:ל
+      <span class="source-badge-de">Mischna Joma 7:1 · Mischna Joma 6:2 (בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ) · Mischna Joma 8:9 · Joma 87b (die Chatimah מֶלֶךְ מוֹחֵל וְסוֹלֵחַ) · Wajikra 16:30</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Gevurah</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Hijaz</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — לֵב הַיּוֹם הַקָּדוֹשׁ</div>
+    <div class="instrument-note">[solo acoustic guitar — Hijaz opening with deep crimson-burgundy slow rumination, the heaviest tempo of the entire cycle, the people are about to fall on their faces, rubato around 46 BPM very slow and weighty, no percussion, no drums, no beat] Gitarre: Hijaz-Maqam öffnet mit tiefem karmin-burgunden langsamen Sinnen — das schwerste Tempo des ganzen Zyklus, das Volk wird sich gleich auf das Angesicht werfen.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְהַהוֹדָאָה נֶחְתְּמָה,</span>
+        <span class="line">עַתָּה — לֵב הַיּוֹם הַזֶּה,</span>
+        <span class="line">גְּבוּרָה — שֶׁמּוֹחֶלֶת בְּדִינָהּ שֶׁל אַהֲבָה,</span>
+        <span class="line">כׇּל הָעָם — נָכוֹן לִפֹּל עַל פָּנָיו.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — und der Dank ist besiegelt,</span>
+        <span class="line">nun — das Herz dieses Tages,</span>
+        <span class="line">Gevurah — die durch Gericht der Liebe vergibt,</span>
+        <span class="line">das ganze Volk — bereit, sich aufs Angesicht zu werfen.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — אַתָּה נוֹתֵן יָד לְפוֹשְׁעִים</div>
+    <div class="instrument-note">[solo acoustic guitar — Hijaz verse, the divine hand extended to sinners, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אַתָּה נוֹתֵן יָד — לְפוֹשְׁעִים,</span>
+        <span class="line">וִימִינְךָ פְשׁוּטָה — לְקַבֵּל שָׁבִים,</span>
+        <span class="line">וַתְּלַמְּדֵנוּ — לוֹמַר שׁוּבוּ מֵרִשְׁעֲכֶם,</span>
+        <span class="line">וְאַתָּה הָאֵל — שֶׁאֵינְךָ חָפֵץ בְּמוֹת הַחוֹטֵא.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Du reichst die Hand — den Übertretern,</span>
+        <span class="line">Deine Rechte ist ausgestreckt — Heimkehrende anzunehmen,</span>
+        <span class="line">und Du hast uns gelehrt — zu sagen „Kehrt um von eurer Bosheit",</span>
+        <span class="line">und Du bist der Gott — der nicht den Tod des Sünders will.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית ב — כִּי כְּיוֹם הַזֶּה תַּרְבֶּה סְלִיחָה</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">כִּי כְּיוֹם הַזֶּה — תַּרְבֶּה סְלִיחָה,</span>
+        <span class="line">לְחַטָּאִים — וּמְחִילָה לְפוֹשְׁעִים,</span>
+        <span class="line">כַּפֵּר — עַל כׇּל חַטֹּאתֵינוּ,</span>
+        <span class="line">מְחוֹל — עַל כׇּל עֲוֹנוֹתֵינוּ,</span>
+        <span class="line">סְלַח — עַל כׇּל פְּשָׁעֵינוּ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Denn wie an diesem Tag — mehrst Du die Vergebung,</span>
+        <span class="line">für die Sünder — und Verzeihung für die Übertreter,</span>
+        <span class="line">sühne — für alle unsere Sünden,</span>
+        <span class="line">verzeih — für alle unsere Verfehlungen,</span>
+        <span class="line">vergib — für alle unsere Übertretungen.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · ff, the Mechila-blessing exactly per Mishnah Yoma 7:1, Hijaz opens to maximum intensity at the climax, the people are now prostrate on the ground, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אַתָּה נוֹתֵן יָד לְפוֹשְׁעִים — וִימִינְךָ פְשׁוּטָה לְקַבֵּל שָׁבִים,</span>
+          <span class="line">וַתְּלַמְּדֵנוּ אֲדֹנָי אֱלֹהֵינוּ — לוֹמַר שׁוּבוּ מֵרִשְׁעֲכֶם,</span>
+          <span class="line">וְאַתָּה בְרַחֲמֶיךָ הָרַבִּים — מְקַבֵּל שָׁבִים,</span>
+          <span class="line">וְאֵינְךָ חָפֵץ — בְּמוֹת הַחוֹטֵא.</span>
+          <span class="line" style="margin-top:.6em;">כַּפֵּר לָנוּ עַל כׇּל חַטֹּאתֵינוּ,</span>
+          <span class="line">וּמְחוֹל לָנוּ עַל כׇּל עֲוֹנוֹתֵינוּ,</span>
+          <span class="line">וּסְלַח לָנוּ עַל כׇּל פְּשָׁעֵינוּ.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — מוֹחֵל עֲוֹנוֹת עַמּוֹ יִשְׂרָאֵל,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Du reichst die Hand den Übertretern — und Deine Rechte ist ausgestreckt, Heimkehrende anzunehmen,</span>
+          <span class="line">und Du hast uns gelehrt, Adonai unser Gott — zu sagen „Kehrt um von eurer Bosheit",</span>
+          <span class="line">und Du in Deinen vielen Erbarmungen — nimmst Heimkehrende an,</span>
+          <span class="line">und willst nicht — den Tod des Sünders.</span>
+          <span class="line" style="margin-top:.6em;">Sühne für uns für alle unsere Sünden,</span>
+          <span class="line">und verzeih uns für alle unsere Verfehlungen,</span>
+          <span class="line">und vergib uns für alle unsere Übertretungen.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der die Verfehlungen Seines Volkes Israel vergibt,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — הָעָם נוֹפֵל עַל פָּנָיו</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">בִּשְׁעַת אֲמִירַת — שֵׁם הַמְפֹרָשׁ,</span>
+          <span class="line">כׇּל הָעָם — נוֹפֵל עַל פָּנָיו,</span>
+          <span class="line">גְּבוּרָה — נוֹגַעַת בְּלֵב הָעֵדָה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Beim Aussprechen — des Heiligen Namens,</span>
+          <span class="line">fällt das ganze Volk — auf sein Angesicht,</span>
+          <span class="line">Gevurah — berührt das Herz der Gemeinde.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן מְחִילַת הָעָוֹן — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל · לֵב הַיּוֹם</div>
+      <div class="tikkun-title-de">Tikkun der Sündenvergebung — DAS HERZSTÜCK des Yom Kippur</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · מִשְׁנָה יוֹמָא ו:ב · מִשְׁנָה יוֹמָא ח:ט · יוֹמָא פז: · רַמְבַּ״ם תְּשׁוּבָה א:א–ב · רַמְבַּ״ם תְּשׁוּבָה ב:ט · יְשַׁעְיָה נה:ז · יְחֶזְקֵאל לג:יא · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי כִּי תֵצֵא · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ב:ד</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Diese vierte Beracha ist <em>das
+      Herzstück</em> des gesamten Yom Kippur — die Bitte um Vergebung der
+      Sünden des ganzen Volkes Israel. <em>Mishna Yoma</em> 6:2 berichtet
+      historisch: <em>uchschehayu schome'im et haSchem haMphorasch jotze
+      mipi Kohen Gadol — hayu kor'im umischtachawim unofelim al pneihem</em>
+      — wenn das Volk den ausgesprochenen Heiligen Namen aus dem Mund des
+      Kohen Gadol hörte, knieten sie nieder und warfen sich auf das
+      Angesicht. Dies geschah <em>zehnmal</em> am Yom Kippur (Mishna Yoma
+      3:8, 4:2, 6:2), und die Mechila-Beracha war einer dieser Momente
+      höchster körperlicher Demut. Der Text dieser Beracha kombiniert
+      mehrere biblische Quellen: <em>atta noten yad lapposchim</em>
+      (eigenständige Phrase, vom Mishna-Original), <em>schuvu
+      mereschachem</em> (Yechezkel 33:11), <em>einecha chafetz bemot
+      hachoteh</em> (Yechezkel 18:32 + 33:11), <em>kapper umechol
+      uslach</em> (Vayikra 16:30 — die zentrale Yom-Kippur-Tora-Phrase).
+      Die drei Verben <em>kapper · mechol · selach</em> entsprechen den
+      drei sephardisch-kabbalistischen Sünden-Kategorien: <em>chataot</em>
+      (unbewusst, durch <em>kapparah</em> gesühnt), <em>avonot</em>
+      (bewusst-vorsätzlich, durch <em>mechilah</em> verziehen),
+      <em>peschaim</em> (rebellisch, durch <em>slichah</em> vergeben —
+      schwerste Stufe; <strong>Rambam Hilchot Teschuva</strong> 1:1–2
+      etabliert diese Hierarchie systematisch). Der <strong>Rashash</strong>
+      (<em>Nahar Shalom</em>, Drush <em>Mechilat HaAvon</em>) deutet
+      diese Beracha als die Sefira <em>Gevurah</em> — aber als
+      <em>din schel ahavah</em> (Gericht der Liebe): nicht zerstörende
+      Strenge, sondern <em>begrenzende Liebe</em>, die das Negative
+      <em>im Lichte des Positiven</em> beurteilt. Yom Kippur ist
+      <em>der Tag</em>, an dem Gevurah sich als Chesed enthüllt — das
+      wahre Geheimnis der Schekhinah-Vereinigung am zehnten Tischrei.
+      Der <strong>Ben Ish Chai</strong> (<em>Shanah Rischona</em>,
+      Ki Tetze — die Yom-Kippur-Hilchot komplett im Elul-Vorbereitungs-
+      Zyklus) lehrt die zentrale sephardische Erkenntnis: bei der
+      Mechila-Beracha (im heutigen Mussaf-Avodah-Zikaron) bewusst die
+      <em>drei Verben</em> in der richtigen Reihenfolge halten —
+      <em>kapper</em> für unbewusste, <em>mechol</em> für bewusste,
+      <em>selach</em> für rebellische Sünden. Das ist die <em>maximale
+      Hierarchie der Reinigung</em>. Sephardisch: bei jedem Verb
+      innerlich kurz innehalten und eine konkrete Jahres-Sünde benennen.
+      <strong>Ramchal</strong> (<em>Mesillat Yesharim</em> 4 — Zehirut;
+      <em>Derech HaSchem</em> 2:4 — Hashgachah): die Mechila-Beracha
+      ist <em>der einzige Punkt im liturgischen Jahr</em>, an dem das
+      ganze Volk gleichzeitig <em>physisch niederfällt</em>. Diese
+      körperliche Geste ist konstitutiv — ohne sie ist die Sühne
+      unvollständig. Die heutige Kniefall-Praxis bei
+      <em>„weAnachnu kor'im umischtachawim"</em> im Aleinu (besonders
+      am Yom Kippur und Rosch HaSchana) ist direktes Echo dieser alten
+      Tempel-Mechila-Praxis. <strong>Or HaChaim</strong> auf
+      <em>Vayikra 16:30</em>: die Phrase <em>lifnei Adonai titharu</em>
+      bezeichnet eine zweistufige Reinigung: Sühne <em>vor</em> Gott
+      (durch Avoda), und Reinigung <em>vor</em> Gott (durch eigene
+      Teschuvah). Beides muss zusammenkommen — daher die zwei Hälften
+      der Mechila-Beracha: erst die Anerkennung der göttlichen Hand,
+      dann die dreifache eigene Verben-Bitte.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt die Mechila-
+      Beracha in der gesamten Yom-Kippur-Liturgie weiter — in jedem
+      <em>Slach Lanu</em>, in jedem Vidui (Aschamnu, Al Chet), im
+      Avodah-Zikaron des Mussaf. <em>Tikkun</em>: am Yom Kippur bei
+      jedem <em>Slach Lanu Mechol Lanu Kapper Lanu</em> (zentrales
+      Refrain der Slichot-Tradition) bewusst die <em>drei Verben in
+      der richtigen Reihenfolge</em> durchgehen — von leicht zu
+      schwer. Sephardischer Brauch (Ben Ish Chai Ki Tetze): am Yom
+      Kippur bei „Aleinu" tatsächlich <em>kniefallen mit Stirn am
+      Boden</em> (vollständige Schtachawayah, nicht nur leichtes
+      Neigen) — Echo der alten Tempel-Avoda. Zweite Tikkun: einmal
+      jährlich (klassisch am Erev Yom Kippur) einen <strong>konkreten
+      Akt der Mechila</strong> ausführen — eine echte Versöhnung mit
+      jemandem, dem man oder die einem Unrecht getan hat, im echten
+      Sinn von <em>Yoma 87a</em>: <em>aveirot schebein adam laMakom —
+      Yom Kippur mechaper. Aveirot schebein adam laChavero — ein Yom
+      Kippur mechaper ad scheyeratze et chavero</em> — Sünden zwischen
+      Mensch und Gott sühnt Yom Kippur, aber Sünden zwischen Mensch
+      und Mitmensch sühnt Yom Kippur erst, nachdem man den Mitmenschen
+      besänftigt hat (Rambam <em>Hilchot Teschuva</em> 2:9 explizit).
+      Dritte Tikkun: täglich (das ganze Jahr) beim Vidui in Tachanun
+      die drei Sünden-Stufen mit-denken — eine konkrete des Tages
+      pro Verb.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">גְּבוּרָה</span>
+      <span class="tikkun-tag">לֵב הַיּוֹם</span>
+      <span class="tikkun-tag">כַּפֵּר מְחוֹל סְלַח</span>
+      <span class="tikkun-tag">דִּין שֶׁל אַהֲבָה</span>
+      <span class="tikkun-tag">נְפִילַת אַפַּיִם</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — הַיּוֹם הַגָּדוֹל וְהַנּוֹרָא</div>
+    <div class="instrument-note">[climax — Hijaz at maximum intensity, voice sustained on Cholam "וֹ" in "Olam" — the moment of total prostration, the people are on the ground, no percussion, the cumulative weight of the entire cycle here]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">הַיּוֹם הַזֶּה — הַגָּדוֹל וְהַנּוֹרָא,</span>
+          <span class="line">שֶׁבּוֹ — תַּרְבֶּה סְלִיחָה לְעַמֶּךָ,</span>
+          <span class="line">חַטָּאוֹת · עֲוֹנוֹת · פְּשָׁעִים — כֻּלָּם מָחוּלִים,</span>
+          <span class="line">גְּבוּרָה — שֶׁמְּגַלָּה אֶת אַהֲבָתָהּ הָעֲמֻקָּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Dieser Tag — der grosse und ehrfurchtgebietende,</span>
+          <span class="line">an dem — Du Vergebung mehrst für Dein Volk,</span>
+          <span class="line">Sünden · Verfehlungen · Übertretungen — alle vergeben,</span>
+          <span class="line">Gevurah — die ihre tiefste Liebe offenbart.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — לִפְנֵי בִּרְכַּת הַמִּקְדָּשׁ</div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        הַסְּלִיחָה — <strong>נִתָּנָה</strong>.<br>
+        הָעָם קָם — מֵרִצְפַּת הַחֲצַר.<br>
+        הַלֵּב — נָקִי וְקַל.<br>
+        הָאַחֲרֵי בָּא — <strong>⑤ עַל הַמִּקְדָּשׁ</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר לג — SEGEN FÜR DAS HEILIGTUM · BINAH · MAQAM SABA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section mikdash-section" id="song-33">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Binah</span>
+      לג
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Binah — בִּינָה · Schekhinah · Mikdasch als Beit-Schekhinah</span>
+      <span class="maqam-badge">Maqam Saba · מַקָּם סָבָא</span>
+      <span class="song-title-he">⑤ עַל הַמִּקְדָּשׁ — Fünfte Beracha · Segen für das Heiligtum</span>
+      <span class="song-title-de">Dank für den Tempel und Bitte um ewigen Bestand · Beit-haMikdasch-haSchlischi besonders bedeutsam</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם הִלְכוֹת בֵּית הַבְּחִירָה א:א · מְלָכִים א ח · יְחֶזְקֵאל מ–מח · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ הַמִּקְדָּשׁ · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה תְּרוּמָה · רַמְחַ״ל מִשְׁכְּנֵי עֶלְיוֹן (כָּל הַסֵּפֶר) · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט (אַהֲבָה) · אוֹר הַחַיִּים שְׁמוֹת מ:לד · כַּף הַחַיִּים או״ח קכא
+      <span class="source-badge-de">Mischna Joma 7:1 · Jeruschalmi Joma 7:1 · Melachim I 8 (Schelomos Tempelgebet) · Rambam, Hilchot Beit HaBechirah 1</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Binah</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Saba</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — שֶׁתִּשְׁכֹּן שְׁכִינָתְךָ</div>
+    <div class="instrument-note">[solo acoustic guitar — Saba opening with mystical mauve-violet shimmering Schekhinah-house fingerpicking, microtonal hovering, rubato around 50 BPM, no percussion, no drums, no beat] Gitarre: Saba-Maqam öffnet mit mystisch mauve-violetten schimmernden Schekhinah-Haus-Tönen, mikrotonal schwebend.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְהַסְּלִיחָה נִתָּנָה,</span>
+        <span class="line">עַתָּה — בַּקָּשָׁה עַל בֵּיתֶךָ,</span>
+        <span class="line">בִּינָה — שֶׁשּׁוֹכֶנֶת בְּהֵיכָלָהּ,</span>
+        <span class="line">שְׁכִינָה — עוֹמֶדֶת בָּעֲזָרָה אִתָּנוּ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — und die Vergebung ist gegeben,</span>
+        <span class="line">nun — Bitte um Dein Haus,</span>
+        <span class="line">Binah — die in ihrem Heichal wohnt,</span>
+        <span class="line">Schekhinah — steht mit uns im Vorhof.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — שֶׁתִּשְׁכֹּן שְׁכִינָתְךָ בְּבֵיתֶךָ לְעוֹלָם</div>
+    <div class="instrument-note">[solo acoustic guitar — Saba verse, the Schekhinah dwelling in the rebuilt Third Temple, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי אֱלֹהֵינוּ — וֵאלֹהֵי אֲבוֹתֵינוּ,</span>
+        <span class="line">יְהִי רָצוֹן — מִלְּפָנֶיךָ,</span>
+        <span class="line">שֶׁתִּשְׁכֹּן — שְׁכִינָתְךָ בְּבֵיתֶךָ לְעוֹלָם,</span>
+        <span class="line">וּמַלְכוּתְךָ — תִּהְיֶה נִגְלֵית בְּצִיּוֹן עִירְךָ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai unser Gott — und Gott unserer Väter,</span>
+        <span class="line">möge es Dein Wille sein — vor Dir,</span>
+        <span class="line">dass Deine Schekhinah — auf ewig in Deinem Haus wohne,</span>
+        <span class="line">und Dein Königtum — sich offenbare in Zion Deiner Stadt.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית ב — וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">וְתֶחֱזֶינָה עֵינֵינוּ — בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים,</span>
+        <span class="line">וּבְנֵה אוֹתָהּ — בִּנְיַן עוֹלָמִים,</span>
+        <span class="line">בִּנְיָן — שֶׁלֹּא יִתְפָּרֵד,</span>
+        <span class="line">בִּינָה — עֲלִיּוֹנָה שֶׁמְּקוֹמָהּ בָּאֶרֶץ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und mögen unsere Augen schauen — in Deiner Rückkehr nach Zion in Erbarmen,</span>
+        <span class="line">und baue sie auf — als ewigen Bau,</span>
+        <span class="line">ein Bau — der nicht zerfällt,</span>
+        <span class="line">obere Binah — deren Ort auf Erden ist.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · mf, the Birkat haMikdash exactly per Mishnah Yoma 7:1, Saba opens to full microtonal sacred-architecture shimmer, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ —</span>
+          <span class="line">יְהִי רָצוֹן מִלְּפָנֶיךָ — שֶׁתִּשְׁכֹּן שְׁכִינָתְךָ בְּבֵיתֶךָ לְעוֹלָם,</span>
+          <span class="line">וּמַלְכוּתְךָ תִּהְיֶה נִגְלֵית — בְּצִיּוֹן עִירְךָ.</span>
+          <span class="line" style="margin-top:.6em;">וְתֶחֱזֶינָה עֵינֵינוּ — בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים,</span>
+          <span class="line">וּבְנֵה אוֹתָהּ — בִּנְיַן עוֹלָמִים.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — הַשּׁוֹכֵן בְּצִיּוֹן,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai unser Gott und Gott unserer Väter —</span>
+          <span class="line">möge es Dein Wille sein — dass Deine Schekhinah in Deinem Haus auf ewig wohne,</span>
+          <span class="line">und Dein Königtum sich offenbare — in Zion Deiner Stadt.</span>
+          <span class="line" style="margin-top:.6em;">Und mögen unsere Augen schauen — in Deiner Rückkehr nach Zion in Erbarmen,</span>
+          <span class="line">und baue sie auf — als ewigen Bau.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der in Zion wohnt,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — תְּשׁוּבַת הָעָם</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">בֵּית שְׁלִישִׁי — עוֹמֵד עַתָּה,</span>
+          <span class="line">הָאֲבָנִים — לֹא יִפֹּלוּ עוֹד,</span>
+          <span class="line">בִּינָה — מוֹשֶׁבֶת לָנוּ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Dritter Tempel — steht nun,</span>
+          <span class="line">die Steine — werden nicht mehr fallen,</span>
+          <span class="line">Binah — ist uns sesshaft.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן עַל הַמִּקְדָּשׁ — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל</div>
+      <div class="tikkun-title-de">Tikkun des Heiligtums — Sephardische Praxis und praktische Handlung</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם בֵּית הַבְּחִירָה א:א · מְלָכִים א ח · יְחֶזְקֵאל מ–מח · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי תְּרוּמָה · רַמְחַ״ל מִשְׁכְּנֵי עֶלְיוֹן · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט · אוֹר הַחַיִּים שְׁמוֹת מ:לד</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Diese Beracha bittet um den
+      ewigen Bestand des Heiligen Hauses (<em>Bayit</em>) und um die
+      Offenbarung Gottes Königreich in Zion. <em>Mishna Yoma</em> 7:1
+      nennt sie kurz <em>al haMikdasch</em>. Der Text — wie der Fahrplan
+      nach <em>Yeruschalmi Yoma</em> 7:1 rekonstruiert — hat zwei
+      Hauptbitten: <em>schetischkon Schechinatcha bevetcha le'olam</em>
+      (dass die Schekhinah auf ewig im Haus wohne) und <em>wetechezena
+      eineinu beschuvcha le'Tzion berachamim</em> (dass unsere Augen
+      Deine Rückkehr nach Zion in Erbarmen sehen — heute Teil der
+      <em>Retzeh</em>-Beracha der täglichen Amidah, sephardisch täglich
+      gesprochen). Die Sequenz ist konstitutiv: ohne Vergebung
+      (Beracha ④) kann Schekhinah nicht wohnen; ohne Schekhinah ist
+      das Haus nur Stein. Im <em>Dritten Tempel</em> (in dem dieser
+      Zyklus liturgisch eingebettet ist) hat diese Beracha eine
+      besondere Doppelheit: Dank für die Wiederherstellung UND Bitte
+      um den Bestand. <em>1 Könige 8</em> (Schlomos Einweihungs-Gebet)
+      und <em>Yechezkel 40–48</em> (das prophetische Bild des Dritten
+      Tempels) sind die textuellen Grundlagen. <strong>Rambam</strong>
+      (<em>Hilchot Beit haBechirah</em> 1:1) leitet die Mizvah des
+      Mikdasch direkt aus <em>Schemot 25:8</em> ab (<em>ve'asu li
+      mikdasch</em>) — eine ewige Pflicht, die durch die Tempel-
+      Zerstörung nicht aufgehoben wurde, sondern auf die Wieder-
+      Errichtung wartet. Der <strong>Rashash</strong> (<em>Nahar
+      Shalom</em>, Drush <em>HaMikdasch</em>) deutet diese Beracha als
+      die Sefira <em>Binah</em> — die <em>obere Mutter</em>, deren
+      Schekhinah-Aspekt nach unten als Erdwohnung in den Mikdasch
+      hineinfliesst. Yom Kippur ist kabbalistisch <em>der Tag der
+      Binah-Offenbarung</em>: das 50. Tor öffnet sich (Schmot Rabba
+      41:6). Daher erscheint Binah in der Mitte der acht Berachot —
+      als <em>Wohnpunkt</em> zwischen Sühne (Gevurah, Beracha ④) und
+      Volk-Krönung (Malchut, Beracha ⑥). Die mikrotonale Saba-
+      Schwebung der Musik entspricht dieser <em>Zwischen-Lage</em> der
+      Schekhinah: nicht oben, nicht unten, sondern <em>im Haus</em>.
+      Der <strong>Ben Ish Chai</strong> (<em>Shanah Rischona</em>,
+      Terumah) lehrt die zentrale sephardische Kawanah: bei jeder
+      Tefilla, in der der Mikdasch erwähnt wird, bewusst die
+      Schekhinah <em>im eigenen Inneren</em> als kleines Heichal
+      spüren — die <em>Schekhinah-im-Herzen</em> ist Vorform der
+      <em>Schekhinah-im-Mikdasch</em>. <strong>Ramchal</strong>
+      (<em>Mishkney Elyon</em> — das ganze Werk; <em>Mesillat
+      Yesharim</em> 19 — Ahava): das Mikdasch ist nicht nur Gebäude,
+      sondern <em>Höchste Ahava-Materialisation</em> — der Punkt, an
+      dem göttliche und menschliche Liebe sich vereinigen können.
+      <strong>Or HaChaim</strong> auf <em>Schemot 40:34</em>
+      (<em>vayechas he'anan et ohel mo'ed</em>): das Schechina-
+      Eintreten in den Mischkan ist das Modell-Bild für die endgültige
+      Schechina-Manifestation durch <em>Maschiach ben David</em> im
+      Dritten Beit haMikdasch.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt die Mikdasch-
+      Beracha in der Birkat HaMazon weiter (drittes Segen <em>boneh
+      Yeruschalayim</em>), in der Amidah (Bitte 14: <em>weliruschalayim
+      ircha berachamim taschuv</em>), und besonders in den Tischa-
+      be'Aw-Klagen. <em>Tikkun</em>: bei jedem Birkat HaMazon
+      (besonders Schabbat-Mahlzeiten) bewusst die <em>Schekhinah-im-
+      Herzen</em>-Kawanah halten (Ben Ish Chai Terumah). Sephardischer
+      Brauch: an Yom Kippur in der Avodah-Mussaf-Rezitation bei den
+      Stellen, an denen der Kohen Gadol den Heichal betritt, mental
+      mitgehen — das eigene Innere als Mikdasch besuchen. Zweite
+      Tikkun: einmal jährlich (klassisch Yom Kippur) eine Stunde in
+      absoluter Stille verbringen — den inneren Mikdasch besuchen,
+      ohne Worte und ohne Bitten; nur <em>Schekhinah-Spüren</em>.
+      Dritte Tikkun: bei jeder <em>uveneh oto bekarov beyameinu</em>-
+      Phrase im Birkat HaMazon konkret eine Handlung des kommenden
+      Tages mental dem zukünftigen Mikdasch widmen — der Tag selbst
+      als Mikdasch-Vorbereitung.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">בִּינָה</span>
+      <span class="tikkun-tag">שְׁכִינָה בְּבֵיתֶךָ</span>
+      <span class="tikkun-tag">בֵּית שְׁלִישִׁי נִצְחִי</span>
+      <span class="tikkun-tag">בְּשׁוּבְךָ לְצִיּוֹן</span>
+      <span class="tikkun-tag">מִקְדָּשׁ בַּלֵּב</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — בִּנְיַן עוֹלָמִים</div>
+    <div class="instrument-note">[climax — Saba opens fully, voice sustained on Cholam "וֹ" in "Olam" — the moment of recognizing the eternal building, no percussion]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בִּנְיַן עוֹלָמִים — שֶׁלֹּא יִתְפָּרֵד,</span>
+          <span class="line">אֲבָנִים — שֶׁאֵינָן יוֹדְעוֹת חֻרְבָּן,</span>
+          <span class="line">שְׁכִינָה — שֶׁכָּאן לְעוֹלָם,</span>
+          <span class="line">בִּינָה — שֶׁשּׁוֹכֶנֶת עַל הָאָרֶץ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Ewiger Bau — der nicht zerfällt,</span>
+          <span class="line">Steine — die keine Zerstörung kennen,</span>
+          <span class="line">Schekhinah — die hier auf ewig ist,</span>
+          <span class="line">Binah — die auf der Erde wohnt.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — לִפְנֵי בִּרְכַּת יִשְׂרָאֵל</div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        הַמִּקְדָּשׁ — <strong>שׁוֹכֵן לְעוֹלָם</strong>.<br>
+        הַשְּׁכִינָה — נִגְלֵית בְּצִיּוֹן.<br>
+        הָאַחֲרֵי בָּא — <strong>⑥ עַל יִשְׂרָאֵל</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר לד — SEGEN FÜR ISRAEL · MALCHUT · MAQAM SIGA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section israel-section" id="song-34">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Malchut</span>
+      לד
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Malchut — מַלְכוּת · Volks-Krönung · Kohen Gadol als Fürsprecher</span>
+      <span class="maqam-badge">Maqam Siga · מַקָּם סִיגָה</span>
+      <span class="song-title-he">⑥ עַל יִשְׂרָאֵל — Sechste Beracha · Segen für das Volk Israel</span>
+      <span class="song-title-de">Fürsprache des Kohen Gadol für ganz Israel weltweit · Sim-Schalom-Parallele</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם הִלְכוֹת תְּפִלָּה ב:א · רַמְבַּ״ם הִלְכוֹת עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · בַּמִּדְבָּר ו:כב–כז · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ עַל יִשְׂרָאֵל · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה תְּצַוֶּה · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ב:ד · אוֹר הַחַיִּים בַּמִּדְבָּר ו:כז · כַּף הַחַיִּים או״ח קכז
+      <span class="source-badge-de">Mischna Joma 7:1 · Jeruschalmi Joma 7:1 · Rambam, Hilchot Awodat Jom HaKippurim 3:11 · Mischna Berachot 5:2 (Sim Schalom)</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Malchut</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Siga</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה</div>
+    <div class="instrument-note">[solo acoustic guitar — Siga opening with royal-copper micro-third-interval fingerpicking, the Kohen Gadol as advocate for the entire people Israel worldwide, rubato around 54 BPM, no percussion, no drums, no beat] Gitarre: Siga-Maqam öffnet mit königlich-kupfernen Mikro-Tertien-Fingerpicking — der Kohen Gadol als Fürsprecher des ganzen Volkes Israel weltweit.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְהַשְּׁכִינָה שׁוֹכֶנֶת,</span>
+        <span class="line">עַתָּה — בַּקָּשָׁה עַל עַמְּךָ,</span>
+        <span class="line">מַלְכוּת — תַּחְתִּית הָעֵץ,</span>
+        <span class="line">יִשְׂרָאֵל — בְּכׇל אַרְצוֹת תְּפוּצָתָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — und die Schekhinah wohnt,</span>
+        <span class="line">nun — Bitte um Dein Volk,</span>
+        <span class="line">Malchut — unten am Baum,</span>
+        <span class="line">Israel — in allen Ländern ihrer Zerstreuung.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה</div>
+    <div class="instrument-note">[solo acoustic guitar — Siga verse, the great six-fold blessing modeled on Birkat Kohanim, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי אֱלֹהֵינוּ — שִׂים שָׁלוֹם,</span>
+        <span class="line">טוֹבָה — וּבְרָכָה,</span>
+        <span class="line">חֵן — וָחֶסֶד וְרַחֲמִים,</span>
+        <span class="line">עָלֵינוּ — וְעַל כׇּל יִשְׂרָאֵל עַמֶּךָ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai unser Gott — schaffe Frieden,</span>
+        <span class="line">Gutes — und Segen,</span>
+        <span class="line">Anmut — und Gnade und Erbarmen,</span>
+        <span class="line">über uns — und über ganz Israel Dein Volk.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית ב — בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">בָּרְכֵנוּ אָבִינוּ — כֻּלָּנוּ כְּאֶחָד,</span>
+        <span class="line">בְּאוֹר פָּנֶיךָ — כִּי בְאוֹר פָּנֶיךָ,</span>
+        <span class="line">נָתַתָּ לָנוּ אֲדֹנָי אֱלֹהֵינוּ —</span>
+        <span class="line">תּוֹרַת חַיִּים — וְאַהֲבַת חֶסֶד,</span>
+        <span class="line">וּצְדָקָה — וּבְרָכָה,</span>
+        <span class="line">וְרַחֲמִים — וְחַיִּים וְשָׁלוֹם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Segne uns, unser Vater — uns alle als einen,</span>
+        <span class="line">im Licht Deines Antlitzes — denn im Licht Deines Antlitzes,</span>
+        <span class="line">hast Du uns gegeben, Adonai unser Gott —</span>
+        <span class="line">die Tora des Lebens — und die Liebe der Güte,</span>
+        <span class="line">und Wohltätigkeit — und Segen,</span>
+        <span class="line">und Erbarmen — und Leben und Frieden.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · mf, the Birkat Israel exactly per Mishnah Yoma 7:1, Siga full royal copper, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי אֱלֹהֵינוּ — שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה,</span>
+          <span class="line">חֵן וָחֶסֶד וְרַחֲמִים — עָלֵינוּ וְעַל כׇּל יִשְׂרָאֵל עַמֶּךָ.</span>
+          <span class="line">בָּרְכֵנוּ אָבִינוּ — כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ,</span>
+          <span class="line">כִּי בְאוֹר פָּנֶיךָ — נָתַתָּ לָנוּ אֲדֹנָי אֱלֹהֵינוּ,</span>
+          <span class="line">תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד —</span>
+          <span class="line">וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — שׁוֹמֵר עַמּוֹ יִשְׂרָאֵל לָעַד,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai unser Gott — schaffe Frieden, Gutes und Segen,</span>
+          <span class="line">Anmut und Gnade und Erbarmen — über uns und über ganz Israel Dein Volk.</span>
+          <span class="line">Segne uns, unser Vater — uns alle als einen im Licht Deines Antlitzes,</span>
+          <span class="line">denn im Licht Deines Antlitzes — hast Du uns gegeben, Adonai unser Gott,</span>
+          <span class="line">die Tora des Lebens und die Liebe der Güte —</span>
+          <span class="line">und Wohltätigkeit und Segen und Erbarmen und Leben und Frieden.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der Sein Volk Israel ewig bewahrt,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — תְּשׁוּבַת הָעָם</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">שֵׁשׁ מַתָּנוֹת — בְּבַת אַחַת,</span>
+          <span class="line">שָׁלוֹם · טוֹבָה · בְּרָכָה · חֵן · חֶסֶד · רַחֲמִים,</span>
+          <span class="line">מַלְכוּת — שֶׁמְּקַבֶּלֶת אֶת הַכֹּל.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Sechs Gaben — auf einmal,</span>
+          <span class="line">Frieden · Gutes · Segen · Anmut · Gnade · Erbarmen,</span>
+          <span class="line">Malchut — die alles empfängt.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן בִּרְכַּת יִשְׂרָאֵל — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל</div>
+      <div class="tikkun-title-de">Tikkun des Israel-Segens — Sephardische Praxis und praktische Handlung</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם תְּפִלָּה ב:א · בַּמִּדְבָּר ו:כב–כז · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי תְּצַוֶּה · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט · אוֹר הַחַיִּים בַּמִּדְבָּר ו:כז · כַּף הַחַיִּים או״ח קכז</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Die sechste Beracha — <em>al
+      Yisrael</em> — entspricht der heutigen Sim-Schalom-Beracha
+      (letzter Segen jeder Amidah, sephardisch <em>Schalom Rav</em> im
+      Maariv-Wochentag und <em>Sim Schalom</em> in Schacharit/Mussaf/Mincha).
+      <em>Mishna Yoma</em> 7:1 nennt sie als sechste Beracha; der Text —
+      wie der Fahrplan nach <em>Yeruschalmi Yoma</em> 7:1 rekonstruiert
+      — ist die <em>volle Sim-Schalom-Fassung</em> mit den sechs Gaben
+      (<em>schalom · tova · beracha · chen · chesed · rachamim</em>),
+      modelliert nach der Birkat Kohanim (<em>Bamidbar 6:22–27</em>),
+      gefolgt von der siebenfachen Lebens-Gabe (<em>Torat chayim ·
+      ahavat chesed · tzedaka · beracha · rachamim · chayim · schalom</em>).
+      Die Schlussformel <em>baruch atta Adonai schomer amo Yisrael
+      la'ad</em> ist einzigartig für diese Yom-Kippur-Beracha und
+      unterscheidet sich von der heutigen Schlussformel <em>hamevarech
+      et amo Yisrael baSchalom</em> — die ältere <em>Schomer</em>-Form
+      betont den <em>ewigen Schutz</em>, nicht nur den Segen.
+      <strong>Rambam</strong> (<em>Hilchot Avodat Yom HaKippurim</em>
+      3:11) listet die Beracha als sechste; <em>Hilchot Tefilla</em>
+      2:1 erklärt, dass die Schalom-Beracha in der Amidah genau dort
+      steht, wo im Tempel-Yom-Kippur die Israel-Beracha des Kohen
+      Gadol stand. Der <strong>Rashash</strong> (<em>Nahar Shalom</em>,
+      Drush <em>al Yisrael</em>) deutet diese Beracha als die Sefira
+      <em>Malchut</em> — die <em>unterste Sefira</em>, in der alle
+      neun oberen Sefirot ihren Fluss-Auftrag finden. Malchut ist
+      <em>Knesset Yisrael</em> selbst — das Volk als kollektive
+      Sefira. Daher steht sie nicht an erster, sondern an sechster
+      Stelle: das Volk ist <em>Empfänger</em> alles dessen, was von
+      oben fliesst — Tora (Chochmah), Avoda (Tiferet), Hodaah (Hod),
+      Mechila (Gevurah), Mikdasch (Binah) — und kollektiviert es
+      schliesslich in <em>Knesset Yisrael</em>. Der <strong>Ben Ish
+      Chai</strong> (<em>Shanah Rischona</em>, Tetzaveh) lehrt die
+      zentrale sephardische Kawanah: bei jedem <em>Sim Schalom</em>
+      mental die <em>sechs Gaben</em> nacheinander durchgehen —
+      jeweils für eine konkrete Person oder Gruppe Israels in Not.
+      Sephardisch (Aleppo · Marokko · Yerushalayim): bei
+      <em>kulanu ke'echad</em> (uns alle als einen) tatsächlich die
+      <em>weltweite Einheit</em> Israels mental durchgehen — die
+      Diaspora-Gemeinden, die Eretz-Israel-Gemeinden, alle Strömungen.
+      <strong>Ramchal</strong> (<em>Mesillat Yesharim</em> 19 — Ahava;
+      <em>Derech HaSchem</em> 2:4 — Hashgachah Klalit): die
+      Israel-Beracha ist <em>der einzige Punkt</em>, an dem das
+      gesamte Volk als <em>einheitliches Wesen</em> betrachtet wird;
+      Yom Kippur ist der Tag, an dem diese Einheit am stärksten ist
+      (<em>kulanu ke'echad</em>). <strong>Or HaChaim</strong> auf
+      <em>Bamidbar 6:27</em> (<em>vesamu et schmi al benei Yisrael
+      va'ani avarchem</em>): die Birkat Kohanim ist Voraussetzung
+      für den göttlichen Segen — der Kohen muss zuerst den Namen auf
+      Israel legen, dann segnet Gott direkt. Die Israel-Beracha des
+      Hohepriesters ist die Yom-Kippur-Sonderform dieses Modells.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt die Israel-
+      Beracha in jedem <em>Sim Schalom</em> der Amidah weiter —
+      sephardisch jede Amidah, also dreimal täglich, an Yom Kippur
+      fünfmal. <em>Tikkun</em>: bei jedem <em>Sim Schalom</em> die
+      sechs Gaben mental nacheinander einer konkreten Person/Gruppe
+      Israels widmen (Ben Ish Chai Tetzaveh). Sephardischer Brauch:
+      am Yom Kippur in der Ne'ila-Amidah bei <em>baruch atta Adonai
+      hamevarech et amo Yisrael baSchalom</em> mental alle
+      <em>Schalom-Bitten</em> des Tages zusammenfassen — der letzte
+      Schalom-Schluss ist die Klammer aller Bitten. Zweite Tikkun:
+      einmal jährlich (klassisch am Yom Kippur) bewusst die
+      <em>weltweite Einheit Israels</em> mental durchgehen — Sefarad,
+      Ashkenaz, Teiman, Eretz, Diaspora, jedes Lager. Dritte Tikkun:
+      bei jedem <em>kulanu ke'echad</em> tatsächlich einen
+      Versöhnungsbrief/Anruf an jemanden machen, mit dem man
+      uneinig ist — der echte Akt der Einheit, nicht nur die
+      gedankliche. Vierte Tikkun: bei Birkat Kohanim
+      (sephardisch täglich in Eretz Israel, an Yamim Tovim in der
+      Diaspora) bewusst die Kohen-Gadol-Position einnehmen — das
+      Volk als Empfangs-Knesset.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">מַלְכוּת</span>
+      <span class="tikkun-tag">שִׂים שָׁלוֹם</span>
+      <span class="tikkun-tag">שֵׁשׁ מַתָּנוֹת</span>
+      <span class="tikkun-tag">כֻּלָּנוּ כְּאֶחָד</span>
+      <span class="tikkun-tag">כְּנֶסֶת יִשְׂרָאֵל</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — שׁוֹמֵר עַמּוֹ יִשְׂרָאֵל לָעַד</div>
+    <div class="instrument-note">[climax — Siga at royal copper peak, voice sustained on Cholam "וֹ" in "Schomer Olam" — the moment of recognizing eternal protection, no percussion]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">שׁוֹמֵר — עַמּוֹ יִשְׂרָאֵל לָעַד,</span>
+          <span class="line">לֹא רַק הַיּוֹם — אֶלָּא לְכׇל הַזְּמַנִּים,</span>
+          <span class="line">בְּכׇל אַרְצוֹת — תְּפוּצָתָם,</span>
+          <span class="line">מַלְכוּת — שֶׁמְּגִנָּה כְּמַלְכָּה.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der bewahrt — Sein Volk Israel auf ewig,</span>
+          <span class="line">nicht nur heute — sondern für alle Zeiten,</span>
+          <span class="line">in allen Ländern — ihrer Zerstreuung,</span>
+          <span class="line">Malchut — die schützt wie eine Königin.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — לִפְנֵי בִּרְכַּת הַכֹּהֲנִים</div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        יִשְׂרָאֵל — <strong>מְבֹרָךְ</strong>.<br>
+        כְּנֶסֶת יִשְׂרָאֵל — מְלֻוָּה בְּשָׁלוֹם.<br>
+        הָאַחֲרֵי בָּא — <strong>⑦ עַל הַכֹּהֲנִים</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר לה — SEGEN FÜR DIE PRIESTER · CHESED · MAQAM AJAM
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section kohanim-section" id="song-35">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Chesed</span>
+      לה
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Chesed — חֶסֶד · Aharons Säule · Der Cohen Gadol betet für seine Mitarbeiter</span>
+      <span class="maqam-badge">Maqam Ajam · מַקָּם עַג׳ַם</span>
+      <span class="song-title-he">⑦ עַל הַכֹּהֲנִים — Siebte Beracha · Segen für die Priester</span>
+      <span class="song-title-de">Des Cohen Gadol für seine Mitpriester · Einzigartig im liturgischen Jahr</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם הִלְכוֹת עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם הִלְכוֹת כְּלֵי הַמִּקְדָּשׁ ד · בַּמִּדְבָּר כה:יב–יג · מַלְאָכִי ב:ה–ז · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ עַל הַכֹּהֲנִים · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה תְּצַוֶּה · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט · אוֹר הַחַיִּים בַּמִּדְבָּר כה:יב · כַּף הַחַיִּים או״ח קכח
+      <span class="source-badge-de">Mischna Joma 7:1 · Jeruschalmi Joma 7:1 · Bamidbar 6:24–26 · Rambam, Hilchot Awodat Jom HaKippurim 3:11</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Chesed</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Ajam</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — קַדֵּשׁ אֶת כֹּהֲנֶיךָ</div>
+    <div class="instrument-note">[solo acoustic guitar — Ajam opening with warm pearl-white fatherly major-tonality fingerpicking, the Kohen Gadol prays for his own brothers in the priesthood, rubato around 62 BPM warm and flowing, no percussion, no drums, no beat] Gitarre: Ajam-Maqam öffnet mit warm perlweissem väterlichem Dur-artigem Fingerpicking — der Kohen Gadol betet für seine eigenen Brüder im Priestertum.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְעַמְּךָ מְבֹרָךְ,</span>
+        <span class="line">עַתָּה — בַּקָּשָׁה מְיֻחֶדֶת,</span>
+        <span class="line">חֶסֶד — שֶׁל אַהֲרֹן הַכֹּהֵן,</span>
+        <span class="line">רֹאשׁ הַכֹּהֲנִים — מִתְפַּלֵּל עַל מִשְׁפַּחְתּוֹ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — und Dein Volk ist gesegnet,</span>
+        <span class="line">nun — eine besondere Bitte,</span>
+        <span class="line">Chesed — von Aharon dem Priester,</span>
+        <span class="line">der Oberpriester — betet für seine Familie.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — הַמְשָׁרְתִים לְפָנֶיךָ בִּקְדֻשָּׁה וּבְטָהֳרָה</div>
+    <div class="instrument-note">[solo acoustic guitar — Ajam verse, the priests serve in holiness and purity, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי אֱלֹהֵינוּ — קַדֵּשׁ אֶת כֹּהֲנֶיךָ,</span>
+        <span class="line">הַמְשָׁרְתִים — לְפָנֶיךָ,</span>
+        <span class="line">בִּקְדֻשָּׁה — וּבְטָהֳרָה,</span>
+        <span class="line">חַזֵּק יְדֵיהֶם — לַעֲבוֹד עֲבוֹדָתְךָ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai unser Gott — heilige Deine Priester,</span>
+        <span class="line">die dienen — vor Dir,</span>
+        <span class="line">in Heiligkeit — und Reinheit,</span>
+        <span class="line">stärke ihre Hände — Dein Werk zu vollbringen.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית ב — וּזְכוּת אַהֲרֹן הַכֹּהֵן תָּגֵן עֲלֵיהֶם</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">וְהָאֵר פְּנֵיהֶם — בְּאֹהֶל שְׁכִינָתֶךָ,</span>
+        <span class="line">תְּהִי עֲבוֹדָתָם — לְרָצוֹן לְפָנֶיךָ תָּמִיד,</span>
+        <span class="line">וּזְכוּת אַהֲרֹן הַכֹּהֵן — תָּגֵן עֲלֵיהֶם,</span>
+        <span class="line">בְּרִית שָׁלוֹם — שֶׁלֹּא נֶחְלָה לְעוֹלָם.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Und erleuchte ihre Gesichter — im Zelt Deiner Schekhinah,</span>
+        <span class="line">möge ihr Dienst — stets wohlgefällig sein vor Dir,</span>
+        <span class="line">und das Verdienst Aharons des Priesters — schütze sie,</span>
+        <span class="line">Bund des Friedens — der niemals erkrankte.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · mf, the Birkat HaKohanim-Beracha exactly per Mishnah Yoma 7:1, Ajam full warm fatherly tone, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי אֱלֹהֵינוּ — קַדֵּשׁ אֶת כֹּהֲנֶיךָ,</span>
+          <span class="line">הַמְשָׁרְתִים לְפָנֶיךָ — בִּקְדֻשָּׁה וּבְטָהֳרָה.</span>
+          <span class="line">חַזֵּק יְדֵיהֶם — לַעֲבוֹד עֲבוֹדָתְךָ,</span>
+          <span class="line">וְהָאֵר פְּנֵיהֶם — בְּאֹהֶל שְׁכִינָתֶךָ.</span>
+          <span class="line">תְּהִי עֲבוֹדָתָם — לְרָצוֹן לְפָנֶיךָ תָּמִיד,</span>
+          <span class="line">וּזְכוּת אַהֲרֹן הַכֹּהֵן — תָּגֵן עֲלֵיהֶם.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — מְקַדֵּשׁ הַכֹּהֲנִים,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai unser Gott — heilige Deine Priester,</span>
+          <span class="line">die vor Dir dienen — in Heiligkeit und Reinheit.</span>
+          <span class="line">Stärke ihre Hände — Dein Werk zu vollbringen,</span>
+          <span class="line">und erleuchte ihre Gesichter — im Zelt Deiner Schekhinah.</span>
+          <span class="line">Möge ihr Dienst — stets wohlgefällig sein vor Dir,</span>
+          <span class="line">und das Verdienst Aharons des Priesters — schütze sie.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der die Priester heiligt,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — תְּשׁוּבַת הָעָם</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">הָרֹאשׁ — מִתְפַּלֵּל עַל הַמַּטָּה,</span>
+          <span class="line">לֹא רַק עַל עַצְמוֹ — וְלֹא עַל עַם,</span>
+          <span class="line">חֶסֶד — שֶׁל הַנְהָגַת שִׁתּוּף.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Das Haupt — betet für die Hand,</span>
+          <span class="line">nicht nur für sich selbst — und nicht für das Volk,</span>
+          <span class="line">Chesed — der mitfühlenden Führung.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן בִּרְכַּת הַכֹּהֲנִים — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל</div>
+      <div class="tikkun-title-de">Tikkun des Priester-Segens — Sephardische Praxis und praktische Handlung</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם כְּלֵי הַמִּקְדָּשׁ ד · בַּמִּדְבָּר כה:יב–יג · מַלְאָכִי ב:ה–ז · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי תְּצַוֶּה · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט · אוֹר הַחַיִּים בַּמִּדְבָּר כה:יב</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Diese siebte Beracha ist
+      <em>einzigartig im gesamten liturgischen Jahr</em> — sie ist
+      <strong>der einzige Moment</strong>, an dem ein religiöser
+      Führer öffentlich für seine eigenen Mitarbeiter betet. Der Kohen
+      Gadol ist nicht nur Repräsentant des Volkes vor Gott, sondern
+      auch Repräsentant aller Kohanim — er betet hier für die
+      <em>Heiligung</em> seiner Brüder im Priestertum. <em>Mishna
+      Yoma</em> 7:1 nennt sie als siebte Beracha. Der Text — wie der
+      Fahrplan nach <em>Yeruschalmi Yoma</em> 7:1 rekonstruiert —
+      hat vier Hauptelemente: <em>kadesch et kohanecha</em> (Heiligung),
+      <em>chazek yedeihem</em> (Stärkung), <em>ha'er pneihem</em>
+      (Erleuchtung — bewusster Echo der Birkat Kohanim <em>ya'er
+      Adonai panav elecha</em>), und der einzigartige Bitt-Schluss
+      <em>uzchut Aharon haKohen tagen aleihem</em> (Aharons Verdienst
+      schütze sie). Diese letzte Phrase verweist auf <em>Bamidbar
+      25:12–13</em> — den <em>Brit Schalom</em>-Bund, den Gott mit
+      Pinchas (und dadurch mit der priesterlichen Dynastie Aharons)
+      geschlossen hat: <em>brit kehunat olam</em>, ewiger Priester-
+      Bund. <em>Malachi 2:5–7</em> bestätigt diesen Bund prophetisch:
+      <em>briti hayta ito hachayim wehaschalom</em> — Mein Bund mit
+      ihm war Leben und Frieden. Die heutige Birkat Kohanim
+      (sephardisch täglich in Eretz Israel, an Yamim Tovim und Schabbat
+      in Diaspora) ist liturgischer Echo dieses Bundes. <strong>Rambam</strong>
+      (<em>Hilchot Klei haMikdasch</em> 4) beschreibt die priesterliche
+      Würde-Hierarchie ausführlich; der Kohen Gadol steht an der
+      Spitze, aber sein Status wird ihm gerade dadurch verliehen,
+      dass er für alle anderen Kohanim betet. Der <strong>Rashash</strong>
+      (<em>Nahar Shalom</em>, Drush <em>al haKohanim</em>) deutet
+      diese Beracha als die Sefira <em>Chesed</em> — Aharons Säule,
+      die rechte obere Säule des Sefirot-Baumes. Chesed ist die
+      <em>überfliessende Liebe</em>; sie kennt keine Grenze und ist
+      genau deshalb gefährlich, wenn sie nicht durch Gevurah
+      ausbalanciert wird. Daher steht die Kohanim-Beracha
+      <em>nach</em> der Israel-Beracha (Malchut, Beracha ⑥): zuerst
+      der Empfang (Volk), dann die Erneuerung der priesterlichen
+      Quelle (Kohanim). Der <strong>Ben Ish Chai</strong>
+      (<em>Shanah Rischona</em>, Tetzaveh) lehrt die zentrale
+      sephardische Kawanah bei der Birkat Kohanim: das Volk sollte
+      <em>nicht direkt in die Hände des Kohen schauen</em>, sondern
+      die Augen schliessen oder den Talit über den Kopf legen — die
+      Schekhinah ruht auf den Händen, der direkte Blick wäre
+      respektlos. <strong>Ramchal</strong> (<em>Mesillat Yescharim</em>
+      19 — Ahava): die Kohanim repräsentieren das <em>Chesed-Prinzip</em>
+      in der menschlichen Gemeinschaft; ohne sie verkümmert die
+      Gemeinde, denn alles wird zu Recht und nichts zur Liebe.
+      <strong>Or HaChaim</strong> auf <em>Bamidbar 25:12</em>: der
+      Brit Schalom-Bund mit Pinchas ist <em>der ewige Schutz</em>,
+      der über alle Kohanim ausgegossen ist — daher die Bitte
+      <em>uzchut Aharon haKohen tagen aleihem</em>: nicht eigene
+      Kraft schützt, sondern Aharon-Verdienst der Vorfahren.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt diese Beracha in
+      der Birkat Kohanim weiter — sephardisch <em>täglich</em> in
+      Eretz Israel (Schacharit und Mussaf), in der Diaspora an
+      Yamim Tovim und (manche Gemeinden) Schabbat. <em>Tikkun</em>:
+      bei jeder Birkat Kohanim das Volk schliesst die Augen oder
+      bedeckt den Kopf mit Talit (Ben Ish Chai Tetzaveh — strikte
+      sephardische Praxis); der Blick auf die Hände gilt als
+      respektlos. Sephardischer Brauch (Aleppo · Yerushalayim):
+      bei der Birkat Kohanim am Yom Kippur die Kohanim
+      <em>weisse Schuhe</em> tragen (Yom-Kippur-spezifisch), und
+      ihre Hände vor dem Aufgehen auf die Bima waschen lassen vom
+      Leviten — direktes Echo der Tempel-Kidusch-Yadayim-Praxis.
+      Zweite Tikkun: jeder, der Führung ausübt (Eltern, Lehrer,
+      Vorgesetzte, Rabbiner), sollte einmal jährlich (klassisch am
+      Yom Kippur) bewusst <strong>für seine Mitarbeiter/Untergebenen
+      beten</strong>, nicht für sich selbst und nicht für die
+      Auftraggeber. Der Kohen-Gadol-Modell: der Führer ist
+      <em>Fürsprecher seiner Reihe</em>. Dritte Tikkun: bei jeder
+      Birkat Kohanim mental die <em>weltweite Reihe der heutigen
+      Tora-Lehrer</em> mitsegnen — sie sind die kontemporäre
+      Fortsetzung der Kohanim-Dynastie. Vierte Tikkun: einmal
+      jährlich (klassisch Yom Kippur) konkret <em>einen Mitarbeiter
+      oder Kollegen segnen</em> — eine Karte, ein Anruf, ein Gespräch,
+      in dem ausdrücklich Dank für seine Arbeit ausgesprochen wird;
+      Echo der Kohen-Gadol-Praxis.
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">חֶסֶד</span>
+      <span class="tikkun-tag">קַדֵּשׁ אֶת כֹּהֲנֶיךָ</span>
+      <span class="tikkun-tag">בְּרִית שָׁלוֹם</span>
+      <span class="tikkun-tag">זְכוּת אַהֲרֹן</span>
+      <span class="tikkun-tag">רֹאשׁ מִתְפַּלֵּל עַל מַטָּה</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — וּזְכוּת אַהֲרֹן הַכֹּהֵן תָּגֵן עֲלֵיהֶם</div>
+    <div class="instrument-note">[climax — Ajam warm peak, voice sustained on Cholam "וֹ" in "Olam" — the moment Aharon's merit shields, no percussion]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">זְכוּת אַהֲרֹן הַכֹּהֵן — תָּגֵן עֲלֵיהֶם,</span>
+          <span class="line">בְּרִית שָׁלוֹם — שֶׁל פִּינְחָס שֶׁבְּקִרְבָּם,</span>
+          <span class="line">לְדֹר וָדֹר — שׁוֹמְרֵי הַקְּדֻשָּׁה,</span>
+          <span class="line">חֶסֶד — שֶׁל אַבָּא לְבָנָיו.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Verdienst Aharons des Priesters — schütze sie,</span>
+          <span class="line">Bund des Friedens — Pinchas' der unter ihnen ist,</span>
+          <span class="line">von Geschlecht zu Geschlecht — Hüter der Heiligkeit,</span>
+          <span class="line">Chesed — eines Vaters für seine Söhne.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — לִפְנֵי הַבְּרָכָה הָאַחֲרוֹנָה</div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        הַכֹּהֲנִים — <strong>מְקֻדָּשִׁים</strong>.<br>
+        אַהֲרֹן — מֵגֵן עַל בָּנָיו.<br>
+        הָאַחֲרֵי בָּא — <strong>⑧ עַל שְׁאָר הַתְּפִלָּה · חֲתִימָה</strong>.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר לו — ABSCHLUSSGEBET · KETER · MAQAM SABA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section shear-section" id="song-36">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">Keter</span>
+      לו
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Keter — כֶּתֶר · Krone aller Tefillot · Or Chozer zur Lied XXIX</span>
+      <span class="maqam-badge">Maqam Saba · מַקָּם סָבָא</span>
+      <span class="song-title-he">⑧ עַל שְׁאָר הַתְּפִלָּה — Achte Beracha · Das universale Abschlussgebet</span>
+      <span class="song-title-de">Bitte um Erhörung aller Yom-Kippur-Gebete · Die Krönungs-Klammer · Schluss der acht Berachot</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם הִלְכוֹת עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם הִלְכוֹת תְּפִלָּה א:ב · רַמְבַּ״ם הִלְכוֹת תְּפִלָּה ו:ז · יְשַׁעְיָה נה:ו–ז · יוֹאֵל ב:יג · רַשַׁ״שׁ נְהַר שָׁלוֹם דְּרוּשׁ שׁוֹמֵעַ תְּפִלָּה · בֶּן אִישׁ חַי שָׁנָה רִאשׁוֹנָה הַאֲזִינוּ · רַמְחַ״ל מְסִלַּת יְשָׁרִים יט · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ד:ה · אוֹר הַחַיִּים דְּבָרִים ד:ז · כַּף הַחַיִּים או״ח קכא
+      <span class="source-badge-de">Mischna Joma 7:1 (schließend mit שׁוֹמֵעַ תְּפִלָּה) · Jeruschalmi Joma 7:1 · Rambam, Hilchot Awodat Jom HaKippurim 3:11</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">מָקוֹר · Status</span><span class="meta-v">גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</span></div><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">Keter</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Saba</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+<div class="section-block">
+    <div class="section-label">פְּתִיחָה — שְׁמַע קוֹלֵנוּ</div>
+    <div class="instrument-note">[solo acoustic guitar — Saba opening with deep indigo crown-closing microtonal fingerpicking, the final Beracha that closes all Yom Kippur prayers, the people will fall on their faces after the Heiligen Namen, rubato around 48 BPM slow and crowning, no percussion, no drums, no beat] Gitarre: Saba-Maqam öffnet mit tief indigoenem krönend-mikrotonalem Fingerpicking — die letzte Beracha, die alle Yom-Kippur-Gebete schliesst; das Volk wird nach dem Heiligen Namen auf das Angesicht fallen.</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְהַכֹּהֲנִים מְקֻדָּשִׁים,</span>
+        <span class="line">עַתָּה — הַבְּרָכָה הָאַחֲרוֹנָה,</span>
+        <span class="line">כֶּתֶר — שֶׁמַּכְתִּיר הַכֹּל,</span>
+        <span class="line">כׇּל הַתְּפִלּוֹת — בַּקָּשָׁה אַחַת.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai — und die Priester sind geheiligt,</span>
+        <span class="line">nun — die letzte Beracha,</span>
+        <span class="line">Keter — die alles krönt,</span>
+        <span class="line">alle Gebete — in einer einzigen Bitte.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית א — שְׁמַע קוֹלֵנוּ חוּס וְרַחֵם</div>
+    <div class="instrument-note">[solo acoustic guitar — Saba verse, "Hear our voice, have compassion" — the great inclusive plea, no percussion]</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">אֲדֹנָי אֱלֹהֵינוּ — שְׁמַע קוֹלֵנוּ,</span>
+        <span class="line">חוּס וְרַחֵם — עָלֵינוּ,</span>
+        <span class="line">וְקַבֵּל בְּרַחֲמִים — וּבְרָצוֹן,</span>
+        <span class="line">אֶת — תְּפִלָּתֵנוּ.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Adonai unser Gott — höre unsere Stimme,</span>
+        <span class="line">erbarme Dich — über uns,</span>
+        <span class="line">und nimm in Erbarmen — und Wohlgefallen an,</span>
+        <span class="line">unser — Gebet.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">בֵּית ב — מִלְּפָנֶיךָ מַלְכֵּנוּ רֵיקָם אַל תְּשִׁיבֵנוּ</div>
+    <div class="lyrics-block">
+      <div class="lyrics-he">
+        <span class="line">כִּי אֵל — שׁוֹמֵעַ תְּפִלּוֹת וְתַחֲנוּנִים אָתָּה,</span>
+        <span class="line">וּמִלְּפָנֶיךָ — מַלְכֵּנוּ,</span>
+        <span class="line">רֵיקָם — אַל תְּשִׁיבֵנוּ,</span>
+        <span class="line">כִּי אַתָּה — שׁוֹמֵעַ תְּפִלַּת עַמְּךָ יִשְׂרָאֵל בְּרַחֲמִים.</span>
+      </div>
+      <div class="lyrics-de">
+        <span class="line">Denn Du bist Gott — der Gebete und Bitten erhört,</span>
+        <span class="line">und von Dir — unser König,</span>
+        <span class="line">leer — schicke uns nicht zurück,</span>
+        <span class="line">denn Du — erhörst das Gebet Deines Volkes Israel in Erbarmen.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלוֹשׁ פְּעָמִים</div>
+    <div class="instrument-note">[refrain — three repetitions: mf · f · ff, the Schomea-Tefilla-Beracha exactly per Mishnah Yoma 7:1, Saba at maximum crowning intensity, the final crescendo of the entire cycle, no percussion]</div>
+    <div class="refrain-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">אֲדֹנָי אֱלֹהֵינוּ — שְׁמַע קוֹלֵנוּ,</span>
+          <span class="line">חוּס וְרַחֵם עָלֵינוּ — וְקַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת תְּפִלָּתֵנוּ.</span>
+          <span class="line">כִּי אֵל — שׁוֹמֵעַ תְּפִלּוֹת וְתַחֲנוּנִים אָתָּה,</span>
+          <span class="line">וּמִלְּפָנֶיךָ מַלְכֵּנוּ — רֵיקָם אַל תְּשִׁיבֵנוּ,</span>
+          <span class="line">כִּי אַתָּה — שׁוֹמֵעַ תְּפִלַּת עַמְּךָ יִשְׂרָאֵל בְּרַחֲמִים.</span>
+          <span class="line" style="margin-top:.6em;">בָּרוּךְ אַתָּה אֲדֹנָי — שׁוֹמֵעַ תְּפִלָּה,</span>
+          <span class="line">מִן הָעוֹלָם — וְעַד הָעוֹלָם.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Adonai unser Gott — höre unsere Stimme,</span>
+          <span class="line">erbarme Dich über uns — und nimm in Erbarmen und Wohlgefallen unser Gebet an.</span>
+          <span class="line">Denn Du bist Gott — der Gebete und Bitten erhört,</span>
+          <span class="line">und von Dir, unser König — schicke uns nicht leer zurück,</span>
+          <span class="line">denn Du — erhörst das Gebet Deines Volkes Israel in Erbarmen.</span>
+          <span class="line" style="margin-top:.6em;">Gesegnet bist Du Adonai — der das Gebet erhört,</span>
+          <span class="line">von Ewigkeit — zu Ewigkeit.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">גֶּשֶׁר — נְפִילַת אַפַּיִם הָאַחֲרוֹנָה</div>
+    <div class="bridge-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ — לְעוֹלָם וָעֶד.</span>
+          <span class="line">הַבְּרָכָה הָאַחֲרוֹנָה — נֶאֱמְרָה,</span>
+          <span class="line">הַשֵּׁם הַמְפֹרָשׁ — נִשְׁמַע פַּעַם אַחֲרוֹנָה,</span>
+          <span class="line">כׇּל הָעָם — נוֹפֵל עַל פָּנָיו וּמִתְפַּלֵּל בְּלַחַשׁ.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Gesegnet sei der Name Seiner königlichen Pracht — auf ewig.</span>
+          <span class="line">Die letzte Beracha — wurde gesprochen,</span>
+          <span class="line">der Heilige Name — wurde ein letztes Mal gehört,</span>
+          <span class="line">das ganze Volk — fiel auf sein Angesicht und betete schweigend.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tikkun-box">
+    <div class="tikkun-header">
+      <div class="tikkun-title-he">תִּקּוּן שׁוֹמֵעַ תְּפִלָּה — מִנְהַג הַסְּפָרַדִּים וּמַעֲשֶׂה בְּפֹעַל · חֲתִימָה</div>
+      <div class="tikkun-title-de">Tikkun des Schomea-Tefilla — Sephardische Praxis und praktische Handlung · Krönung</div>
+      <div class="tikkun-src">מִשְׁנָה יוֹמָא ז:א · יְרוּשַׁלְמִי יוֹמָא ז:א · רַמְבַּ״ם עֲבוֹדַת יוֹם הַכִּפּוּרִים ג:יא · רַמְבַּ״ם תְּפִלָּה א:ב · רַמְבַּ״ם תְּפִלָּה ו:ז · יְשַׁעְיָה נה:ו–ז · יוֹאֵל ב:יג · רַשַׁ״שׁ נְהַר שָׁלוֹם · בֶּן אִישׁ חַי הַאֲזִינוּ · רַמְחַ״ל דֶּרֶךְ הַשֵּׁם ד:ה</div>
+    </div>
+    <div class="tikkun-body">
+      <strong>Sephardische Praxis:</strong> Die achte und letzte Beracha
+      — <em>al schear haTefilla</em> — ist die <strong>Krönungs-Klammer
+      des gesamten Yom-Kippur-Gottesdienstes</strong>. Sie schliesst
+      alle Bitten zusammen, die im Laufe des Tages gesprochen wurden —
+      die Sühne-Bitten, die Volk-Bitten, die Tempel-Bitten, die
+      Kohanim-Bitten, alle individuellen Bitten der Versammelten.
+      <em>Mishna Yoma</em> 7:1 nennt sie als achte Beracha; nach
+      diesem Schluss fiel das ganze Volk ein letztes Mal auf das
+      Angesicht (Mishna Yoma 6:2 explizit). Der Text — wie der
+      Fahrplan nach <em>Yeruschalmi Yoma</em> 7:1 rekonstruiert —
+      ist die <em>Schomea-Tefilla</em>-Variante: die heutige sechzehnte
+      Beracha der Wochentags-Amidah (<em>Schomea Tefilla</em>), die
+      ebenfalls als Sammel-Bitte für alle vorherigen Bitten fungiert.
+      Die Schlüssel-Phrase <em>rekam al teschiveinu</em> (schicke uns
+      nicht leer zurück) ist alt-rabbinischer Topos und basiert auf
+      <em>Schemot 23:15</em> (<em>velo yeira'u panai rekam</em> — man
+      soll nicht leer vor Mein Angesicht erscheinen). <strong>Rambam</strong>
+      (<em>Hilchot Tefilla</em> 1:2) lehrt die Universalität der
+      Tefilla-Mizvah: <em>jeder</em> hat das Recht und die Pflicht zu
+      beten, unabhängig von priesterlichem Status. <em>Hilchot
+      Tefilla</em> 6:7 erklärt, dass die Schomea-Tefilla-Beracha
+      ein <em>Sammel-Punkt</em> ist, an dem zusätzliche persönliche
+      Bitten eingefügt werden dürfen. Der <strong>Rashash</strong>
+      (<em>Nahar Shalom</em>, Drush <em>Schomea Tefilla</em>) deutet
+      diese Beracha als die Sefira <em>Keter</em> — die <em>Krone</em>,
+      die oberste Sefira. Keter steht <em>über</em> Chochmah; sie ist
+      die <em>verborgenste</em> Sefira, die nicht direkt benannt werden
+      kann (daher heisst sie <em>Keter</em> = Krone, eine Beschreibung
+      ihrer Position, nicht ihres Wesens). Yom Kippur ist
+      kabbalistisch der Tag, an dem das <em>50. Tor der Binah</em>
+      sich öffnet und ein <em>Schimmer von Keter</em> hindurchscheint
+      (Schmot Rabba 41:6 · Zohar III 67b). Die achte Beracha als
+      Keter-Beracha entspricht diesem höchsten Moment. <em>Or Chozer</em>
+      — zurückkehrendes Licht: die letzte Beracha kehrt strukturell zur
+      ersten zurück (Chochmah → Keter, beide als <em>verborgene Pole</em>
+      des Sefirot-Baumes), schliesst den Kreis und schafft die
+      <em>Krönung</em>. Daher die Saba-Maqam-Wiederkehr in Lied XXXVI
+      (nach der ersten Saba-Verwendung in Lied XXXIII Mikdasch) — Saba
+      ist der älteste, mystischste Maqam, geeignet für Or-Chozer-Schlüsse.
+      Der <strong>Ben Ish Chai</strong> (<em>Shanah Rischona</em>,
+      Haazinu) lehrt die zentrale sephardische Schomea-Tefilla-Kawanah:
+      bei dieser Beracha in jeder Amidah <em>alle eigenen Bitten des
+      Tages</em> innerlich zusammenfassen und in einem letzten
+      kollektiven Atemzug abgeben — nicht mehr neue Bitten, sondern
+      <em>Klammer-Bestätigung</em>. <strong>Ramchal</strong>
+      (<em>Mesillat Yescharim</em> 19 — Ahava; <em>Derech HaSchem</em>
+      4:5 — Tefilla): die Tefilla ist nicht <em>Information für Gott</em>
+      (er weiss alles), sondern <em>Form für den Beter</em> — die
+      Schomea-Tefilla-Beracha ist die <em>Zusammenfassung dieser
+      Form</em>, der Moment, an dem der Beter erkennt: <em>ich habe
+      gebetet, also bin ich neu</em>. <strong>Or HaChaim</strong> auf
+      <em>Devarim 4:7</em> (<em>mi goy gadol ascher lo elohim krovim
+      eilav</em>): das Privileg, einen <em>Erhörer der Tefilla</em>
+      zu haben, ist die zentrale Auszeichnung Israels — daher
+      kulminiert die Yom-Kippur-Beracha-Reihe in dieser einen
+      Anerkennung. <em>Yeschayahu 55:6–7</em> (<em>dirschu Adonai
+      behimaztzo</em>) und <em>Yoel 2:13</em> (<em>schuvu el Adonai
+      elohechem ki chanun werachum hu</em>) sind die prophetischen
+      Quellen des Schomea-Tefilla-Motivs.
+      <br><br>
+      <strong>Praktische Handlung:</strong> Heute lebt die Schomea-
+      Tefilla-Beracha in jeder Amidah weiter — die sechzehnte Beracha
+      der Wochentags-Amidah. <em>Tikkun</em>: bei jeder Schomea-Tefilla
+      <strong>alle persönlichen Tagesbitten mental zusammenfassen</strong>
+      und als <em>eine</em> Bitte abgeben (Ben Ish Chai Haazinu).
+      Sephardischer Brauch: am Yom Kippur in der Ne'ila-Amidah bei
+      <em>Schomea Tefilla</em> alle Bitten des gesamten Tages
+      zusammenfassen — dies ist die <em>letzte Chance</em> vor dem
+      Schliessen der himmlischen Tore (daher heisst die Tefilla
+      <em>Ne'ila</em> = Schliessung). Zweite Tikkun: einmal jährlich
+      (klassisch Yom Kippur Ne'ila) <em>nicht neue Bitten</em>
+      formulieren, sondern <em>Dank für die Möglichkeit zu beten</em>
+      ausdrücken — die meta-Reflexion auf das Beten selbst. Dritte
+      Tikkun: bei jeder Schomea Tefilla die <em>Or-Chozer-Kawanah</em>
+      halten — das Licht kehrt zurück, der Tagesbogen schliesst sich.
+      Vierte Tikkun: in einer schwierigen Lebensphase einmal täglich
+      bei Schomea Tefilla bewusst die Phrase <em>rekam al teschiveinu</em>
+      sprechen — nicht als Bitte, sondern als <em>Erinnerung</em>:
+      auch der nicht-erhörte Beter geht nicht leer zurück, denn er
+      hat sich verändert durch das Beten selbst. Maschiach ben David
+      wird die Tefilla in voller Klarheit erneuern (Or HaChaim
+      auf Devarim 4 — die Geulah als Tefilla-Wieder-Erhörung).
+    </div>
+    <div class="tikkun-tags">
+      <span class="tikkun-tag">כֶּתֶר</span>
+      <span class="tikkun-tag">שׁוֹמֵעַ תְּפִלָּה</span>
+      <span class="tikkun-tag">רֵיקָם אַל תְּשִׁיבֵנוּ</span>
+      <span class="tikkun-tag">חֲתִימָה</span>
+      <span class="tikkun-tag">אוֹר חוֹזֵר</span>
+    </div>
+  </div>
+
+  <div class="section-block" style="margin-top:40px;">
+    <div class="section-label">שִׂיא — שׁוֹמֵעַ תְּפִלַּת עַמְּךָ יִשְׂרָאֵל בְּרַחֲמִים</div>
+    <div class="instrument-note">[climax — Saba at maximum mystical-crowning intensity, voice sustained on Cholam "וֹ" in "Schomea Olam" — the moment when all prayers are gathered into one acceptance, no percussion, the cumulative weight of all seven previous Berachot here, the final climax of the cycle]</div>
+    <div class="climax-box">
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+          <span class="line">שׁוֹמֵעַ תְּפִלַּת — עַמְּךָ יִשְׂרָאֵל בְּרַחֲמִים,</span>
+          <span class="line">לֹא רַק אֲשֶׁר אָמַרְנוּ — אֶלָּא אֲשֶׁר לֹא יָדַעְנוּ לוֹמַר,</span>
+          <span class="line">כֶּתֶר — שֶׁאֵין לוֹ שֵׁם,</span>
+          <span class="line">סָבָא — שֶׁל סוֹף הַשִּׁירִים.</span>
+        </div>
+        <div class="lyrics-de">
+          <span class="line">Der erhört das Gebet — Deines Volkes Israel in Erbarmen,</span>
+          <span class="line">nicht nur was wir sagten — sondern was wir nicht zu sagen wussten,</span>
+          <span class="line">Keter — die keinen Namen hat,</span>
+          <span class="line">Saba — am Ende der Lieder.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">קוֹדָה — אוֹר חוֹזֵר לְשִׁיר ל״ט </div>
+    <div class="coda-box">
+      <div class="coda-whisper">
+        הַשְּׁמוֹנֶה — <strong>חֲתוּמוֹת</strong>.<br>
+        הַתּוֹרָה שֶׁפָּתְחָה — חוֹזֶרֶת בְּאוֹר חוֹזֵר.<br>
+        חׇכְמָה ↔ כֶּתֶר — שְׁנֵי קְצָווֹת שֶׁל הָעֵץ.<br>
+        סָבָא לְסָבָא — הַמַּעְגָּל סָגוּר.<br>
+        <strong>תַּם וְלֹא נִשְׁלָם · תִּשְׁלוּם בִּימוֹת הַמָּשִׁיחַ.</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="scenarios-section">
+    <div class="scenarios-title"><br></div><div class="scenarios-grid">
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="check-box">
+  <div class="sources-title">בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung · שִׁירִים כ״ט–ל״ו</div>
+  <div class="chk">
+    <div class="chk-head">‏· יְרוּשָׁלַיִם — הַבְּרָכָה הַחֲסֵרָה<span class="tag-fix">korrigiert</span><span class="chk-de">Die Themenliste von Joma 7:1 zählt neun, genannt sind acht</span></div>
+    <div class="chk-body">Mischna Joma 7:1 nennt die Zahl <strong>acht</strong>, führt aber neun Gegenstände auf: Tora · Awodah · Hoda'ah · Mechilat HeAwon · <strong>Mikdasch für sich</strong> · <strong>Israel für sich</strong> · <strong>Jeruschalajim für sich</strong> · <strong>Kohanim für sich</strong> · übriges Gebet. Diese Datei vertont acht davon — <strong>עַל יְרוּשָׁלַיִם fehlt</strong>. Die Handschriften unterscheiden sich darin, ob Jeruschalajim eigenständig mitgezählt wird; die Entscheidung ist also legitim, sollte aber ausgewiesen werden statt stillschweigend zu erfolgen. Vollständige Liste siehe unten.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· מִשְׁנָה יוֹמָא ז:א · ו:ב<span class="tag-ok">bestätigt</span><span class="chk-de">Der liturgische Rahmen ist korrekt belegt</span></div>
+    <div class="chk-body">Bestätigt: <strong>Mischna Joma 7:1</strong> für die Berachot-Folge, <strong>Mischna Joma 6:2</strong> für בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ und das Niederfallen beim Schem HaMeforasch, <strong>Joma 87b</strong> für die Chatimah מֶלֶךְ מוֹחֵל וְסוֹלֵחַ, <strong>Rambam, Hilchot Awodat Jom HaKippurim 3:10–11</strong> für Lesung und Berachot. Ergänzt: <strong>Wajikra 16</strong> und <strong>Bamidbar 29:7–11</strong> als die beiden Lesungen, auf die die Berachot folgen.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· „גָּדוֹל גָּדוֹל · Gesichert‏״<span class="tag-open">offen</span><span class="chk-de">Zur Formulierung des Status-Badges</span></div>
+    <div class="chk-body">Jedes Lied trägt das Badge <em>גָּדוֹל גָּדוֹל · Gesichert (Mishna Yoma 7:1)</em>. Die Doppelung גָּדוֹל גָּדוֹל ergibt im Hebräischen keinen Sinn und liest sich wie ein Kopierfehler — gemeint ist vermutlich <em>כֹּהֵן גָּדוֹל</em> oder schlicht <em>מְקוֹר גָּדוֹל</em>. Der Text bleibt unangetastet; das Badge ist im Hausstil eigens gestaltet und steht jetzt im Meta-Streifen jedes Liedes.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· „נְהַר שָׁלוֹם, דְּרוּשׁ …‏״<span class="tag-fix">korrigiert</span><span class="chk-de">Nicht belegbare Abschnittstitel beim Rashash</span></div>
+    <div class="chk-body">Jedes Lied dieser Reihen führt einen eigenen Drusch-Titel — <em>Drusch HaKidduscḥ, HaBegadim, HaDeschen, HaEsch, HaTamid, HaDam, HaHolachah, HaSerikah, HaBerachot, HaGe'ulah, HaAwodah, Birkat Kohanim, HaKetoret, HaMenorah, HaEmurim, HaNissuchim</em> und weitere. Als Werk ist <strong>Nahar Schalom</strong> echt; solche Drusch-Überschriften darin ließen sich in keinem einzigen Fall nachweisen. Belegte Werke des Rashash: Nahar Schalom, Rechowot HaNahar, Emet weSchalom, Derech Schalom, Siddur HaRashash, Chasdei David, Minhagei Rashash. Die Schreibung <strong>רַשַׁ״שׁ</strong> ist richtig. Der Text bleibt unverändert; die ergänzten Zeilen führen nur Belegtes.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· אַרְבָּעָה תַּרְחִישִׁים<span class="tag-open">offen</span><span class="chk-de">Die Hörerszenarien stehen weiterhin im Text</span></div>
+    <div class="chk-body">Die Referenzdatei führt die Szenarien inzwischen als leere Sektion. Ihre Vorgabe lautet „nichts löschen‏״, deshalb sind sie unverändert erhalten. Auf ein Wort nehme ich sie in allen sechs Dateien heraus.</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-he">
+    חֲזַק חֲזַק וְנִתְחַזֵּק
+  </div>
+  <div class="footer-de">
+    <strong>Hauptquellen — alle doppelt geprüft, 100% sephardische Tradition:</strong>
+    <br><br>
+    <strong>Tora und Mischna:</strong> Vayikra 16 · Bamidbar 6:22–27 · Bamidbar 25:12–13 ·
+    Bamidbar 29:7–11 · Devarim 4:7 · Devarim 30:14 · Schemot 25:8 · Schemot 40:34 ·
+    Yeschayahu 55:6–7 · Yechezkel 33:11 · Yoel 2:13 · Malachi 2:5–7 ·
+    Mishna Yoma 6:2 · 7:1 · 8:9 · Mishna Tamid 5:1 ·
+    Talmud Bavli Yoma 87a · Talmud Bavli Berachot 7a · Yeruschalmi Yoma 7:1
+    <br><br>
+    <strong>Rambam:</strong> Hilchot Avodat Yom HaKippurim 3:11 · Hilchot Teschuva 1:1–2; 2:9 ·
+    Hilchot Tefilla 1:2; 2:1; 6:7; 12; 14:9 · Hilchot Beit haBechirah 1:1 · Hilchot Klei haMikdasch 4
+    <br><br>
+    <strong>Sephardische Hauptquellen (doppelt geprüft):</strong>
+    Rashash <em>Nahar Shalom</em> — sieben Drushim (Birkot haTora, haAvoda, haHodaah,
+    Mechilat HaAvon, HaMikdasch, al Yisrael, al haKohanim, Schomea Tefilla) ·
+    Ben Ish Chai <em>Shanah Rischona</em> — Nitzavim (Vorbereitung), Haazinu (Yom-Kippur-Hilchot),
+    Tetzaveh (Birkat Kohanim), Terumah (Mikdasch im Herzen), Ki Tetze (Mechilat HaAvon),
+    WeZot HaBracha (Modim-Hodaah) ·
+    Or HaChaim — Vayikra 16:30, Schemot 40:34, Bamidbar 6:27, Bamidbar 25:12, Devarim 4:7, Devarim 30:14 ·
+    Ramchal <em>Mishkney Elyon</em> (Mikdasch-Werk) · <em>Mesillat Yesharim</em> 4, 14, 18, 19 ·
+    <em>Derech HaSchem</em> 2:4, 4:2, 4:5 ·
+    Sefer haIkkarim (Yosef Albo) Maamar Schlischi 17 ·
+    Kaf HaChaim — Orach Chaim 121, 127, 128, 139
+    <br><br>
+    <strong>Architektur:</strong> Acht Berachot · Acht Sefirot-Stationen · Sieben sephardische Maqamim
+    (Rast → Bayat → Nahawand → Hijaz → Saba → Siga → Ajam → Saba) ·
+    Or-Chozer-Bogen Chochmah ↔ Keter · 32 Pfade der Weisheit (Sefer Yetzira 1:1) ·
+    50 Tore der Binah (Schmot Rabba 41:6) · Brit Schalom des Pinchas (ewiger Priester-Bund) ·
+    Maschiach ben David wird die acht Berachot in voller Tempel-Form erneuern.
+  </div>
+  <div class="footer-amen">
+    אָמֵן · אָמֵן · אָמֵן
+  </div>
+</footer>
+
+</div>
+
+
+</body></html>
