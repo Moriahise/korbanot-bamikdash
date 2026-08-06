@@ -1,20 +1,15 @@
 name: Deploy static site to GitHub Pages
 
-# Läuft bei jedem Push auf main und lässt sich zusätzlich
-# jederzeit von Hand starten (Actions -> Run workflow).
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# Minimale Rechte, die deploy-pages benötigt.
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Nur ein Pages-Deployment gleichzeitig.
-# cancel-in-progress: false -> laufende Deployments werden nicht abgebrochen.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -34,19 +29,29 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # TEST-SCHRITT: baut _site ohne Mediendateien.
+      # Damit pruefen wir, ob die Groesse das Deployment blockiert.
+      - name: Seite ohne Medien zusammenstellen
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '_site' \
+            --exclude '*.mp3' \
+            --exclude '*.mp4' \
+            --exclude '*.wav' \
+            --exclude '*.m4a' \
+            --exclude '*.mov' \
+            ./ _site/
+          echo "--- Groesse von _site ---"
+          du -sh _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          # Gesamtes Repository-Verzeichnis hochladen.
-          # .git und .github werden automatisch ausgeschlossen.
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # 30 Minuten statt der Standard-10-Minuten.
-          # Angabe in Millisekunden.
-          timeout: 1800000
-          # Nach einem Fehler nicht sofort aufgeben.
-          error_count: 10
