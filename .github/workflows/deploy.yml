@@ -24,28 +24,116 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # TEST-SCHRITT: baut _site ohne Mediendateien.
-      # Damit pruefen wir, ob die Groesse das Deployment blockiert.
-      - name: Seite ohne Medien zusammenstellen
+      - name: Seite vollständig zusammenstellen
         run: |
+          rm -rf _site
           mkdir -p _site
           rsync -a \
             --exclude '.git' \
             --exclude '.github' \
             --exclude '_site' \
-            --exclude '*.mp3' \
-            --exclude '*.mp4' \
-            --exclude '*.wav' \
-            --exclude '*.m4a' \
-            --exclude '*.mov' \
             ./ _site/
-          echo "--- Groesse von _site ---"
+          echo "--- Größe von _site ---"
           du -sh _site
+
+      - name: Verlinkte HTML- und Audiodateien prüfen
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          import sys
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+
+          site = Path("_site").resolve()
+          index_file = site / "index.html"
+
+          if not index_file.is_file():
+              print("FEHLER: _site/index.html fehlt.")
+              sys.exit(1)
+
+          html = index_file.read_text(encoding="utf-8")
+          match = re.search(
+              r'<script\b[^>]*\bid=["\']seed["\'][^>]*>(.*?)</script>',
+              html,
+              flags=re.IGNORECASE | re.DOTALL,
+          )
+          if not match:
+              print('FEHLER: Das JSON-Element <script id="seed"> wurde nicht gefunden.')
+              sys.exit(1)
+
+          try:
+              data = json.loads(match.group(1).strip())
+          except json.JSONDecodeError as exc:
+              print(f"FEHLER: Das seed-JSON ist ungültig: {exc}")
+              sys.exit(1)
+
+          entries = data.get("entries", [])
+          if not isinstance(entries, list):
+              print('FEHLER: "entries" im seed-JSON ist keine Liste.')
+              sys.exit(1)
+
+          missing = []
+          unsafe = []
+          checked = {"page": 0, "audio": 0}
+
+          for position, entry in enumerate(entries, start=1):
+              if not isinstance(entry, dict):
+                  continue
+
+              label = entry.get("sig") or entry.get("title") or f"Eintrag {position}"
+
+              for field, kind in (("page", "HTML"), ("audio", "Audio")):
+                  reference = entry.get(field)
+                  if not isinstance(reference, str) or not reference.strip():
+                      continue
+
+                  reference = reference.strip()
+                  parsed = urlsplit(reference)
+
+                  # Extern gehostete Dateien liegen nicht im Pages-Artefakt.
+                  if parsed.scheme.lower() in {"http", "https", "data", "blob"}:
+                      continue
+
+                  checked[field] += 1
+                  relative = unquote(parsed.path).replace("\\", "/").lstrip("/")
+                  candidate = (site / relative).resolve()
+
+                  try:
+                      candidate.relative_to(site)
+                  except ValueError:
+                      unsafe.append((kind, label, reference))
+                      continue
+
+                  if not candidate.is_file():
+                      missing.append((kind, label, reference))
+
+          print(
+              f"Geprüft: {checked['page']} HTML-Verweise und "
+              f"{checked['audio']} Audio-Verweise."
+          )
+
+          if unsafe:
+              print("\nFEHLER: Unsichere Pfade außerhalb von _site:")
+              for kind, label, reference in unsafe:
+                  print(f"  - {kind}: {label} -> {reference}")
+
+          if missing:
+              print("\nFEHLER: Im Pages-Artefakt fehlen referenzierte Dateien:")
+              for kind, label, reference in missing:
+                  print(f"  - {kind}: {label} -> {reference}")
+
+          if unsafe or missing:
+              sys.exit(1)
+
+          print("Alle lokalen HTML- und Audio-Verweise sind vorhanden.")
+          PY
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
