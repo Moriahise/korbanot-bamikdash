@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="he-IL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מֵאַרְבָּעָה עָשָׂר עַד הָעֹמֶר — הַשְׁלָמוֹת ט״ז–כ׳ · Karten 16–20</title>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #050402;
+  --deep:        #090704;
+  --layer:       #0E0B05;
+  --card:        #0A0805;
+
+  --acc:         #6E8C30;
+  --acc-lt:      #B4D060;
+  --acc-vlt:     #E0F0AC;
+  --acc-dim:     #16200A;
+  --acc-bdr:     rgba(180,208,96,.34);
+
+  --gold:        #C89C20;
+  --gold-lt:     #F0D060;
+  --amber:       #C07010;
+  --amber-lt:    #E8A830;
+  --dawn-dim:    #806840;
+
+  --ivory:       #F2EAD8;
+  --ivory-lt:    #FAF4E4;
+  --ivory-dim:   #806C50;
+  --silver:      #C8C0A8;
+  --silver-dim:  #605848;
+  --text:        #9C9080;
+
+  --tik:         #3C2C08;
+  --tik-lt:      #C09030;
+
+  --maqam:       #E0F0AC;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--silver);
+  font-family:'EB Garamond',serif;
+  overflow-x:hidden;
+  line-height:1.88;
+}
+
+/* ── ATMOSPHÄRE ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,   rgba(180,208,96,.22) 0%,transparent 50%),
+    radial-gradient(ellipse at 20% 20%,  rgba(180,208,96,.09) 0%,transparent 42%),
+    radial-gradient(ellipse at 80% 15%,  rgba(180,208,96,.09) 0%,transparent 40%),
+    radial-gradient(ellipse at 15% 70%,  rgba(180,208,96,.07) 0%,transparent 44%),
+    radial-gradient(ellipse at 85% 75%,  rgba(180,208,96,.07) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,  rgba(8,6,3,.84) 0%,transparent 72%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 12% 6%,   rgba(180,208,96,.70) 0%,transparent 100%),
+    radial-gradient(2.5px 2.5px at 50% 3%, rgba(180,208,96,.70) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 10%,rgba(180,208,96,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 28% 32%,  rgba(180,208,96,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 48%,  rgba(180,208,96,.42) 0%,transparent 100%),
+    radial-gradient(2px 2px at 8% 68%,   rgba(180,208,96,.70) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 78%,  rgba(180,208,96,.42) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 42% 88%,rgba(180,208,96,.42) 0%,transparent 100%),
+    radial-gradient(1px 1px at 62% 20%,  rgba(180,208,96,.42) 0%,transparent 100%);
+}
+
+/* ── STICKY NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(5,4,2,.97);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--acc-bdr);
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-brand{
+  font-family:'Frank Ruhl Libre',serif;font-weight:900;
+  padding:12px 22px;border-right:1px solid var(--acc-bdr);
+  white-space:nowrap;flex-shrink:0;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.nav-brand-main{font-size:.95em;color:var(--acc-lt);letter-spacing:.04em;direction:rtl;}
+.nav-brand-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.50em;color:var(--silver-dim);font-weight:300;
+  letter-spacing:.14em;direction:ltr;
+}
+.nav-link{
+  font-family:'Frank Ruhl Libre',serif;font-size:.76em;font-weight:700;
+  color:var(--acc-lt);opacity:.60;text-decoration:none;padding:0 13px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+  transition:opacity .2s,border-color .2s;
+  display:flex;flex-direction:column;justify-content:center;gap:0;direction:rtl;
+}
+.nav-link:hover{opacity:1;border-bottom-color:var(--acc);}
+.nav-he{display:flex;align-items:center;gap:6px;direction:rtl;}
+.nav-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.82em;opacity:.50;direction:ltr;}
+.nav-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.68em;color:var(--silver-dim);direction:ltr;text-align:right;
+  letter-spacing:.06em;margin-top:-4px;
+}
+
+/* ── WRAP ── */
+.wrap{max-width:1040px;margin:0 auto;padding:72px 44px 150px;position:relative;z-index:1;}
+
+/* ── PAGE HEADER ── */
+.page-header{
+  text-align:center;margin-bottom:64px;padding-bottom:60px;
+  border-bottom:1px solid var(--acc-bdr);position:relative;
+}
+.page-header::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:-12px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 22px;
+  color:var(--acc);font-size:.52em;letter-spacing:.65em;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.80em;color:var(--acc-lt);letter-spacing:.30em;
+  text-transform:uppercase;margin-bottom:22px;opacity:.82;
+}
+.page-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:4.0em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.05em;line-height:1.10;
+  margin-bottom:10px;
+  text-shadow:0 0 60px rgba(180,208,96,.50), 0 0 120px rgba(180,208,96,.30), 0 0 220px rgba(180,208,96,.12);
+}
+.page-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.08em;color:var(--silver-dim);margin-bottom:26px;
+}
+.page-desc{
+  font-size:1.01em;color:var(--text);line-height:1.95;
+  max-width:700px;margin:0 auto 30px;
+}
+.page-desc strong{color:var(--ivory);}
+.page-desc em{color:var(--acc-lt);font-style:italic;}
+.world-chain{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  justify-content:center;
+  border:1px solid var(--acc-bdr);padding:12px 28px;
+  background:rgba(255,255,255,.012);margin-top:20px;
+}
+.wc-item{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;
+  direction:rtl;padding:3px 12px;border:1px solid transparent;
+}
+.wc-active{
+  color:var(--acc-lt);border-color:var(--acc-bdr);
+  background:rgba(255,255,255,.03);
+}
+.wc-dim{color:var(--silver-dim);opacity:.38;}
+.wc-sep{color:var(--acc);opacity:.38;font-size:.72em;}
+
+/* ── VESSEL / SEFIRA NAV GRID ── */
+.sefira-nav{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:6px;
+  margin:0 0 60px;
+}
+.sefira-nav-item{
+  border:1px solid var(--acc-bdr);padding:14px 10px;text-align:center;
+  text-decoration:none;transition:background .2s,border-color .2s;
+  background:rgba(255,255,255,.012);
+}
+.sefira-nav-item:hover{background:rgba(255,255,255,.035);border-color:var(--acc-lt);}
+.sn-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.60em;opacity:.45;display:block;direction:ltr;}
+.sn-he{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:700;color:var(--acc-lt);display:block;direction:rtl;line-height:1.5;}
+.sn-de{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.66em;color:var(--silver-dim);display:block;line-height:1.5;}
+.sn-maqam{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.58em;color:var(--maqam);opacity:.72;display:block;direction:ltr;margin-top:3px;}
+
+/* ── SONG SECTION ── */
+.song-section{
+  margin-bottom:60px;scroll-margin-top:62px;
+  border:1px solid rgba(255,255,255,.05);
+  background:linear-gradient(180deg,rgba(14,11,5,.96) 0%,rgba(9,7,3,.98) 100%);
+  overflow:hidden;position:relative;
+}
+.song-section::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--acc),var(--gold),var(--acc-lt),var(--gold),var(--acc),transparent);
+  opacity:.55;
+}
+.song-section::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:120px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(180,208,96,.22) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── SONG HEADER ── */
+.song-header{
+  padding:30px 42px 24px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  display:grid;grid-template-columns:92px 1fr auto;gap:0 24px;align-items:center;
+  position:relative;z-index:1;
+}
+.song-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.95em;opacity:.44;line-height:1;text-align:center;
+  color:var(--acc-lt);
+  border-right:1px solid var(--acc-bdr);padding-right:24px;
+}
+.song-num .snum-sefira{
+  font-family:'Frank Ruhl Libre',serif;font-size:.36em;font-weight:700;
+  opacity:.62;letter-spacing:.08em;display:block;margin-bottom:4px;direction:rtl;
+}
+.sefira-badge, .vessel-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.66em;font-weight:700;
+  letter-spacing:.10em;color:var(--acc-lt);opacity:.68;display:block;margin-bottom:4px;direction:rtl;
+}
+.maqam-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;display:block;margin-bottom:6px;direction:ltr;
+  letter-spacing:.10em;color:var(--maqam);opacity:.86;
+}
+.song-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.72em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;letter-spacing:.03em;display:block;line-height:1.4;
+  text-shadow:0 0 40px rgba(180,208,96,.12);
+}
+.song-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);display:block;margin-top:3px;
+}
+.source-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.63em;
+  border:1px solid var(--acc-bdr);padding:8px 16px;
+  color:var(--acc-lt);direction:rtl;text-align:right;line-height:1.78;
+  flex-shrink:0;background:rgba(255,255,255,.015);max-width:270px;
+}
+.source-badge-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.92em;color:var(--silver-dim);direction:ltr;display:block;margin-top:4px;line-height:1.6;
+}
+
+/* ── META-STREIFEN ── */
+.meta-strip{
+  display:flex;flex-wrap:wrap;gap:0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.012);
+}
+.meta-cell{
+  flex:1 1 auto;min-width:150px;padding:12px 20px;
+  border-right:1px solid rgba(255,255,255,.045);
+}
+.meta-cell:last-child{border-right:none;}
+.meta-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.62em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);display:block;margin-bottom:2px;
+}
+.meta-v{
+  font-family:'Frank Ruhl Libre',serif;font-size:.82em;
+  color:var(--acc-lt);opacity:.90;display:block;line-height:1.6;
+}
+
+/* ── SONG BODY ── */
+.song-body{padding:0 42px 50px;position:relative;z-index:1;}
+.section-block,.section{margin:28px 0;}
+.section-label{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.72em;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--silver-dim);margin-bottom:12px;padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.045);opacity:.86;direction:rtl;text-align:right;
+}
+
+/* ── INSTRUMENTENHINWEIS ── */
+.guitar-note,.instr,.instrument-note{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--maqam);opacity:.92;
+  margin-bottom:14px;padding:9px 18px;
+  border-left:2px solid var(--acc-bdr);
+  background:rgba(255,255,255,.015);direction:ltr;
+  line-height:1.82;
+}
+
+/* ── LYRIK ── */
+.lyrics-block,.lyrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:0 38px;
+}
+.lyrics-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.13em;
+  color:var(--ivory-lt);direction:rtl;text-align:right;line-height:2.14;
+}
+.lyrics-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.93em;
+  color:var(--text);line-height:2.14;
+  border-left:1px solid rgba(255,255,255,.05);padding-left:28px;
+}
+.line{display:block;}
+
+/* ── BOXEN ── */
+.refrain-box{
+  background:linear-gradient(135deg,rgba(180,208,96,.09),rgba(255,255,255,.01));
+  border:1px solid var(--acc-bdr);border-left:3px solid var(--acc);
+  padding:24px 30px;
+}
+.bridge-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.06),transparent);
+  border:1px solid rgba(200,156,32,.20);border-left:3px solid var(--gold);
+  padding:24px 30px;
+}
+.climax-box{
+  background:linear-gradient(135deg,rgba(180,208,96,.09),transparent);
+  border:1px solid var(--acc-bdr);
+  padding:22px 28px;margin:28px 0;
+  box-shadow:inset 0 0 40px rgba(255,255,255,.014);
+}
+.climax-box .lyrics-he .line{font-size:1.08em;font-weight:700;}
+.coda-box{padding:22px 28px;margin:28px 0;border:1px solid rgba(255,255,255,.045);background:rgba(255,255,255,.01);}
+.coda-whisper{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.08em;text-align:center;
+  color:var(--ivory-dim);direction:rtl;line-height:2.4;letter-spacing:.06em;
+}
+.coda-whisper em{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--silver-dim);direction:ltr;unicode-bidi:embed;
+}
+.coda-whisper strong{color:var(--acc-lt);}
+
+/* ── TIKKUN ── */
+.tikkun-box{
+  background:linear-gradient(135deg,rgba(60,44,8,.18),rgba(9,7,3,.90));
+  border:1px solid rgba(192,144,48,.34);border-left:4px solid var(--gold);
+  padding:32px 34px;margin:34px 0;position:relative;
+}
+.tikkun-box::before{
+  content:'מַעֲשֵׂה הַתִּיקּוּן — Die Tikkun-Handlung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--tik-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.tikkun-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid rgba(192,144,48,.18);gap:18px;flex-wrap:wrap;
+}
+.tikkun-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--tik-lt);direction:rtl;
+}
+.tikkun-title-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.79em;color:var(--gold);display:block;margin-top:2px;
+}
+.tikkun-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.34);
+  padding:4px 12px;background:rgba(60,44,8,.10);
+  direction:rtl;flex-shrink:0;font-style:italic;max-width:230px;text-align:right;line-height:1.7;
+}
+.tikkun-body{
+  font-family:'EB Garamond',serif;font-size:.90em;
+  color:var(--text);line-height:1.95;
+}
+.tikkun-body strong{color:var(--ivory-dim);}
+.tikkun-tags,.mitzva-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px;}
+.tikkun-tag,.mitzva-tag{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;
+  color:var(--tik-lt);border:1px solid rgba(192,144,48,.30);
+  padding:3px 11px;background:rgba(60,44,8,.08);direction:rtl;
+}
+
+/* ── SZENARIEN (Bestand aus der Vorlage) ── */
+.scenarios-section,.scenarios{margin-top:44px;padding-top:36px;border-top:1px solid rgba(255,255,255,.05);}
+.scenarios-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.00em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:22px;
+}
+.scenarios-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scenario-card,.scenario{
+  border:1px solid rgba(255,255,255,.06);padding:20px 22px;margin-bottom:14px;
+  background:rgba(6,5,2,.68);position:relative;overflow:hidden;
+}
+.scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);}
+.scenario{border-left:2px solid var(--acc-bdr);}
+.sc-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62em;letter-spacing:.20em;text-transform:uppercase;margin-bottom:4px;opacity:.65;color:var(--acc-lt);}
+.sc-title-he,.scenario-label{font-family:'Frank Ruhl Libre',serif;font-size:.92em;font-weight:700;direction:rtl;margin-bottom:6px;color:var(--acc-lt);}
+.sc-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;color:var(--silver-dim);margin-bottom:10px;}
+.sc-body,.scenario-text{font-size:.87em;color:var(--text);line-height:1.86;}
+.sc-body strong{color:var(--ivory-dim);}
+.key-moment{margin-top:10px;padding:8px 14px;border-left:2px solid var(--acc);background:rgba(255,255,255,.02);font-size:.85em;font-style:italic;color:var(--ivory-dim);}
+.reaction{margin-top:9px;font-size:.83em;color:var(--silver-dim);border-top:1px solid rgba(255,255,255,.05);padding-top:8px;}
+.reaction strong{color:var(--ivory-lt);font-family:'Frank Ruhl Libre',serif;}
+
+/* ── ORNAMENT ── */
+.ornament{display:flex;align-items:center;gap:18px;margin:50px 0 44px;}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--acc-bdr),transparent);}
+.ornament-star{color:var(--acc);font-size:.65em;letter-spacing:.5em;opacity:.42;}
+
+/* ── QUELLEN-BOXEN ── */
+.sources-box,.check-box{
+  background:linear-gradient(135deg,rgba(180,208,96,.09),rgba(5,4,2,.90));
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  padding:32px 34px;margin-top:44px;position:relative;
+}
+.sources-box::before{
+  content:'אִמּוּת הַמְּקוֹרוֹת — Quellenverifikation';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.check-box::before{
+  content:'בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.sources-title{
+  font-family:'Frank Ruhl Libre',serif;font-size:.96em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;text-align:right;margin-bottom:14px;
+}
+.sources-body{
+  font-family:'EB Garamond',serif;font-size:.89em;color:var(--text);line-height:1.92;
+}
+.sources-body strong{color:var(--ivory-dim);}
+.chk{
+  margin-bottom:18px;padding:14px 18px;
+  border-left:2px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+}
+.chk:last-child{margin-bottom:0;}
+.chk-head{
+  font-family:'Frank Ruhl Libre',serif;font-size:.86em;font-weight:700;
+  direction:rtl;text-align:right;margin-bottom:6px;color:var(--acc-lt);
+}
+.chk-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--silver-dim);display:block;direction:ltr;text-align:left;margin-top:1px;
+}
+.chk-body{font-family:'EB Garamond',serif;font-size:.87em;color:var(--text);line-height:1.90;}
+.chk-body strong{color:var(--ivory-dim);}
+.chk-body em{color:var(--acc-lt);font-style:italic;}
+.tag-ok,.tag-fix,.tag-open{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;text-transform:uppercase;padding:1px 9px;
+  border:1px solid;margin-left:8px;white-space:nowrap;direction:ltr;display:inline-block;
+}
+.tag-ok{color:#8FBF80;border-color:rgba(143,191,128,.38);}
+.tag-fix{color:#E09050;border-color:rgba(224,144,80,.40);}
+.tag-open{color:#9098C0;border-color:rgba(144,152,192,.38);}
+
+/* ── TRADITIONSHINWEIS ── */
+.trad-box{
+  border:1px solid rgba(144,152,192,.28);border-left:4px solid #7A82B0;
+  background:linear-gradient(135deg,rgba(90,96,140,.08),rgba(5,4,2,.88));
+  padding:26px 32px;margin-top:30px;position:relative;
+}
+.trad-box::before{
+  content:'הֶעָרַת מָסוֹרֶת — Traditionshinweis';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:#A0A8D0;
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.trad-box .sources-title{color:#A0A8D0;}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;margin-top:80px;padding-top:56px;
+  border-top:1px solid var(--acc-bdr);
+  color:var(--silver-dim);font-size:.86em;line-height:1.90;
+}
+.footer-world,.footer-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.55em;font-weight:900;
+  color:var(--acc-lt);direction:rtl;letter-spacing:.06em;
+  margin-bottom:14px;line-height:1.5;
+}
+.footer-chain{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.94em;color:var(--silver-dim);letter-spacing:.12em;margin-bottom:22px;
+}
+.footer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.02em;color:var(--silver-dim);line-height:1.98;
+  max-width:600px;margin:0 auto 24px;
+}
+.footer-amen{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.20em;
+  color:var(--acc-lt);letter-spacing:.14em;opacity:.55;direction:rtl;line-height:1.7;
+}
+.footer p{max-width:760px;margin:0 auto 10px;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .wrap{padding:52px 20px 100px;}
+  .song-header{grid-template-columns:64px 1fr;gap:14px;}
+  .source-badge{grid-column:1 / -1;max-width:none;margin-top:14px;}
+  .lyrics-block,.lyrics{grid-template-columns:1fr;}
+  .lyrics-de{border-left:none;padding-left:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.06);padding-top:8px;}
+  .scenarios-grid{grid-template-columns:1fr;}
+  .sefira-nav{grid-template-columns:repeat(2,1fr);}
+  .page-title-he{font-size:2.6em;}
+  .song-body{padding:0 20px 40px;}
+  .tikkun-src{max-width:none;}
+  .nav-de{display:none;}
+}
+
+/* ── ZUSATZ: Korbanot-Vokabular ── */
+:root{ --ass: #6E8C30; --ass-lt: #B4D060; }
+.korban-badge{
+  font-family:'Frank Ruhl Libre',serif;font-size:.68em;font-weight:700;
+  color:var(--ivory-dim);opacity:.90;display:block;margin-bottom:5px;direction:rtl;
+  letter-spacing:.04em;
+}
+.song-wrap{position:relative;}
+.footer-sources{
+  font-family:'EB Garamond',serif;font-size:.92em;color:var(--silver-dim);
+  line-height:1.90;max-width:780px;margin:0 auto 16px;
+}
+.footer-sources strong{color:var(--acc-lt);}
+.footer-meta{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.90em;color:var(--silver-dim);opacity:.78;line-height:1.80;
+  max-width:760px;margin:0 auto;
+}
+
+/* ── ZUSATZ: Or-Chozer-Abschluss (Lied X) ── */
+.or-chozer-box{
+  background:linear-gradient(135deg,rgba(180,208,96,.09),rgba(200,156,32,.10),rgba(10,8,8,.94));
+  border:2px solid var(--acc-lt);padding:38px 34px;text-align:center;
+  margin:44px 0;position:relative;
+}
+.or-chozer-box::before{
+  content:'אוֹר חוֹזֵר';position:absolute;top:-13px;left:50%;
+  transform:translateX(-50%);background:var(--bg);padding:0 18px;
+  font-family:'Frank Ruhl Libre',serif;font-size:.74em;color:var(--acc-lt);
+  letter-spacing:.20em;direction:rtl;
+}
+.or-chozer-text{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.24em;color:var(--acc-lt);
+  direction:rtl;line-height:2.45;
+}
+.or-chozer-text strong{font-weight:900;color:var(--ivory-lt);}
+.or-chozer-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92em;
+  color:var(--text);margin-top:18px;line-height:1.92;
+}
+
+/* ── ZUSATZ: Gruppen-Trenner und Gruppen-Farbmodifikatoren ── */
+.sec-div{
+  display:flex;align-items:center;gap:22px;
+  padding:22px 30px;margin:52px 0 40px;position:relative;
+  border:1px solid var(--acc-bdr);background:rgba(255,255,255,.014);
+  color:var(--acc-lt);
+}
+.sec-div::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,transparent,var(--acc),transparent);
+}
+.sec-num{
+  font-family:'Frank Ruhl Libre',serif;font-size:2.1em;font-weight:900;
+  color:var(--acc-lt);opacity:.42;direction:rtl;line-height:1;flex-shrink:0;
+}
+.sec-title-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.14em;font-weight:700;
+  color:var(--acc-lt);direction:rtl;
+}
+.sec-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.86em;color:var(--silver-dim);line-height:1.75;
+}
+
+/* Gruppenfarben: setzen die Akzentvariablen für Element und Teilbaum neu */
+.jer{--acc:#6E8C30;--acc-lt:#B4D060;--acc-bdr:rgba(180,208,96,.34);--maqam:#B4D060;}
+.pro,.pro-song{--acc:#6E8C30;--acc-lt:#B4D060;--acc-bdr:rgba(180,208,96,.34);--maqam:#B4D060;}
+.ver,.ver-song{--acc:#6E8C30;--acc-lt:#B4D060;--acc-bdr:rgba(180,208,96,.34);--maqam:#B4D060;}
+.song-num.jer,.song-num.pro,.song-num.ver{color:var(--acc-lt);}
+
+/* ── ZUSATZ: Gesichert-Badge und Sektionsvarianten ── */
+.gesichert-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.68em;
+  letter-spacing:.10em;color:#8FBF80;border:1px solid rgba(143,191,128,.36);
+  padding:2px 10px;margin-right:8px;white-space:nowrap;display:inline-block;
+  background:rgba(143,191,128,.05);
+}
+.sec-div.gold-sec,.sec-div.ketoret-sec{
+  border-color:rgba(200,156,32,.34);
+}
+.sec-div.gold-sec .sec-num,.sec-div.gold-sec .sec-title-he,
+.sec-div.ketoret-sec .sec-num,.sec-div.ketoret-sec .sec-title-he{color:var(--gold-lt);}
+
+/* ── ZUSATZ: Berachah-Box und Aufführungshinweise ── */
+.berachah-box{
+  background:linear-gradient(135deg,rgba(200,156,32,.10),rgba(9,7,3,.92));
+  border:1px solid rgba(200,156,32,.34);border-left:4px solid var(--gold);
+  padding:28px 32px;margin:32px 0;position:relative;
+}
+.berachah-box::before{
+  content:'נֻסַּח הַבְּרָכָה — Wortlaut der Beracha';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--gold-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.ber-tag{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  letter-spacing:.14em;color:var(--silver-dim);margin-bottom:10px;direction:ltr;
+}
+.ber-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.06em;color:var(--ivory-lt);
+  direction:rtl;line-height:2.15;
+}
+.ber-kahal{
+  font-family:'Frank Ruhl Libre',serif;font-size:.92em;color:var(--gold-lt);
+  direction:rtl;line-height:2.05;margin-top:8px;opacity:.86;
+}
+.ber-de{
+  font-family:'EB Garamond',serif;font-style:italic;font-size:.88em;
+  color:var(--text);line-height:1.92;margin-top:12px;
+  border-top:1px solid rgba(200,156,32,.16);padding-top:10px;
+}
+.ber-src{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.76em;
+  color:var(--silver-dim);margin-top:10px;direction:ltr;
+}
+.perf-box{
+  border:1px solid var(--acc-bdr);border-left:4px solid var(--acc);
+  background:rgba(255,255,255,.014);padding:26px 30px;margin:32px 0;position:relative;
+}
+.perf-box::before{
+  content:'הוֹרָאוֹת בִּיצוּעַ — Aufführungshinweise';
+  position:absolute;top:-11px;right:22px;background:var(--bg);
+  padding:0 12px;font-size:.60em;color:var(--acc-lt);
+  letter-spacing:.14em;font-family:'Frank Ruhl Libre',serif;
+}
+.perf-row{display:flex;gap:14px;margin-bottom:8px;align-items:baseline;flex-wrap:wrap;}
+.perf-k{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--silver-dim);
+  min-width:170px;flex-shrink:0;
+}
+.perf-v{font-family:'EB Garamond',serif;font-size:.90em;color:var(--text);line-height:1.85;flex:1;}
+.perf-v strong{color:var(--ivory-dim);}
+
+/* ── ZUSATZ: Fahrplan-Karten ── */
+.card{
+  display:grid;grid-template-columns:74px 1fr 250px;gap:0 24px;
+  border:1px solid rgba(255,255,255,.055);
+  background:linear-gradient(180deg,rgba(14,11,5,.94),rgba(9,7,3,.97));
+  padding:24px 28px;margin-bottom:14px;position:relative;
+  transition:border-color .2s,background .2s;
+}
+.card:hover{border-color:var(--acc-bdr);background:rgba(255,255,255,.022);}
+.card::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,transparent,var(--acc),transparent);opacity:.55;
+}
+.card-num{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.75em;
+  color:var(--acc-lt);opacity:.42;line-height:1;text-align:center;
+  border-right:1px solid var(--acc-bdr);padding-right:22px;align-self:center;
+}
+.card-main{min-width:0;}
+.card-he{
+  font-family:'Frank Ruhl Libre',serif;font-size:1.24em;font-weight:900;
+  color:var(--ivory-lt);direction:rtl;line-height:1.5;display:block;
+}
+.card-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.88em;
+  color:var(--silver-dim);display:block;margin-bottom:9px;
+}
+.card-text{
+  font-family:'EB Garamond',serif;font-size:.88em;color:var(--text);line-height:1.90;
+}
+.card-text em{color:var(--acc-lt);font-style:italic;}
+.card-side{display:flex;flex-direction:column;gap:7px;align-items:flex-end;}
+.card-sef{
+  font-family:'Frank Ruhl Libre',serif;font-size:.72em;font-weight:700;
+  color:var(--acc-lt);border:1px solid var(--acc-bdr);padding:3px 12px;
+  direction:rtl;background:rgba(255,255,255,.015);white-space:nowrap;
+}
+.card-maq{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;
+  letter-spacing:.10em;color:var(--maqam);opacity:.90;direction:ltr;white-space:nowrap;
+}
+.card-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.62em;color:var(--acc-lt);
+  opacity:.78;direction:rtl;text-align:right;line-height:1.85;
+}
+.card-src-de{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.72em;
+  color:var(--silver-dim);direction:ltr;text-align:right;line-height:1.65;
+}
+.sec-block{margin-bottom:56px;scroll-margin-top:62px;}
+.sec-hdr{
+  display:flex;align-items:center;gap:24px;padding:24px 30px;margin-bottom:20px;
+  border:1px solid var(--acc-bdr);background:rgba(255,255,255,.016);position:relative;
+}
+.sec-hdr::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,transparent,var(--acc),transparent);
+}
+.sec-hdr-num{
+  font-family:'Frank Ruhl Libre',serif;font-size:2.3em;font-weight:900;
+  color:var(--acc-lt);opacity:.40;direction:rtl;line-height:1;flex-shrink:0;
+}
+.sec-badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.74em;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--silver-dim);margin-bottom:4px;
+}
+.sec-meta-line{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.80em;
+  color:var(--maqam);opacity:.82;margin-top:5px;
+}
+.sec-src{
+  font-family:'Frank Ruhl Libre',serif;font-size:.64em;color:var(--acc-lt);
+  opacity:.66;direction:rtl;margin-top:5px;
+}
+@media(max-width:760px){
+  .card{grid-template-columns:52px 1fr;gap:0 14px;}
+  .card-side{grid-column:1 / -1;align-items:flex-start;margin-top:14px;}
+  .card-src,.card-src-de{text-align:left;}
+}
+
+/* ── ZUSATZ: Varianten der Beracha-Box ── */
+.berachah-box.formel-box::before{content:'נֻסַּח הַהַכְרָזָה — Wortlaut der überlieferten Formel';}
+.berachah-box.vers-box::before{content:'הַפָּסוּק — Der Vers, der gesagt wurde';}
+.berachah-box.formel-box, .berachah-box.vers-box{
+  border-left-color:var(--acc);
+  background:linear-gradient(135deg,rgba(180,208,96,.09),rgba(9,7,3,.92));
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">
+    <span class="nav-brand-main">הַשְׁלָמוֹת</span>
+    <span class="nav-brand-sub">Sektion ג · פֶּסַח · Karten 16–20</span>
+  </div>
+  <a class="nav-link" href="#song-16"><span class="nav-he"><span class="nav-num">ט״ז</span>פֶּסַח בְּשָׁלֹשׁ כִּתּוֹת</span><span class="nav-de">Das Pessachopfer in drei Gruppen</span></a>
+  <a class="nav-link" href="#song-17"><span class="nav-he"><span class="nav-num">י״ז</span>הַלֵּל בִּשְׁעַת הַשְּׁחִיטָה</span><span class="nav-de">Hallel während der Schlachtung</span></a>
+  <a class="nav-link" href="#song-18"><span class="nav-he"><span class="nav-num">י״ח</span>חֲגִיגַת אַרְבָּעָה עָשָׂר</span><span class="nav-de">Das Festopfer des vierzehnten</span></a>
+  <a class="nav-link" href="#song-19"><span class="nav-he"><span class="nav-num">י״ט</span>מוּסַף שִׁבְעַת הַיָּמִים</span><span class="nav-de">Die Mussafim der sieben Tage</span></a>
+  <a class="nav-link" href="#song-20"><span class="nav-he"><span class="nav-num">כ׳</span>קְצִירַת הָעֹמֶר</span><span class="nav-de">Die nächtliche Omer-Ernte</span></a>
+</nav>
+
+<div class="wrap">
+
+<header class="page-header">
+  <p class="eyebrow">בֵּית הַמִּקְדָּשׁ הַשְּׁלִישִׁי · סֶקְצְיָה ג · פֶּסַח</p>
+  <h1 class="page-title-he">מֵאַרְבָּעָה עָשָׂר עַד הָעֹמֶר</h1>
+  <p class="page-title-de">Haschlamot XVI–XX · Karten 16 bis 20 des Fahrplans מַה שֶּׁעוֹד חָסֵר</p>
+  <p class="page-desc">
+    <strong>שָׁלֹשׁ כִּתּוֹת · הַלֵּל בִּשְׁעַת הַשְּׁחִיטָה · חֲגִיגַת אַרְבָּעָה עָשָׂר · מוּסַף שִׁבְעַת הַיָּמִים · קְצִירַת הָעֹמֶר</strong><br>
+    Sektion ג vollständig. Fünf Avodot vom Nachmittag des vierzehnten Nissan bis in die
+    Nacht des sechzehnten — <em>die dichtesten Menschenszenen, die die Mischna überhaupt
+    beschreibt</em>: ein Hof, der sich füllt und verriegelt wird; Schalen ohne Boden, damit
+    niemand sie abstellt; ein Gesang, der wieder von vorn beginnt, wenn er zu Ende ist;
+    ein Opfer, das nur da ist, damit ein anderes nicht im Hunger gegessen wird; und
+    ein Feld bei Nacht, auf dem dreimal gefragt wird, ehe die Sichel fällt.
+    <br><br>
+    Drei Lieder tragen einen <strong>belegten Wortlaut</strong>: zwei Verse (Status b) und
+    die vollständig überlieferte Frageformel der Omer-Ernte (Status a). Bei den beiden
+    übrigen ist nichts überliefert und nichts rekonstruiert.
+  </p>
+  <div class="world-chain">
+    <span class="wc-item wc-dim">יוֹם</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">שָׁבוּעַ</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-dim">חֹדֶשׁ</span>
+    <span class="wc-sep">→</span>
+    <span class="wc-item wc-active">שָׁנָה</span>
+  </div>
+</header>
+
+<div class="sefira-nav">
+  <a class="sefira-nav-item" href="#song-16">
+    <span class="sn-num">ט״ז · Malchut</span>
+    <span class="sn-he">פֶּסַח בְּשָׁלֹשׁ כִּתּוֹת</span>
+    <span class="sn-de">Das Pessachopfer in drei Gruppen</span>
+    <span class="sn-maqam">Maqam Hijaz</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-17">
+    <span class="sn-num">י״ז · Tiferet</span>
+    <span class="sn-he">הַלֵּל בִּשְׁעַת הַשְּׁחִיטָה</span>
+    <span class="sn-de">Hallel während der Schlachtung</span>
+    <span class="sn-maqam">Maqam Rast</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-18">
+    <span class="sn-num">י״ח · Chesed</span>
+    <span class="sn-he">חֲגִיגַת אַרְבָּעָה עָשָׂר</span>
+    <span class="sn-de">Das Festopfer des vierzehnten</span>
+    <span class="sn-maqam">Maqam Ajam</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-19">
+    <span class="sn-num">י״ט · Netzach</span>
+    <span class="sn-he">מוּסַף שִׁבְעַת הַיָּמִים</span>
+    <span class="sn-de">Die Mussafim der sieben Tage</span>
+    <span class="sn-maqam">Maqam Bayat</span>
+  </a>
+  <a class="sefira-nav-item" href="#song-20">
+    <span class="sn-num">כ׳ · Jesod</span>
+    <span class="sn-he">קְצִירַת הָעֹמֶר</span>
+    <span class="sn-de">Die nächtliche Omer-Ernte</span>
+    <span class="sn-maqam">Maqam Saba</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר ט״ז — DAS PESSACHOPFER IN DREI GRUPPEN · MALCHUT · MAQAM HIJAZ
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-16">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">מַלְכוּת</span>
+      ט״ז
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Malchut — מַלְכוּת · Was ein Maß hat und geschlossen wird · Karte 16</span>
+      <span class="maqam-badge">Maqam Hijaz · מַקָּם חִג׳ַאז</span>
+      <span class="song-title-he">קָרְבָּן פֶּסַח בְּשָׁלֹשׁ כִּתּוֹת</span>
+      <span class="song-title-de">Der Hof füllt sich, die Tore werden verriegelt, und die Schalen haben keinen Boden</span>
+    </div>
+    <div class="source-badge">
+      שְׁמוֹת י״ב:ו׳ · מִשְׁנָה פְּסָחִים ה:ה–ז · פְּסָחִים סד. – סד: · רַמְבַּ״ם קׇרְבַּן פֶּסַח א
+      <span class="source-badge-de">Schemot 12:6 · Mischna Pessachim 5:5–7 (die drei Gruppen, die verriegelten Tore, die Reihen mit silbernen und goldenen Schalen ohne Boden) · Pessachim 64a–b · Rambam, Hilchot Korban Pessach 1</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">מַלְכוּת · Malchut</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Hijaz · מַקָּם חִג׳ַאז</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">~68 BPM rubato · mf → f → p</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — נִתְמַלְּאָה הָעֲזָרָה</div>
+      <div class="instrument-note">[solo acoustic guitar] [no percussion] [no drums] [no choir] Maqam Hijaz entering fast and crowded, a courtyard filling, rubato ~68 BPM. Gitarre: Hidschaz tritt schnell und gedrängt ein — ein Hof, der sich füllt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — נִכְנְסָה כַּת רִאשׁוֹנָה,</span>
+        <span class="line">נִתְמַלְּאָה הָעֲזָרָה,</span>
+        <span class="line">נָעֲלוּ דַּלְתוֹת הָעֲזָרָה —</span>
+        <span class="line">תָּקְעוּ, הֵרִיעוּ, וְתָקְעוּ.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Adonai — die erste Gruppe trat ein,</span>
+        <span class="line">der Hof füllte sich,</span>
+        <span class="line">man verriegelte die Tore des Hofes —</span>
+        <span class="line">man blies Tekiah, Teruah und Tekiah.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית א — בְּזִיכֵי כֶסֶף וּבְזִיכֵי זָהָב</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Hijaz in tight rows, one image per line. Gitarre: Hidschaz in engen Reihen, ein Bild je Zeile.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">הַכֹּהֲנִים עוֹמְדִים שׁוּרוֹת שׁוּרוֹת,</span>
+        <span class="line">וּבִידֵיהֶם בְּזִיכֵי כֶסֶף וּבְזִיכֵי זָהָב,</span>
+        <span class="line">שׁוּרָה כֻּלָּהּ כֶּסֶף וְשׁוּרָה כֻּלָּהּ זָהָב,</span>
+        <span class="line">וְלֹא הָיוּ לַבְּזִיכִין שׁוּלַיִם.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Die Kohanim stehen Reihe um Reihe,</span>
+        <span class="line">und in ihren Händen silberne Schalen und goldene Schalen,</span>
+        <span class="line">eine Reihe ganz aus Silber und eine Reihe ganz aus Gold,</span>
+        <span class="line">und die Schalen hatten keinen Boden.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — מַלְכוּת: הַשַּׁעַר שֶׁנִּסְגָּר</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Hijaz royal, then closing. Gitarre: Hidschaz königlich, dann schließend.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">מַלְכוּת אֵינָהּ פְּתוּחָה לַכֹּל,</span>
+        <span class="line">מַלְכוּת יֵשׁ לָהּ מִדָּה,</span>
+        <span class="line">וְכַאֲשֶׁר נִתְמַלְּאָה הֶחָצֵר —</span>
+        <span class="line">נָעֲלוּ, וְהַנִּשְׁאָר מְחַכֶּה בַּחוּץ.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Malchut steht nicht allen offen,</span>
+        <span class="line">Malchut hat ein Maß,</span>
+        <span class="line">und als der Hof voll war —</span>
+        <span class="line">verriegelte man, und wer übrig blieb, wartet draußen.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mf · f · mf</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] [no choir] Hijaz refrain, driving but never rushed. Gitarre: Hidschaz-Refrain, drängend, aber nie gehetzt.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">כַּת — וְעוֹד כַּת,</span>
+          <span class="line">דֶּלֶת — וְעוֹד דֶּלֶת,</span>
+          <span class="line">שָׁחַט יִשְׂרָאֵל וְקִבֵּל הַכֹּהֵן,</span>
+          <span class="line">וְאֵין כְּלִי שֶׁמֻּנָּח.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Eine Gruppe — und noch eine Gruppe,</span>
+          <span class="line">ein Tor — und noch ein Tor,</span>
+          <span class="line">ein Israelit schlachtete und ein Kohen empfing,</span>
+          <span class="line">und kein Gefäß wird abgestellt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — שֶׁמָּא יִקְרַשׁ הַדָּם</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Hijaz reduced to plain speech. Gitarre: Hidschaz auf schlichte Rede reduziert.</div>
+      <div class="bridge-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">וְלָמָּה אֵין לַבְּזִיכִין שׁוּלַיִם?</span>
+          <span class="line">שֶׁלֹּא יַנִּיחוּם וְיִקְרַשׁ הַדָּם —</span>
+          <span class="line">כְּלִי שֶׁאֵין לוֹ מָקוֹם לָנוּחַ</span>
+          <span class="line">אֵינוֹ נָח.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Und warum haben die Schalen keinen Boden?</span>
+          <span class="line">Damit man sie nicht abstellt und das Blut gerinnt —</span>
+          <span class="line">ein Gefäß, das keinen Ort zum Ruhen hat,</span>
+          <span class="line">ruht nicht.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="berachah-box vers-box">
+      <div class="ber-tag">הַפָּסוּק שֶׁל הַשְּׁחִיטָה · Schemot 12:6</div>
+      <div class="ber-he">וְשָׁחֲטוּ אֹתוֹ כֹּל קְהַל עֲדַת יִשְׂרָאֵל בֵּין הָעַרְבָּיִם.</div>
+      <div class="ber-kahal"></div>
+      <div class="ber-de">Und die ganze Versammlung der Gemeinde Israels soll es schlachten, zwischen den Abenden.</div>
+      <div class="ber-src"><strong>Status (b).</strong> Für die Schechitat HaPessach im Mikdasch ist eine Berachah <em>על שחיטת הפסח</em> in der Literatur bekannt (Pessachim 121a), ihr Wortlaut ließ sich jedoch nicht zu der Genauigkeit verifizieren, die dieses Projekt verlangt. Nach Regel 5 und 6 steht deshalb kein rekonstruierter Formeltext, sondern der <strong>Vers</strong>, der die Awodah unmittelbar trägt.</div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">מִדָּה לַמָּקוֹם</div>
+          <div class="tikkun-title-de">Dem Raum sein Maß geben</div>
+        </div>
+        <div class="tikkun-src">מִשְׁנָה פְּסָחִים ה:ה</div>
+      </div>
+      <div class="tikkun-body">Bei einer Einladung oder Versammlung <strong>vorher die Zahl festlegen, die der Raum trägt — und sie einhalten</strong>, auch wenn noch jemand kommt. Wer nicht mehr hineinpasst, bekommt einen zweiten Termin, nicht weniger Platz. Im Mikdasch füllte sich die Asarah, die Tore wurden verriegelt, und die zweite Gruppe wartete draußen, bis die erste hinausging.</div>
+      <div class="tikkun-tags"><span class="tikkun-tag">פֶּסַח</span><span class="tikkun-tag">מַלְכוּת</span><span class="tikkun-tag">מִדָּה</span><span class="tikkun-tag">שָׁלֹשׁ כִּתּוֹת</span></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׂיא — f · נִתְמַלְּאָה וְנָעֲלוּ</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Hijaz at full force, three calls. Gitarre: Hidschaz mit voller Kraft — drei Rufe.</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">נִתְמַלְּאָה! — וְנָעֲלוּ!</span>
+          <span class="line">כֶּסֶף! — וְזָהָב! — וְאֵין! — שׁוּלַיִם!</span>
+          <span class="line">מַלְכוּת! — יֵשׁ לָהּ! — מִדָּה!</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Voll! — und verriegelt!</span>
+          <span class="line">Silber! — und Gold! — und kein! — Boden!</span>
+          <span class="line">Malchut! — hat! — ein Maß!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — p · וְהַכַּת הַשְּׁנִיָּה מְחַכָּה</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Hijaz stopping behind a closed door. Gitarre: Hidschaz hält hinter einer geschlossenen Tür an.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">וְהַדֶּלֶת נְעוּלָה — וְהַכַּת הַשְּׁנִיָּה מְחַכָּה.<br><em>Und das Tor ist verriegelt — und die zweite Gruppe wartet.</em></div>
+      </div>
+    </div>
+
+    <div class="perf-box">
+      <div class="perf-row"><span class="perf-k">Maqam</span><span class="perf-v"><strong>Hidschaz</strong> durchgehend. Anschluss an Lied XV (Nahawand) — der Wechsel ist hörbar.</span></div>
+      <div class="perf-row"><span class="perf-k">Tempo</span><span class="perf-v">~68 BPM, das schnellste der fünf. Drängend, aber nie gehetzt.</span></div>
+      <div class="perf-row"><span class="perf-k">Dynamik</span><span class="perf-v">mf — f — p. Nach dem Schia ein harter Schnitt in die Coda.</span></div>
+      <div class="perf-row"><span class="perf-k">Vokalführung</span><span class="perf-v">Solo-Männerstimme. Bait I in engen Reihen, ohne Atempause zwischen den ersten drei Zeilen.</span></div>
+      <div class="perf-row"><span class="perf-k">Instrument</span><span class="perf-v">Nur akustische Gitarre. Keine Perkussion, keine Trommeln, kein Chor.</span></div>
+      <div class="perf-row"><span class="perf-k">Was nicht vorkommt</span><span class="perf-v">Keine Schofar- oder Trompetentöne, obwohl die Petichah sie nennt. Kein Menschengewirr, kein Raumklang.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר י״ז — HALLEL WÄHREND DER SCHLACHTUNG · TIFERET · MAQAM RAST
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-17">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">תִּפְאֶרֶת</span>
+      י״ז
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Tiferet — תִּפְאֶרֶת · Gesang und Handlung enden im selben Augenblick · Karte 17</span>
+      <span class="maqam-badge">Maqam Rast · מַקָּם רַסְת</span>
+      <span class="song-title-he">הַלֵּל בִּשְׁעַת הַשְּׁחִיטָה</span>
+      <span class="song-title-de">Und die dritte Gruppe erreichte niemals „Ahavti"</span>
+    </div>
+    <div class="source-badge">
+      מִשְׁנָה פְּסָחִים ה:ז · פְּסָחִים סד. · תְּהִלִּים קט״ז:א׳ · עֲרָכִין י.
+      <span class="source-badge-de">Mischna Pessachim 5:7 (אִם גָּמְרוּ — שָׁנוּ · Rabbi Jehuda über die dritte Gruppe) · Pessachim 64a · Tehillim 116:1 · Arachin 10a · Machloket Raschi und Tosafot, wer sang: die Anwesenden oder die Leviten</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">תִּפְאֶרֶת · Tiferet</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Rast · מַקָּם רַסְת</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">~70 BPM rubato · mf durchgehend</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — וְהַסַּכִּין אֵינָהּ פּוֹסֶקֶת</div>
+      <div class="instrument-note">[solo acoustic guitar] [no percussion] [no drums] [no choir] Maqam Rast opening bright and continuous, a song that must not stop, rubato ~70 BPM. Gitarre: Rast öffnet hell und ununterbrochen — ein Gesang, der nicht aufhören darf.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְקוֹרְאִים אֶת הַהַלֵּל,</span>
+        <span class="line">וְהַסַּכִּין אֵינָהּ פּוֹסֶקֶת,</span>
+        <span class="line">וְאִם גָּמְרוּ — שָׁנוּ,</span>
+        <span class="line">וְאִם שָׁנוּ — שִׁלְּשׁוּ.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Adonai — und man liest den Hallel,</span>
+        <span class="line">und das Messer hört nicht auf,</span>
+        <span class="line">und wenn sie zu Ende waren — sagten sie ihn nochmals,</span>
+        <span class="line">und wenn sie ihn nochmals sagten — ein drittes Mal.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית א — מִימֵיהֶם לֹא שִׁלְּשׁוּ</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Rast steady, the third round never arriving. Gitarre: Rast gleichmäßig, die dritte Runde kommt nie.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">וְאַף עַל פִּי כֵן —</span>
+        <span class="line">מִימֵיהֶם לֹא שִׁלְּשׁוּ,</span>
+        <span class="line">שֶׁהַכֹּהֲנִים הָיוּ זְרִיזִים,</span>
+        <span class="line">וְהָעֲבוֹדָה גָּמְרָה תְּחִלָּה.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Und dennoch —</span>
+        <span class="line">sie haben ihn niemals ein drittes Mal gesagt,</span>
+        <span class="line">denn die Kohanim waren flink,</span>
+        <span class="line">und der Dienst war zuerst fertig.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — תִּפְאֶרֶת: הַשִּׁיר וְהַמַּעֲשֶׂה כְּאֶחָד</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Rast at its most balanced. Gitarre: Rast an seiner ausgeglichensten Stelle.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">תִּפְאֶרֶת אֵינָהּ הַשִּׁיר לְבַדּוֹ,</span>
+        <span class="line">וְאֵינָהּ הַמַּעֲשֶׂה לְבַדּוֹ,</span>
+        <span class="line">תִּפְאֶרֶת הִיא שֶׁשְּׁנֵיהֶם נִגְמָרִים</span>
+        <span class="line">בְּאוֹתוֹ רֶגַע.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Tiferet ist nicht der Gesang allein,</span>
+        <span class="line">und nicht die Handlung allein,</span>
+        <span class="line">Tiferet ist, dass beide zu Ende kommen</span>
+        <span class="line">im selben Augenblick.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mf · mf · mf</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] [no choir] Rast refrain, sung three times at exactly the same volume — the third repetition is the content. Gitarre: Rast-Refrain, dreimal in genau derselben Lautstärke — die dritte Wiederholung ist der Inhalt.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">שִׁיר — עַל הַסַּכִּין,</span>
+          <span class="line">קוֹל — עַל הַדָּם,</span>
+          <span class="line">אִם גָּמְרוּ — שָׁנוּ,</span>
+          <span class="line">וְאֵין רֶגַע בְּלֹא נִגּוּן.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Gesang — über dem Messer,</span>
+          <span class="line">Stimme — über dem Blut,</span>
+          <span class="line">wenn sie fertig waren — nochmals,</span>
+          <span class="line">und kein Augenblick ohne Melodie.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — כַּת שְׁלִישִׁית לֹא הִגִּיעָה</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Rast thinning, the smallest group. Gitarre: Rast wird dünner — die kleinste Gruppe.</div>
+      <div class="bridge-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">רַבִּי יְהוּדָה אוֹמֵר:</span>
+          <span class="line">מִימֵיהֶם שֶׁל כַּת שְׁלִישִׁית</span>
+          <span class="line">לֹא הִגִּיעוּ לְ״אָהַבְתִּי כִּי יִשְׁמַע״ —</span>
+          <span class="line">מִפְּנֵי שֶׁהָיְתָה מֻעֶטֶת.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Rabbi Jehuda sagt:</span>
+          <span class="line">In allen ihren Tagen hat die dritte Gruppe</span>
+          <span class="line">niemals „Ahavti ki jischma" erreicht —</span>
+          <span class="line">weil sie klein war.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="berachah-box vers-box">
+      <div class="ber-tag">הַפָּסוּק שֶׁלֹּא הִגִּיעוּ אֵלָיו · Tehillim 116:1</div>
+      <div class="ber-he">אָהַבְתִּי כִּי יִשְׁמַע אֲדֹנָי אֶת קוֹלִי תַּחֲנוּנָי.</div>
+      <div class="ber-kahal"></div>
+      <div class="ber-de">Ich liebe es, dass Adonai meine Stimme, mein Flehen hört.</div>
+      <div class="ber-src"><strong>Status (b).</strong> Für den Hallel während der Schechitah ist kein Berachah-Wortlaut überliefert; der gesungene Text ist der Hallel selbst. Hier steht der Vers, den nach Rabbi Jehuda die <em>dritte Gruppe niemals erreichte</em> — Tehillim 116:1, der Beginn eines eigenen Abschnitts. Das Tetragramm steht nach Projektnorm als אֲדֹנָי.</div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">לְהַתְחִיל בְּשִׁיר וְלִגְמֹר בַּמַּעֲשֶׂה</div>
+          <div class="tikkun-title-de">Mit Gesang beginnen, mit der Arbeit aufhören</div>
+        </div>
+        <div class="tikkun-src">מִשְׁנָה פְּסָחִים ה:ז</div>
+      </div>
+      <div class="tikkun-body">Eine Arbeit, die man mit anderen tut, so beginnen, dass jemand dabei etwas sagt oder singt — <strong>und erst aufhören, wenn die Arbeit fertig ist, nicht wenn der Text zu Ende ist</strong>. Im Mikdasch begann der Hallel mit dem ersten Schnitt; war er zu Ende und noch nicht alles geschlachtet, fing man wieder von vorn an.</div>
+      <div class="tikkun-tags"><span class="tikkun-tag">הַלֵּל</span><span class="tikkun-tag">תִּפְאֶרֶת</span><span class="tikkun-tag">פֶּסַח</span><span class="tikkun-tag">שִׁיר</span></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׂיא — mf · מֵעוֹלָם לֹא שִׁלְּשׁוּ</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Rast opening, three calls, no fortissimo. Gitarre: Rast öffnet sich — drei Rufe, kein Fortissimo.</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">אִם! — גָּמְרוּ! — שָׁנוּ!</span>
+          <span class="line">מֵעוֹלָם! — לֹא! — שִׁלְּשׁוּ!</span>
+          <span class="line">תִּפְאֶרֶת! — שִׁיר! — וּמַעֲשֶׂה!</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Wenn! — fertig! — nochmals!</span>
+          <span class="line">Niemals! — ein drittes! — Mal!</span>
+          <span class="line">Tiferet! — Gesang! — und Handlung!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — p · וְעוֹד אָהַבְתִּי</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Rast breaking off before the phrase completes. Gitarre: Rast bricht ab, ehe die Phrase zu Ende ist.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">וְהַשְּׁלִישִׁית לֹא הִגִּיעָה — וְעוֹד אָהַבְתִּי.<br><em>Und die dritte kam nicht an — und dennoch: Ahavti.</em></div>
+      </div>
+    </div>
+
+    <div class="perf-box">
+      <div class="perf-row"><span class="perf-k">Maqam</span><span class="perf-v"><strong>Rast</strong> durchgehend, hell und ununterbrochen.</span></div>
+      <div class="perf-row"><span class="perf-k">Tempo</span><span class="perf-v">~70 BPM, das schnellste Tempo der ganzen Haschlamot-Reihe bisher.</span></div>
+      <div class="perf-row"><span class="perf-k">Dynamik</span><span class="perf-v">mf durchgehend. Der Pizmon wird dreimal in <em>exakt</em> derselben Lautstärke gesungen — die Gleichheit der drei Durchgänge ist der Inhalt.</span></div>
+      <div class="perf-row"><span class="perf-k">Vokalführung</span><span class="perf-v">Solo-Männerstimme. Die Coda bricht auf dem Wort <em>Ahavti</em> ab, ohne den Vers zu vollenden.</span></div>
+      <div class="perf-row"><span class="perf-k">Instrument</span><span class="perf-v">Nur akustische Gitarre. Keine Perkussion, keine Trommeln, kein Chor.</span></div>
+      <div class="perf-row"><span class="perf-k">Was nicht vorkommt</span><span class="perf-v">Keine bekannte Hallel-Melodie. Und kein Chor, obwohl das Lied von einem Gesang vieler handelt.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר י״ח — DAS FESTOPFER DES VIERZEHNTEN · CHESED · MAQAM AJAM
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-18">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">חֶסֶד</span>
+      י״ח
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Chesed — חֶסֶד · Die Zugabe, die vorher kommt · Karte 18</span>
+      <span class="maqam-badge">Maqam Ajam · מַקָּם עַג׳ַם</span>
+      <span class="song-title-he">חֲגִיגַת אַרְבָּעָה עָשָׂר</span>
+      <span class="song-title-de">Damit das Pessachopfer auf Sättigung folgt und nicht auf Hunger</span>
+    </div>
+    <div class="source-badge">
+      דְּבָרִים ט״ז:ב׳ · מִשְׁנָה פְּסָחִים ו:ג–ד · פְּסָחִים ע. – ע:
+      <span class="source-badge-de">Dewarim 16:2 (וְזָבַחְתָּ פֶּסַח … צֹאן וּבָקָר) · Mischna Pessachim 6:3–4 (nur wenn es an einem Werktag kommt, in Reinheit und bei kleiner Gruppe) · Pessachim 70a–b (שֶׁיְּהֵא נֶאֱכָל עַל הַשֹּׂבַע · der Rinderteil ist die Chagigah)</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">חֶסֶד · Chesed</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Ajam · מַקָּם עַג׳ַם</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">~62 BPM rubato · mp → mf → p</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — קׇרְבָּן שֶׁאֵינוֹ הַפֶּסַח</div>
+      <div class="instrument-note">[solo acoustic guitar] [no percussion] [no drums] [no choir] Maqam Ajam opening warm and generous, pure major, rubato ~62 BPM. Gitarre: Ajam öffnet warm und großzügig, rein-dur.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְקׇרְבָּן שֶׁבָּא עִם הַפֶּסַח</span>
+        <span class="line">וְאֵינוֹ הַפֶּסַח,</span>
+        <span class="line">כְּדֵי שֶׁיְּהֵא הַפֶּסַח נֶאֱכָל</span>
+        <span class="line">עַל הַשֹּׂבַע.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Adonai — und ein Opfer, das mit dem Pessach kommt</span>
+        <span class="line">und nicht das Pessach ist,</span>
+        <span class="line">damit das Pessach gegessen werde</span>
+        <span class="line">auf Sättigung.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית א — אֵימָתַי מְבִיאִין עִמּוֹ</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Ajam listing conditions, then their negation. Gitarre: Ajam zählt Bedingungen auf, dann ihre Verneinung.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">בִּזְמַן שֶׁהוּא בָּא בְּחֹל,</span>
+        <span class="line">בְּטׇהֳרָה, וּבְמֻעָט —</span>
+        <span class="line">אֲבָל בְּשַׁבָּת, וּבְטֻמְאָה, וּבִמְרֻבֶּה —</span>
+        <span class="line">אֵין מְבִיאִין עִמּוֹ.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Wenn es an einem Werktag kommt,</span>
+        <span class="line">in Reinheit und bei wenigen —</span>
+        <span class="line">aber am Schabbat, in Unreinheit und bei vielen —</span>
+        <span class="line">bringt man es nicht dazu.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — חֶסֶד: מַה שֶּׁמּוֹסִיפִים כְּדֵי שֶׁיְּהֵא דַּי</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Ajam broadening, unhurried. Gitarre: Ajam wird weiter, ohne Eile.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">חֶסֶד אֵינוֹ הַמִּעוּט הַנִּדְרָשׁ,</span>
+        <span class="line">חֶסֶד הוּא הַתּוֹסֶפֶת שֶׁלִּפְנֵי,</span>
+        <span class="line">שֶׁלֹּא יֹאכַל אָדָם אֶת הַקֹּדֶשׁ</span>
+        <span class="line">כְּשֶׁהוּא רָעֵב.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Chesed ist nicht das geforderte Mindestmaß,</span>
+        <span class="line">Chesed ist die Zugabe, die vorher kommt,</span>
+        <span class="line">damit ein Mensch das Heilige nicht esse,</span>
+        <span class="line">während er hungrig ist.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mp · mf · mp</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] [no choir] Ajam refrain, the warmest passage of the section. Gitarre: Ajam-Refrain — die wärmste Stelle der Sektion.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">בָּשָׂר — לִפְנֵי בָּשָׂר,</span>
+          <span class="line">שְׁלָמִים — לִפְנֵי פֶּסַח,</span>
+          <span class="line">עַל הַשֹּׂבַע — וְלֹא בָּרָעָב,</span>
+          <span class="line">וְהַכֹּל כְּדֵי שֶׁיִּטְעַם.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Fleisch — vor Fleisch,</span>
+          <span class="line">Schelamim — vor Pessach,</span>
+          <span class="line">auf Sättigung — und nicht im Hunger,</span>
+          <span class="line">und alles, damit er schmeckt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — צֹאן וּבָקָר</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Ajam narrowing for the derivation. Gitarre: Ajam verengt sich für die Ableitung.</div>
+      <div class="bridge-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">וְזָבַחְתָּ פֶּסַח … צֹאן וּבָקָר —</span>
+          <span class="line">וַהֲלֹא אֵין הַפֶּסַח בָּא אֶלָּא מִן הַצֹּאן?</span>
+          <span class="line">אֶלָּא: הַבָּקָר לַחֲגִיגָה,</span>
+          <span class="line">שֶׁבָּאָה עִמּוֹ.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">„Und du sollst das Pessach schlachten … Kleinvieh und Rind" —</span>
+          <span class="line">kommt das Pessach denn nicht nur vom Kleinvieh?</span>
+          <span class="line">Vielmehr: das Rind ist für die Chagigah,</span>
+          <span class="line">die mit ihm kommt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">לָתֵת מַשֶּׁהוּ פָּשׁוּט קֹדֶם</div>
+          <div class="tikkun-title-de">Zuerst etwas Einfaches geben</div>
+        </div>
+        <div class="tikkun-src">פְּסָחִים ע.</div>
+      </div>
+      <div class="tikkun-body">Bevor man jemandem etwas Wichtiges gibt oder sagt — eine Nachricht, ein Geschenk, eine Bitte — <strong>ihm zuerst etwas Einfaches geben</strong>: Wasser, Brot, einen Stuhl. Das Wesentliche wird nicht im Hunger empfangen. Die Chagigah kam an demselben Tag und vor dem Pessach, damit das Pessach <em>al hasova</em> gegessen werde.</div>
+      <div class="tikkun-tags"><span class="tikkun-tag">חֲגִיגָה</span><span class="tikkun-tag">חֶסֶד</span><span class="tikkun-tag">שֹׂבַע</span><span class="tikkun-tag">פֶּסַח</span></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׂיא — mf · עַל הַשֹּׂבַע</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Ajam warm at full breadth, three calls. Gitarre: Ajam warm in voller Weite — drei Rufe.</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">עַל! — הַשֹּׂבַע!</span>
+          <span class="line">צֹאן! — וּבָקָר!</span>
+          <span class="line">חֶסֶד! — מוֹסִיף! — לִפְנֵי!</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Auf! — Sättigung!</span>
+          <span class="line">Kleinvieh! — und Rind!</span>
+          <span class="line">Chesed! — fügt hinzu! — vorher!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — p · וְהַפֶּסַח עוֹד לְפָנֵינוּ</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Ajam settling warm, the main thing still ahead. Gitarre: Ajam sinkt warm zurück — die Hauptsache steht noch bevor.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">וְהַחֲגִיגָה נֶאֶכְלָה — וְהַפֶּסַח עוֹד לְפָנֵינוּ.<br><em>Und die Chagigah ist gegessen — und das Pessach steht uns noch bevor.</em></div>
+      </div>
+    </div>
+
+    <div class="perf-box">
+      <div class="perf-row"><span class="perf-k">Maqam</span><span class="perf-v"><strong>Ajam</strong> durchgehend, rein-dur, ohne Molleintrübung.</span></div>
+      <div class="perf-row"><span class="perf-k">Tempo</span><span class="perf-v">~62 BPM. Bait I baut auf und kippt in der dritten Zeile ins Gegenteil.</span></div>
+      <div class="perf-row"><span class="perf-k">Dynamik</span><span class="perf-v">mp — mf — p. Kein Fortissimo; dies ist ein Lied über eine Zugabe.</span></div>
+      <div class="perf-row"><span class="perf-k">Vokalführung</span><span class="perf-v">Solo-Männerstimme, offen. Der Gescher als Frage und Antwort einer Stimme.</span></div>
+      <div class="perf-row"><span class="perf-k">Instrument</span><span class="perf-v">Nur akustische Gitarre. Keine Perkussion, keine Trommeln, kein Chor.</span></div>
+      <div class="perf-row"><span class="perf-k">Was nicht vorkommt</span><span class="perf-v">Keine Festlichkeit. Dieses Opfer wird gegessen, damit ein anderes richtig schmeckt.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר י״ט — DIE MUSSAFIM DER SIEBEN TAGE · NETZACH · MAQAM BAYAT
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-19">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">נֶצַח</span>
+      י״ט
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Netzach — נֶצַח · Sieben Tage ohne Steigerung · Karte 19</span>
+      <span class="maqam-badge">Maqam Bayat · מַקָּם בַּיָּאת</span>
+      <span class="song-title-he">מוּסַף שִׁבְעַת יְמֵי הַפֶּסַח</span>
+      <span class="song-title-de">Derselbe Betrag an jedem Tag — und der siebte wie der erste</span>
+    </div>
+    <div class="source-badge">
+      בְּמִדְבַּר כ״ח:ט״ז–כ״ה · בְּמִדְבַּר כ״ט:י״ב–ל״ד · רַמְבַּ״ם תְּמִידִין וּמוּסָפִין י
+      <span class="source-badge-de">Bamidbar 28:16–25 (sieben Tage, jeden Tag zwei Stiere, ein Widder, sieben Lämmer, ein Ziegenbock) · Bamidbar 29:12–34 (die absteigenden Stiere von Sukkot zum Vergleich) · Rambam, Hilchot Temidin uMussafin 10</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">נֶצַח · Netzach</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Bayat · מַקָּם בַּיָּאת</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">~58 BPM rubato · mp · unverändert</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — שִׁבְעָה יָמִים וְאוֹתוֹ מוּסָף</div>
+      <div class="instrument-note">[solo acoustic guitar] [no percussion] [no drums] [no choir] Maqam Bayat opening patient, a figure that will not change, rubato ~58 BPM. Gitarre: Bayat öffnet geduldig — eine Figur, die sich nicht ändern wird.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — שִׁבְעָה יָמִים,</span>
+        <span class="line">וְאוֹתוֹ מוּסָף בְּכָל יוֹם:</span>
+        <span class="line">שְׁנֵי פָרִים וְאַיִל אֶחָד</span>
+        <span class="line">וְשִׁבְעָה כְבָשִׂים בְּנֵי שָׁנָה.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Adonai — sieben Tage,</span>
+        <span class="line">und dasselbe Mussaf an jedem Tag:</span>
+        <span class="line">zwei Stiere und ein Widder</span>
+        <span class="line">und sieben einjährige Lämmer.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית א — לֹא עוֹלֶה וְלֹא יוֹרֵד</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Bayat repeating the same shape four times. Gitarre: Bayat wiederholt viermal dieselbe Gestalt.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">בֶּחָג הָאַחֵר הַפָּרִים פּוֹחֲתִים,</span>
+        <span class="line">וְכָאן — אֵינָם פּוֹחֲתִים,</span>
+        <span class="line">לֹא בָּרִאשׁוֹן וְלֹא בַּשְּׁבִיעִי,</span>
+        <span class="line">אוֹתוֹ מִסְפָּר בְּכָל יוֹם.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Beim anderen Fest nehmen die Stiere ab,</span>
+        <span class="line">und hier — nehmen sie nicht ab,</span>
+        <span class="line">nicht am ersten und nicht am siebten,</span>
+        <span class="line">dieselbe Zahl an jedem Tag.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — נֶצַח: מַה שֶּׁאֵינוֹ מִשְׁתַּנֶּה</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Bayat holding, unresolved. Gitarre: Bayat hält, unaufgelöst.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">נֶצַח אֵינוֹ הַגְּדֻלָּה,</span>
+        <span class="line">נֶצַח הוּא הַחֲזָרָה,</span>
+        <span class="line">וְאֵין לוֹ שִׂיא וְאֵין לוֹ יְרִידָה —</span>
+        <span class="line">יֵשׁ לוֹ רַק עוֹד יוֹם.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Netzach ist nicht die Größe,</span>
+        <span class="line">Netzach ist die Wiederholung,</span>
+        <span class="line">und er hat keinen Gipfel und kein Absinken —</span>
+        <span class="line">er hat nur noch einen Tag.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · mp · mp · mp</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] [no choir] Bayat refrain, three times identical — no dynamic change at all. Gitarre: Bayat-Refrain, dreimal gleich — gar keine Dynamikänderung.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">שִׁבְעָה — וְכֻלָּם שָׁוִים,</span>
+          <span class="line">אוֹתוֹ — וְעוֹד אוֹתוֹ,</span>
+          <span class="line">לֹא רַבּוּ וְלֹא מָעֲטוּ,</span>
+          <span class="line">וְהַשְּׁבִיעִי כָּרִאשׁוֹן.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Sieben — und alle gleich,</span>
+          <span class="line">dasselbe — und wieder dasselbe,</span>
+          <span class="line">sie wurden nicht mehr und nicht weniger,</span>
+          <span class="line">und der siebte wie der erste.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — וּבֶחָג יוֹרְדִים</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Bayat descending in steps for the comparison, then returning. Gitarre: Bayat steigt für den Vergleich in Stufen ab und kehrt zurück.</div>
+      <div class="bridge-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">בְּסֻכּוֹת יוֹרְדִים הַפָּרִים —</span>
+          <span class="line">שְׁלֹשָׁה עָשָׂר, שְׁנֵים עָשָׂר, אַחַד עָשָׂר;</span>
+          <span class="line">וּבַפֶּסַח לֹא כֵן,</span>
+          <span class="line">כִּי לֹא כָּל חַג מְסַפֵּר אוֹתוֹ סִפּוּר.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">An Sukkot nehmen die Stiere ab —</span>
+          <span class="line">dreizehn, zwölf, elf;</span>
+          <span class="line">und an Pessach nicht so,</span>
+          <span class="line">denn nicht jedes Fest erzählt dieselbe Geschichte.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">שִׁבְעָה יָמִים בְּלִי שִׁנּוּי</div>
+          <div class="tikkun-title-de">Sieben Tage ohne Veränderung</div>
+        </div>
+        <div class="tikkun-src">בְּמִדְבַּר כ״ח:ט״ז–כ״ה</div>
+      </div>
+      <div class="tikkun-body"><strong>Etwas sieben Tage lang jeden Tag genau gleich tun</strong> — dieselbe Zeit, dieselbe Menge, dieselben Worte. Ohne Steigerung, ohne Abschwächung, und am letzten Tag nicht mehr als am ersten. Das Mussaf der sieben Pessachtage kennt keine Kurve; der siebte ist wie der erste.</div>
+      <div class="tikkun-tags"><span class="tikkun-tag">מוּסָף</span><span class="tikkun-tag">נֶצַח</span><span class="tikkun-tag">פֶּסַח</span><span class="tikkun-tag">חֲזָרָה</span></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׂיא — mf · לֹא רַבּוּ וְלֹא מָעֲטוּ</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Bayat opening once only, then straight back to the level. Gitarre: Bayat öffnet sich ein einziges Mal und fällt sofort auf die Ebene zurück.</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">שִׁבְעָה! — וְכֻלָּם! — שָׁוִים!</span>
+          <span class="line">לֹא! — רַבּוּ! — וְלֹא! — מָעֲטוּ!</span>
+          <span class="line">נֶצַח! — חוֹזֵר! — וְאֵינוֹ עוֹלֶה!</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Sieben! — und alle! — gleich!</span>
+          <span class="line">Nicht! — mehr! — und nicht! — weniger!</span>
+          <span class="line">Netzach! — wiederholt! — und steigt nicht!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — p · וּמָחָר כְּבָר לֹא</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Bayat stopping on the same tone it began on. Gitarre: Bayat hört auf demselben Ton auf, mit dem es begann.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">וְהַשְּׁבִיעִי כָּרִאשׁוֹן — וּמָחָר כְּבָר לֹא.<br><em>Und der siebte wie der erste — und morgen schon nicht mehr.</em></div>
+      </div>
+    </div>
+
+    <div class="perf-box">
+      <div class="perf-row"><span class="perf-k">Maqam</span><span class="perf-v"><strong>Bajat</strong> durchgehend. Anschluss an Lied XVIII (Ajam).</span></div>
+      <div class="perf-row"><span class="perf-k">Tempo</span><span class="perf-v">~58 BPM, unverändert von der ersten bis zur letzten Zeile — kein Rubato-Spiel innerhalb der Strophen.</span></div>
+      <div class="perf-row"><span class="perf-k">Dynamik</span><span class="perf-v">mp durchgehend. Der Pizmon wird dreimal in <strong>exakt</strong> derselben Lautstärke gesungen; nur der Schia erreicht kurz mf.</span></div>
+      <div class="perf-row"><span class="perf-k">Vokalführung</span><span class="perf-v">Solo-Männerstimme. Bait I viermal dieselbe melodische Gestalt — die Monotonie ist beabsichtigt.</span></div>
+      <div class="perf-row"><span class="perf-k">Instrument</span><span class="perf-v">Nur akustische Gitarre. Keine Perkussion, keine Trommeln, kein Chor.</span></div>
+      <div class="perf-row"><span class="perf-k">Was nicht vorkommt</span><span class="perf-v">Kein Spannungsbogen. Wer dieses Lied interessanter macht, macht es falsch.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament"><div class="ornament-line"></div><span class="ornament-star">✦ ✦ ✦</span><div class="ornament-line"></div></div>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     שִׁיר כ׳ — DIE NÄCHTLICHE OMER-ERNTE · JESOD · MAQAM SABA
+══════════════════════════════════════════════════════════════════ -->
+<section class="song-section" id="song-20">
+  <div class="song-header">
+    <div class="song-num">
+      <span class="snum-sefira">יְסוֹד</span>
+      כ׳
+    </div>
+    <div class="song-meta">
+      <span class="sefira-badge">Jesod — יְסוֹד · Der Anfang, der um Erlaubnis fragt · Karte 20</span>
+      <span class="maqam-badge">Maqam Saba · מַקָּם סָבָא</span>
+      <span class="song-title-he">קְצִירַת הָעֹמֶר בַּלַּיְלָה</span>
+      <span class="song-title-de">Dreimal gefragt, dreimal geantwortet — und dann erst fällt die Sichel</span>
+    </div>
+    <div class="source-badge">
+      וַיִּקְרָא כ״ג:י׳–י״א · מִשְׁנָה מְנָחוֹת י:ב–ג · מְנָחוֹת ס״ה. · רַמְבַּ״ם תְּמִידִין וּמוּסָפִין ז
+      <span class="source-badge-de">Wajikra 23:10–11 · Mischna Menachot 10:2 (die Nachbarstädte versammeln sich, כְּדֵי שֶׁיְּהֵא נִקְצָר בְּעֵסֶק גָּדוֹל) · Mischna Menachot 10:3 (die dreifache Frage; מִפְּנֵי הַבַּיְתוֹסִים) · Menachot 65a · Rambam, Hilchot Temidin uMussafin 7</span>
+    </div>
+  </div>
+  <div class="meta-strip"><div class="meta-cell"><span class="meta-k">סְפִירָה · Sefirah</span><span class="meta-v">יְסוֹד · Jesod</span></div><div class="meta-cell"><span class="meta-k">מַקָּם · Maqam</span><span class="meta-v">Saba · מַקָּם סָבָא</span></div><div class="meta-cell"><span class="meta-k">מִשְׁקָל · Tempo</span><span class="meta-v">~54 BPM rubato · pp → mf → pp</span></div><div class="meta-cell"><span class="meta-k">כְּלִי · Instrument</span><span class="meta-v">גִּיטָרָה אֲקוּסְטִית</span></div><div class="meta-cell"><span class="meta-k">מִבְנֶה · Struktur</span><span class="meta-v">Petichah · Bait I · Bait II · Pizmon · Gescher · Tikkun · Schia · Codah</span></div></div>
+  <div class="song-body">
+
+    <div class="section-block">
+      <div class="section-label">פְּתִיחָה — בְּעֵסֶק גָּדוֹל</div>
+      <div class="instrument-note">[solo acoustic guitar] [no percussion] [no drums] [no choir] Maqam Saba opening low and ancient, a field at nightfall full of people, rubato ~54 BPM. Gitarre: Saba öffnet tief und uralt — ein Feld bei Einbruch der Nacht, voller Menschen.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">אֲדֹנָי — וְהָעֲיָרוֹת הַסְּמוּכוֹת מִתְכַּנְּסוֹת,</span>
+        <span class="line">כְּדֵי שֶׁיְּהֵא נִקְצָר בְּעֵסֶק גָּדוֹל,</span>
+        <span class="line">וּשְׁלִיחַ בֵּית דִּין עוֹמֵד בַּשָּׂדֶה</span>
+        <span class="line">וּמְחַכֶּה לַחֲשֵׁכָה.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Adonai — und die umliegenden Städte versammeln sich,</span>
+        <span class="line">damit es unter großem Aufheben geschnitten werde,</span>
+        <span class="line">und der Bote des Gerichts steht auf dem Feld</span>
+        <span class="line">und wartet auf das Dunkel.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית א — כֵּיוָן שֶׁחֲשֵׁכָה</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Saba as call and response, one question per line. Gitarre: Saba als Ruf und Antwort — eine Frage je Zeile.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">כֵּיוָן שֶׁחֲשֵׁכָה אוֹמֵר לָהֶן:</span>
+        <span class="line">בָּא הַשֶּׁמֶשׁ? — הֵין.</span>
+        <span class="line">מַגָּל זוֹ? — הֵין.</span>
+        <span class="line">קֻפָּה זוֹ? — הֵין.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Als es dunkel wurde, sagt er zu ihnen:</span>
+        <span class="line">Ist die Sonne untergegangen? — Ja.</span>
+        <span class="line">Diese Sichel? — Ja.</span>
+        <span class="line">Dieser Korb? — Ja.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">בֵּית ב — יְסוֹד: הַהַתְחָלָה שֶׁצְּרִיכָה רְשׁוּת</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Saba sinking to its foundation register. Gitarre: Saba sinkt in seine tragende Lage.</div>
+      <div class="lyrics-block">
+        <div class="lyrics-he">
+        <span class="line">יְסוֹד אֵינוֹ מַתְחִיל מֵעַצְמוֹ,</span>
+        <span class="line">יְסוֹד שׁוֹאֵל וּמְקַבֵּל רְשׁוּת,</span>
+        <span class="line">וְאֵין הַמַּגָּל יוֹרֶדֶת</span>
+        <span class="line">עַד שֶׁאָמְרוּ לוֹ: קְצֹר.</span>
+        </div>
+        <div class="lyrics-de">
+        <span class="line">Jesod beginnt nicht von selbst,</span>
+        <span class="line">Jesod fragt und empfängt Erlaubnis,</span>
+        <span class="line">und die Sichel fällt nicht,</span>
+        <span class="line">ehe sie ihm gesagt haben: schneide.</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">פִּזְמוֹן — חוֹזֵר שָׁלֹשׁ פְּעָמִים · p · mf · p</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] [no choir] Saba refrain, threefold in its own shape. Gitarre: Saba-Refrain, in seiner eigenen Gestalt dreifach.</div>
+      <div class="refrain-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">שָׁלֹשׁ — עַל כָּל דָּבָר,</span>
+          <span class="line">הֵין — וְעוֹד הֵין,</span>
+          <span class="line">לַיְלָה — וְהַשָּׂדֶה מָלֵא,</span>
+          <span class="line">וְעוֹד לֹא נָגַעְנוּ בַּשִּׁבֳּלִים.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Dreimal — bei jeder Sache,</span>
+          <span class="line">Ja — und wieder Ja,</span>
+          <span class="line">Nacht — und das Feld ist voll,</span>
+          <span class="line">und noch haben wir die Ähren nicht berührt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">גֶּשֶׁר — כָּל כָּךְ לָמָּה</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Saba flat and spoken, the reason given plainly. Gitarre: Saba flach und gesprochen — der Grund wird schlicht genannt.</div>
+      <div class="bridge-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">כָּל כָּךְ לָמָּה?</span>
+          <span class="line">מִפְּנֵי הַבַּיְתוֹסִים,</span>
+          <span class="line">שֶׁהָיוּ אוֹמְרִים:</span>
+          <span class="line">אֵין קְצִירַת הָעֹמֶר בְּמוֹצָאֵי יוֹם טוֹב.</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Warum so viel Aufhebens?</span>
+          <span class="line">Wegen der Bajtosim,</span>
+          <span class="line">die sagten:</span>
+          <span class="line">die Omer-Ernte finde nicht am Ausgang des Festtags statt.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="berachah-box formel-box">
+      <div class="ber-tag">נֻסַּח הַשְּׁאֵלָה · Mischna Menachot 10:3</div>
+      <div class="ber-he">בָּא הַשֶּׁמֶשׁ? — הֵין. מַגָּל זוֹ? — הֵין. קֻפָּה זוֹ? — הֵין. בַּשַּׁבָּת: שַׁבָּת זוֹ? — הֵין.</div>
+      <div class="ber-kahal">אֶקְצֹר? — וְהֵם אוֹמְרִים לוֹ: קְצֹר. שָׁלֹשׁ פְּעָמִים עַל כָּל דָּבָר וְדָבָר: הֵין, הֵין, הֵין.</div>
+      <div class="ber-de">Ist die Sonne untergegangen? — Ja. Diese Sichel? — Ja. Dieser Korb? — Ja. Am Schabbat: Dieser Schabbat? — Ja. — Soll ich schneiden? Und sie sagen ihm: Schneide. Dreimal bei jeder einzelnen Sache: Ja, ja, ja.</div>
+      <div class="ber-src"><strong>Status (a).</strong> Dies ist <em>keine</em> Berachah, sondern die vollständig überlieferte Ruf-Formel der Omer-Ernte — Wortlaut aus Mischna Menachot 10:3, zeichengenau. Sie steht hier als belegter liturgischer Text, ausdrücklich nicht als Berachah der Awodah.</div>
+    </div>
+
+    <div class="tikkun-box">
+      <div class="tikkun-header">
+        <div>
+          <div class="tikkun-title-he">לִשְׁאֹל בְּקוֹל לִפְנֵי שֶׁמַּתְחִילִים</div>
+          <div class="tikkun-title-de">Laut fragen, bevor man beginnt</div>
+        </div>
+        <div class="tikkun-src">מִשְׁנָה מְנָחוֹת י:ג</div>
+      </div>
+      <div class="tikkun-body">Vor einer Handlung, über die man <strong>allein</strong> entscheiden könnte — den Tisch abräumen, ein Gespräch beenden, einen Text absenden — <strong>laut fragen und die Antwort abwarten</strong>, auch wenn man sie kennt. Der Bote des Gerichts fragte dreimal bei jeder einzelnen Sache, obwohl alle Umstehenden es sahen.</div>
+      <div class="tikkun-tags"><span class="tikkun-tag">עֹמֶר</span><span class="tikkun-tag">יְסוֹד</span><span class="tikkun-tag">רְשׁוּת</span><span class="tikkun-tag">לַיְלָה</span></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">שִׂיא — mf · אֶקְצֹר — קְצֹר</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] Saba opening for three calls, question and answer in one voice. Gitarre: Saba öffnet sich für drei Rufe — Frage und Antwort in einer Stimme.</div>
+      <div class="climax-box">
+        <div class="lyrics-block">
+          <div class="lyrics-he">
+          <span class="line">בָּא! — הַשֶּׁמֶשׁ! — הֵין!</span>
+          <span class="line">אֶקְצֹר! — קְצֹר!</span>
+          <span class="line">יְסוֹד! — שׁוֹאֵל! — וּמַתְחִיל!</span>
+          </div>
+          <div class="lyrics-de">
+          <span class="line">Ist! — die Sonne! — untergegangen! — Ja!</span>
+          <span class="line">Soll ich schneiden! — Schneide!</span>
+          <span class="line">Jesod! — fragt! — und beginnt!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-block">
+      <div class="section-label">קוֹדָה — pp · וְהַסְּפִירָה הִתְחִילָה</div>
+      <div class="instrument-note">[acoustic guitar] [no percussion] One low Saba tone; forty-nine days begin. Gitarre: Ein tiefer Saba-Ton; neunundvierzig Tage beginnen.</div>
+      <div class="coda-box">
+        <div class="coda-whisper">וְהַמַּגָּל יָרְדָה — וְהַסְּפִירָה הִתְחִילָה.<br><em>Und die Sichel ist gefallen — und die Zählung hat begonnen.</em></div>
+      </div>
+    </div>
+
+    <div class="perf-box">
+      <div class="perf-row"><span class="perf-k">Maqam</span><span class="perf-v"><strong>Saba</strong> durchgehend, tief. Anschluss an Lied XIX (Bajat).</span></div>
+      <div class="perf-row"><span class="perf-k">Tempo</span><span class="perf-v">~54 BPM. Bait I und die Formel-Box als Wechselrede: Frage in der Kopfstimme, Antwort eine Terz tiefer.</span></div>
+      <div class="perf-row"><span class="perf-k">Dynamik</span><span class="perf-v">pp — mf — pp. Der Gescher wird flach gesprochen, ohne Melodie.</span></div>
+      <div class="perf-row"><span class="perf-k">Vokalführung</span><span class="perf-v">Solo-Männerstimme. Frage und Antwort werden von <em>derselben</em> Stimme gesungen — auch das dreifache <em>Hein</em>.</span></div>
+      <div class="perf-row"><span class="perf-k">Instrument</span><span class="perf-v">Nur akustische Gitarre. Keine Perkussion, keine Trommeln, kein Chor.</span></div>
+      <div class="perf-row"><span class="perf-k">Was nicht vorkommt</span><span class="perf-v">Keine Menge, kein Rufchor, kein Sichelgeräusch. Das große Aufheben steht im Text, nicht im Klang.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="check-box">
+  <div class="sources-title">בְּדִיקַת הַמְּקוֹרוֹת — Quellenprüfung · שִׁירִים ט״ז–כ׳</div>
+  <div class="chk">
+    <div class="chk-head">‏· מַעֲמַד הַבְּרָכוֹת — b · b · c · c · a<span class="tag-ok">bestätigt</span><span class="chk-de">Pflichtpunkt: fünf Karten, drei Status</span></div>
+    <div class="chk-body">Karte 20 → <strong>(a)</strong>: die Frageformel aus Mischna Menachot 10:3, zeichengenau übernommen — belegt, aber keine Berachah. Karten 16 und 17 → <strong>(b)</strong>: Schemot 12:6 und Tehillim 116:1. Karten 18 und 19 → <strong>(c)</strong>: nichts überliefert, nichts rekonstruiert.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· בְּרָכָה עַל שְׁחִיטַת הַפֶּסַח<span class="tag-open">offen</span><span class="chk-de">Bewusst nicht verwendet</span></div>
+    <div class="chk-body">Eine Berachah <em>על שחיטת הפסח</em> ist in der Literatur bekannt und wird gewöhnlich auf <strong>Pessachim 121a</strong> zurückgeführt. Der genaue Wortlaut ließ sich in der Recherche nicht auf die Genauigkeit bringen, die Regel 5 und 6 dieses Projekts verlangen. Statt eine Formel zu rekonstruieren, steht in Lied XVI der Vers <strong>Schemot 12:6</strong>. Wenn Sie den Talmudtext vorliegen haben, lässt sich die Box später auf Status (a) heben.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· נִתְמַלְּאָה הָעֲזָרָה — פְּסָחִים ה:ה<span class="tag-ok">bestätigt</span><span class="chk-de">Die Leitstelle von Lied XVI, doppelt geprüft</span></div>
+    <div class="chk-body">Mischna Pessachim 5:5–6: die erste Gruppe tritt ein, der Hof füllt sich, die Tore werden verriegelt, man bläst Tekiah–Teruah–Tekiah; die Kohanim stehen Reihe um Reihe mit <strong>silbernen und goldenen Schalen</strong>, eine Reihe ganz Silber und eine ganz Gold, <strong>und die Schalen hatten keinen Boden</strong>, damit man sie nicht abstellt und das Blut gerinnt. <em>שָׁחַט יִשְׂרָאֵל וְקִבֵּל הַכֹּהֵן</em> — der Israelit schlachtet, der Kohen empfängt.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· אִם גָּמְרוּ שָׁנוּ — פְּסָחִים ה:ז<span class="tag-ok">bestätigt</span><span class="chk-de">Die Leitstelle von Lied XVII</span></div>
+    <div class="chk-body">Jede Gruppe las den Hallel; waren sie zu Ende, sagten sie ihn nochmals, und waren sie wieder zu Ende, ein drittes Mal — <em>und in allen ihren Tagen haben sie ihn niemals ein drittes Mal gesagt</em>. Rabbi Jehuda: in allen Tagen der dritten Gruppe erreichten sie niemals <strong>אָהַבְתִּי כִּי יִשְׁמַע</strong>, weil sie klein war. Der Vers ist <strong>Tehillim 116:1</strong> und beginnt einen eigenen Abschnitt des Hallel.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· מִי שָׁר — מַחְלֹקֶת שֶׁאֵינָהּ מֻכְרַעַת<span class="tag-open">offen</span><span class="chk-de">Wer den Hallel sang, ist strittig</span></div>
+    <div class="chk-body">Die Mischna sagt nur <em>וְקוֹרִין אֶת הַהַלֵּל</em>, ohne Subjekt. <strong>Raschi</strong> versteht: alle Anwesenden; <strong>Tosafot</strong>: die Leviten. Nach Regel 12 nennt der Fahrplan beide Seiten, und das Lied entscheidet nicht — es sagt nur <em>„und man liest den Hallel‏״</em>.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· עַל הַשֹּׂבַע — פְּסָחִים ו:ג · ע.<span class="tag-ok">bestätigt</span><span class="chk-de">Die Leitstelle von Lied XVIII</span></div>
+    <div class="chk-body">Mischna Pessachim 6:3: die Chagigah kommt nur mit, wenn das Pessach <em>an einem Werktag, in Reinheit und bei kleiner Gruppe</em> gebracht wird. Der Zweck steht in Pessachim 70a: <strong>שֶׁיְּהֵא נֶאֱכָל עַל הַשֹּׂבַע</strong>. Die Ableitung aus <strong>Dewarim 16:2</strong> — das Pessach kommt nur vom Kleinvieh, also ist das Rind die Chagigah — steht in Pessachim 70b und bildet den Gescher.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· לֹא רַבּוּ וְלֹא מָעֲטוּ<span class="tag-ok">bestätigt</span><span class="chk-de">Der Befund von Lied XIX steht im Text</span></div>
+    <div class="chk-body"><strong>Bamidbar 28:16–25</strong>: an jedem der sieben Pessachtage dieselbe Gabe — zwei Stiere, ein Widder, sieben Lämmer, ein Ziegenbock. <strong>Bamidbar 29:12–34</strong> zeigt den Gegensatz: an Sukkot nehmen die Stiere von dreizehn auf sieben ab. Der Gescher stellt beides nebeneinander und deutet nichts hinein.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· נֻסַּח הַשְּׁאֵלָה — מְנָחוֹת י:ג<span class="tag-ok">bestätigt</span><span class="chk-de">Die Formel von Lied XX ist wortgleich</span></div>
+    <div class="chk-body">Mischna Menachot 10:3, zeichengenau: <em>בָּא הַשֶּׁמֶשׁ? — הֵין … מַגָּל זוֹ? … קֻפָּה זוֹ? … בַּשַּׁבָּת: שַׁבָּת זוֹ? … אֶקְצֹר? וְהֵם אוֹמְרִים לוֹ: קְצֹר … שָׁלֹשׁ פְּעָמִים עַל כָּל דָּבָר וְדָבָר.</em> Und der Grund im Klartext: <strong>מִפְּנֵי הַבַּיְתוֹסִים</strong>, die sagten, die Omer-Ernte finde nicht am Ausgang des Festtags statt. Dazu Menachot 10:2: die Nachbarstädte versammelten sich, <em>כְּדֵי שֶׁיְּהֵא נִקְצָר בְּעֵסֶק גָּדוֹל</em>.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· חֲפִיפָה עִם שִׁירִים קַיָּמִים<span class="tag-ok">bestätigt</span><span class="chk-de">Drei Berührungen, keine Wiederholung</span></div>
+    <div class="chk-body">Lied XVI berührt <em>Korban Pessach</em> (Assiya X der Vier-Welten-Reihe) — dort ist die Gabe der Gegenstand, hier die <strong>Ordnung der drei Gruppen</strong>. Lied XVII berührt <em>Hallel</em> (Haschlamot XV) — dort die achtzehn Tage, hier der Gesang während der Handlung, und deshalb ein <em>anderer</em> Vers in der Box. Lied XX berührt <em>Minchat HaOmer</em> (Jetzirah IX) — dort die Darbringung, hier die nächtliche Ernte.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· מַקָּמִים · BPM<span class="tag-ok">bestätigt</span><span class="chk-de">Kanon und Sektionsspanne eingehalten</span></div>
+    <div class="chk-body">Malchut → Hidschaz, Tiferet → Rast, Chesed → Ajam, Netzach → Bajat, Jesod → Saba — <strong>fünf von fünf kanonisch</strong>. BPM 68 · 70 · 62 · 58 · 54, alle in der Spanne 54–70 der Sektion ג, keine zwei aufeinanderfolgenden gleich, und der Anschluss an Lied XV (64, Nahawand) ist in Tempo und Maqam verschieden.</div>
+  </div>
+  <div class="chk">
+    <div class="chk-head">‏· תַּרְחִישִׁים<span class="tag-ok">bestätigt</span><span class="chk-de">Keine Hörerszenarien</span></div>
+    <div class="chk-body">Nach Projektnorm enthalten diese fünf Lieder <strong>keine</strong> vier Hörerszenarien. Jedes trägt eine <em>Aufführungshinweise</em>-Box mit sechs Feldern.</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-world">הַשְׁלָמוֹת ט״ז–כ׳ · פֶּסַח · סֶקְצְיָה ג הֻשְׁלְמָה</div>
+  <div class="footer-chain">מַלְכוּת → תִּפְאֶרֶת → חֶסֶד → נֶצַח → יְסוֹד</div>
+  <div class="footer-de">
+    Sephardische Autorität · Maqam-Tradition: Aleppo, Jerusalem ·
+    Instrument: Akustische Gitarre, solo · Quellen: Mischna Pessachim · Menachot ·
+    Talmud Pessachim · Menachot · Arachin · Rambam, Hilchot Korban Pessach und
+    Hilchot Temidin uMussafin · Tehillim 116 ·
+    Tetragramm durchgängig als אֲדֹנָי · Maschiach ben David · Nussach Zadoq
+    <br><br>
+    <em>Ein Hof füllt sich und wird verriegelt. Schalen ohne Boden, damit niemand sie abstellt.
+    Ein Gesang, der wieder von vorn beginnt, und eine Gruppe, die niemals bis „Ahavti" kam.
+    Ein Opfer, das nur da ist, damit ein anderes satt gegessen wird. Und ein Feld bei Nacht,
+    auf dem dreimal gefragt wird — obwohl alle es sehen.</em>
+  </div>
+  <div class="footer-amen">וּבָנִינוּ הַמִּקְדָּשׁ בִּמְהֵרָה בְיָמֵינוּ — אָמֵן</div>
+</footer>
+
+</div>
+</body>
+</html>
